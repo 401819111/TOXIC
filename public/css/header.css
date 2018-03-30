@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/font_icon/iconfont.eot');
+  src: url('../font/font_icon/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/font_icon/iconfont.woff') format('woff'), url('../font/font_icon/iconfont.ttf') format('truetype'), url('../font/font_icon/iconfont.svg#iconfont') format('svg');
+}
+nav {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transition: all .3s ease;
+}
+#header_topFrame {
+  height: 60px;
+  position: relative;
+  z-index: 99;
+  width: 100%;
+  background-color: #444;
+  color: white;
+  border-top: 1px solid transparent;
+}
+#header_topFrame:hover #header_hiddenFrame {
+  margin-top: 0;
+}
+#header_topFrame #logo {
+  width: 114px;
+  height: 40px;
+  margin: 0 auto;
+  margin-top: 10px;
+  cursor: pointer;
+}
+#header_topFrame #logo img {
+  width: 114px;
+  height: 40px;
+}
+#header_topFrame ul {
+  list-style: none;
+  font-family: 'iconfont';
+  position: absolute;
+  height: 60px;
+  right: 35px;
+  top: 15px;
+  font-size: 16px;
+  line-height: 34px;
+}
+#header_topFrame ul li {
+  float: left;
+  cursor: pointer;
+  padding: 0 15px;
+}
+#header_topFrame ul li input {
+  position: absolute;
+  top: 5px;
+  left: 200px;
+  border: none;
+  background-color: #666;
+  height: 25px;
+  border-radius: 8px;
+  padding-left: 5px;
+  color: #999;
+  transition: left .3s ease;
+}
+#header_topFrame ul li span {
+  margin-left: 20px;
+}
+#header_topFrame ul #hearder_searchFrame {
+  overflow: hidden;
+  position: relative;
+  width: 174px;
+  padding-right: 0;
+}
+#header_hiddenFrame {
+  height: 40px;
+  background-color: #666;
+  margin-top: -40px;
+  z-index: -99;
+  transition: all .3s ease;
+}
+#header_hiddenFrame ul {
+  color: white;
+  list-style: none;
+  position: relative;
+  width: 700px;
+  margin: 0 auto;
+}
+#header_hiddenFrame ul li {
+  float: left;
+  padding: 0 10px;
+  line-height: 40px;
+  font-size: 14px;
+}
+#header_hiddenFrame ul li:hover {
+  background-color: #444;
+  cursor: pointer;
+}
