@@ -1,0 +1,73 @@
+body {
+  background: #eeeeee;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.Network_Main {
+  width: 80%;
+  margin: 0 auto;
+}
+header {
+  margin-top: 50px;
+  font-size: 13px;
+  color: #999999;
+}
+header a {
+  text-decoration: none;
+  color: #999999;
+}
+section {
+  margin-top: 50px;
+  height: 600px;
+}
+section .list ul {
+  width: 35%;
+  float: left;
+}
+section .list ul li {
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  background: white;
+  box-sizing: border-box;
+  padding: 0 6px;
+  height: 56px;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 25px;
+}
+section .list ul li:last-child {
+  margin-bottom: 0px;
+}
+section .list ul li:hover {
+  cursor: pointer;
+  background-color: rgba(179, 179, 179, 0.25);
+}
+section .list ul li:hover h1 {
+  font-weight: 700;
+}
+section .list ul li img {
+  float: left;
+  width: 27px;
+  height: 44px;
+}
+section .list ul li .site {
+  text-align: left;
+  float: left;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+section .list ul li .site p {
+  color: #999999;
+  font-size: 13px;
+  line-height: 1em;
+  margin-top: 7px;
+}
+section .list ul li h1 {
+  color: #666666;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1em;
+}

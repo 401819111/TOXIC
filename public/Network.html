@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <style type="text/css">
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+
+        #allmap {
+            height: 461px;
+            width: 60%;
+            overflow: hidden;
+
+            float: right;
+            margin-left: 50px;
+        }
+
+        #result {
+            width: 100%;
+            font-size: 12px;
+        }
+
+        dl, dt, dd, ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        dt {
+            font-size: 14px;
+            font-family: "微软雅黑";
+            font-weight: bold;
+            border-bottom: 1px dotted #000;
+            padding: 5px 0 5px 5px;
+            margin: 5px 0;
+        }
+
+        dd {
+            padding: 5px 0 0 5px;
+        }
+
+        li {
+            line-height: 28px;
+        }
+    </style>
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=dBpjCtkcH8S7Zf0qFVMaz2G5pApA1p5a"></script>
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css"/>
+    <title>Toxic网点查询</title>
+    <link rel="stylesheet/less" href="less/Network.less">
+</head>
+<!--<link rel="stylesheet/less" href="less/Network.less">-->
+<body>
+<div class="Network_Main">
+    <header>
+        当前位置：<a href="">首页</a> > 网点查询
+    </header>
+    <section>
+        <!--左边的网点列表-->
+        <div class="list" id="result">
+            <ul>
+                <li onclick="place(poi1,content1,'国信安')">
+                    <img src="images/other/u5666.png" alt="">
+                    <div class="site">
+                        <h1>四川省成都市</h1>
+                        <p>国家西部信息安全产业基地（成都市高新区云华路333号）</p>
+                    </div>
+                </li>
+                <li onclick="place(poi2,content2,'航天大厦')">
+                    <img src="images/other/u5666.png" alt="">
+                    <div class="site">
+                        <h1>航天科技大厦</h1>
+                        <p>四川省成都市新光华街7号航天科技大厦</p>
+                    </div>
+                </li>
+                <li onclick="place(poi3,content3,'腾讯成都大厦')">
+                    <img src="images/other/u5666.png" alt="">
+                    <div class="site">
+                        <h1>腾讯成都大厦</h1>
+                        <p>腾讯成都大厦 天华二路81号天赋软件园C区4号楼</p>
+                    </div>
+                </li>
+                <li onclick="place(poi4,content4,'富润国际广场')">
+                    <img src="images/other/u5666.png" alt="">
+                    <div class="site">
+                        <h1>富润国际广场</h1>
+                        <p>富润国际广场天府二街266号</p>
+                    </div>
+                </li>
+                <li onclick="place(poi5,content5,'金控时代广场')">
+                    <img src="images/other/u5666.png" alt="">
+                    <div class="site">
+                        <h1>金控时代广场</h1>
+                        <p>四川省成都市武侯区天府二街香月湖东南250米</p>
+                    </div>
+                </li>
+                <li onclick="place(poi6,content6,'蜀都中心')">
+                    <img src="images/other/u5666.png" alt="">
+                    <div class="site">
+                        <h1>蜀都中心</h1>
+                        <p>高新区天府蜀都中心大道天府二街138号</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--右边的地图-->
+        <div id="allmap">
+        </div>
+    </section>
+</div>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/less.min.js"></script>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map('allmap');
+    var poi1 = new BMap.Point(104.065912,30.555275);
+    var poi2 = new BMap.Point(104.073126,30.659193);
+    var poi3 = new BMap.Point(104.069533,30.553699);
+    var poi4 = new BMap.Point(104.067655,30.557965);
+    var poi5 = new BMap.Point(104.067745,30.559609);
+    var poi6 = new BMap.Point(104.072034,30.557981);
+    map.centerAndZoom(poi1, 16);
+    map.centerAndZoom(poi2, 16);
+    map.centerAndZoom(poi3, 16);
+    map.centerAndZoom(poi4, 16);
+    map.centerAndZoom(poi5, 16);
+    map.centerAndZoom(poi6, 16);
+    map.enableScrollWheelZoom();
+    var content1 = '<div style="margin:0;line-height:20px;padding:2px;">' +
+        '地址：国家西部信息安全产业基地（成都市高新区云华路333号）<br/>电话：(0826)88888888<br/>' +
+        '</div>';
+    var content2 = '<div style="margin:0;line-height:20px;padding:2px;">' +
+        '地址：航天科技大厦 新光华街7号<br/>电话：(0826)88888888<br/>' +
+        '</div>';
+    var content3 = '<div style="margin:0;line-height:20px;padding:2px;">' +
+        '地址：腾讯成都大厦 天华二路81号天赋软件园C区4号楼 <br/>电话：(0826)88888888<br/>' +
+        '</div>';
+    var content4 = '<div style="margin:0;line-height:20px;padding:2px;">' +
+        '地址：富润国际广场天府二街266号 <br/>电话：(0826)88888888<br/>' +
+        '</div>';
+    var content5 = '<div style="margin:0;line-height:20px;padding:2px;">' +
+        '地址：金控时代广场-3栋四川省成都市武侯区天府二街香月湖东南250米<br/>电话：(0826)88888888<br/>' +
+        '</div>';
+    var content6 = '<div style="margin:0;line-height:20px;padding:2px;">' +
+        '地址：高新区天府大道天府二街138号<br/>电话：(0826)88888888<br/>' +
+        '</div>';
+
+
+    function place(poi,content,title) {
+        //创建检索信息窗口对象
+        var searchInfoWindow = null;
+        searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+            title  : title,      //标题
+            width  : 290,             //宽度
+            height : 70,              //高度
+            panel  : "panel",         //检索结果面板
+            enableAutoPan : true,     //自动平移
+            searchTypes   :[
+                BMAPLIB_TAB_SEARCH,   //周边检索
+                BMAPLIB_TAB_TO_HERE,  //到这里去
+                BMAPLIB_TAB_FROM_HERE //从这里出发
+            ]
+        });
+        var marker = new BMap.Marker(poi); //创建marker对象
+        // marker.enableDragging(); //marker可拖拽
+        marker.addEventListener("click", function(e){
+            searchInfoWindow.open(marker);
+        })
+        map.addOverlay(marker); //在地图中添加marker
+        searchInfoWindow.open(marker);
+    }
+
+</script>
+
+</body>
+</html>

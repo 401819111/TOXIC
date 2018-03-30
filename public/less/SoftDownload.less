@@ -1,0 +1,209 @@
+@mainColor: #444444;
+//主色调：#444444
+@pointColor: #ff5a00;
+//点睛色：#ff5a00；
+@bgColor: #eeeeee;
+//页面背景色：#eeeeee
+@fontChinese: "微软雅黑";
+//中文：微软雅黑；
+@fontEnglist: "Arial";
+@fontSize: 13px;
+//正文字体大小
+@fontSizeTitle: 14px;
+//正文标题大小
+@fontColor: rgb(153, 153, 153);
+//正文字体颜色;
+@fontColorTitle: #666666;
+//正文标题颜色;
+body {
+  background: @bgColor;
+  //font-size: @fontSize;
+  //color: @fontColor;
+  font-family: @fontChinese;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.softMain {
+  width: 80%;
+  margin: 60px auto;
+  header {
+    margin-bottom: 30px;
+    h2 {
+      font-weight: 400;
+      font-style: normal;
+      font-size: 32px;
+    }
+    p {
+      line-height: 2em;
+    }
+    .selectGroup {
+      #platform {
+        width: 150px;
+        height: 50px;
+        box-sizing: border-box;
+        padding-left: 8px;
+      }
+      #system{
+        box-sizing: border-box;
+        padding-left: 8px;
+        width: 220px;
+        height: 50px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .softdownload{
+    .downloadTitle{
+      margin-bottom: 20px;
+      margin-top: 40px;
+      p{
+        font-size: 20px;
+      }
+      span{
+        line-height: 2em;
+      }
+    }
+    .downloadList{
+      background-color: white;
+      padding: 30px 45px;
+      .list-item{
+        &:last-child{
+          margin-bottom: 0px;
+        }
+        height: 100px;
+        margin-bottom: 30px;
+        //padding-left: 25px;
+        //border-bottom: 1px solid #E4E4E4;
+        border-bottom: 1px solid rgba(228, 228, 228, 0.54);
+        .picWord{
+          height: 100px;
+          //border: 1px solid red;
+          display: flex;
+          //justify-content: center;
+          align-items: center;
+          width: 40%;
+          float:left;
+          a>img{
+            //border: 1px solid red;
+            width: 80px;
+            height: 80px;
+            //margin-left: 20px;
+          }
+          img{
+            width: 40px;
+            height: 40px;
+          }
+          .word{
+            font-size: 20px;
+            margin-left: 50px;
+            //border: 1px solid red;
+            .other-title{
+              font-style: italic;
+            }
+            .other-subTitle{
+              font-size: @fontSize;
+              line-height: 2em;
+            }
+            p>span{
+              font-size: @fontSize;
+            }
+            p>a{
+              text-decoration: none;
+              color: #000000 ;
+              font-family: @fontEnglist;
+              font-style: italic;
+            }
+            span>a{
+              color: @pointColor;
+              font-size: @fontSize;
+            }
+          }
+        }
+        .rightBtn{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+          float:right;
+          height: 100px;
+          .bit{
+            width: 225px;
+            height: 45px;
+            box-sizing: border-box;
+            padding-left: 20px;
+          }
+          button{
+            width: 225px;
+            height: 45px;
+            margin-left: 20%;
+            color: white;
+            background: @pointColor;
+            border: none;
+            outline: none;
+            &:hover{
+              background: white;
+              border: 1px solid @pointColor;
+              color:@pointColor ;
+              cursor: pointer;
+            }
+            //outline-style: none;
+          }
+        }
+
+      }
+    }
+  }
+}
+.downloadFooter{
+  width: 100%;
+  height: 202px;
+  background: rgba(68, 68, 68, 1);
+  color: white;
+  .center{
+    width: 485px;
+    margin: 0 auto;
+    .word{
+      text-align: center;
+      padding-top: 30px;
+      h2{
+        font-size: 32px;
+        font-weight: normal;
+      }
+      p{
+        line-height: 2em;
+        font-size: 20px;
+      }
+    }
+    .btnGroup{
+      margin-top: 20px;
+      button{
+        width: 230px;
+        height: 39px;
+        border-radius: 3px;
+        border: none;
+        cursor: pointer;
+      }
+      .support{
+        background: white;
+        color: black;
+        &:hover{
+          background-color: transparent;
+          border: 1px solid white;
+          color: white;
+        }
+      }
+      .relation{
+        margin-left: 20px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+      }
+
+    }
+  }
+
+}

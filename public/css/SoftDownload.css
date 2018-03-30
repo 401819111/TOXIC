@@ -1,0 +1,173 @@
+body {
+  background: #eeeeee;
+  font-family: "΢���ź�";
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.softMain {
+  width: 80%;
+  margin: 60px auto;
+}
+.softMain header {
+  margin-bottom: 30px;
+}
+.softMain header h2 {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+}
+.softMain header p {
+  line-height: 2em;
+}
+.softMain header .selectGroup #platform {
+  width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+  padding-left: 8px;
+}
+.softMain header .selectGroup #system {
+  box-sizing: border-box;
+  padding-left: 8px;
+  width: 220px;
+  height: 50px;
+  margin-left: 10px;
+}
+.softMain .softdownload .downloadTitle {
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+.softMain .softdownload .downloadTitle p {
+  font-size: 20px;
+}
+.softMain .softdownload .downloadTitle span {
+  line-height: 2em;
+}
+.softMain .softdownload .downloadList {
+  background-color: white;
+  padding: 30px 45px;
+}
+.softMain .softdownload .downloadList .list-item {
+  height: 100px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(228, 228, 228, 0.54);
+}
+.softMain .softdownload .downloadList .list-item:last-child {
+  margin-bottom: 0px;
+}
+.softMain .softdownload .downloadList .list-item .picWord {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  width: 40%;
+  float: left;
+}
+.softMain .softdownload .downloadList .list-item .picWord a > img {
+  width: 80px;
+  height: 80px;
+}
+.softMain .softdownload .downloadList .list-item .picWord img {
+  width: 40px;
+  height: 40px;
+}
+.softMain .softdownload .downloadList .list-item .picWord .word {
+  font-size: 20px;
+  margin-left: 50px;
+}
+.softMain .softdownload .downloadList .list-item .picWord .word .other-title {
+  font-style: italic;
+}
+.softMain .softdownload .downloadList .list-item .picWord .word .other-subTitle {
+  font-size: 13px;
+  line-height: 2em;
+}
+.softMain .softdownload .downloadList .list-item .picWord .word p > span {
+  font-size: 13px;
+}
+.softMain .softdownload .downloadList .list-item .picWord .word p > a {
+  text-decoration: none;
+  color: #000000 ;
+  font-family: "Arial";
+  font-style: italic;
+}
+.softMain .softdownload .downloadList .list-item .picWord .word span > a {
+  color: #ff5a00;
+  font-size: 13px;
+}
+.softMain .softdownload .downloadList .list-item .rightBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  float: right;
+  height: 100px;
+}
+.softMain .softdownload .downloadList .list-item .rightBtn .bit {
+  width: 225px;
+  height: 45px;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+.softMain .softdownload .downloadList .list-item .rightBtn button {
+  width: 225px;
+  height: 45px;
+  margin-left: 20%;
+  color: white;
+  background: #ff5a00;
+  border: none;
+  outline: none;
+}
+.softMain .softdownload .downloadList .list-item .rightBtn button:hover {
+  background: white;
+  border: 1px solid #ff5a00;
+  color: #ff5a00;
+  cursor: pointer;
+}
+.downloadFooter {
+  width: 100%;
+  height: 202px;
+  background: #444444;
+  color: white;
+}
+.downloadFooter .center {
+  width: 485px;
+  margin: 0 auto;
+}
+.downloadFooter .center .word {
+  text-align: center;
+  padding-top: 30px;
+}
+.downloadFooter .center .word h2 {
+  font-size: 32px;
+  font-weight: normal;
+}
+.downloadFooter .center .word p {
+  line-height: 2em;
+  font-size: 20px;
+}
+.downloadFooter .center .btnGroup {
+  margin-top: 20px;
+}
+.downloadFooter .center .btnGroup button {
+  width: 230px;
+  height: 39px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+.downloadFooter .center .btnGroup .support {
+  background: white;
+  color: black;
+}
+.downloadFooter .center .btnGroup .support:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+.downloadFooter .center .btnGroup .relation {
+  margin-left: 20px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
