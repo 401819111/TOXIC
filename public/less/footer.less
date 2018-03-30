@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/font_icon/iconfont.eot');
+    src: url('../font/font_icon/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/font_icon/iconfont.woff') format('woff'),
+    url('../font/font_icon/iconfont.ttf') format('truetype'),
+    url('../font/font_icon/iconfont.svg#iconfont') format('svg');
+  }
+  @border:1px solid red;
+  @pcolor:#ff5d00;
+footer{
+    width: 100%;
+    height: 230px;
+    background-color: #444;
+    div:first-child{
+        width: 100%;
+        height: 15px;
+        background-color: #2a2a2a;
+    }
+    #footer_mid{
+        ul{
+            width: 80%;
+            list-style: none;
+            margin: 0 auto;
+            margin-top: 25px;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-between;
+            li{
+                flex-direction: row;
+                h5{
+                    color: white;
+                }
+                p{
+                    color: #a6aaac;
+                    font-size: 13px;
+                    margin-top: 8px;
+                    width: 95%;
+                    max-width: 200px;
+                    button{
+                        width: 91px;
+                        // height: 17px;
+                        background: @pcolor;
+                        margin-top: 5px;
+                        border: none;
+                        color: white;
+                        padding: 7px 5px;
+                        border-radius: 5px;
+                    }
+                }
+                input{
+                    margin-top: 10px;
+                    width: 80%;
+                    height: 19px;
+                    color: #999;
+                    border: none;
+                    padding: 3px;
+                }
+            }
+            li:first-child{
+                margin-left: 6%;
+            }
+            #footer_rss{
+                margin-left: 6%;
+            }
+        }
+    }
+    #footer_bottom{
+        clear: both;
+        color: #979797;
+        height: 35px;
+        border-top: 1px solid #797979;
+        width: 65%;
+        text-align: center;
+        line-height: 30px;
+        font-size: 12px;
+        font-family: "iconfont";
+        position: relative;
+        top: 10px;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        span:last-child{
+            margin-left: 20px;
+        }
+        span{ 
+            font-family: "微软雅黑";
+            span{
+                margin-left: 20px;
+                font-family: "iconfont"
+            }
+        }
+    }
+}
