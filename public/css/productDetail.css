@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "微软雅黑", "Arial";
+  font-size: 13px;
+}
+body .productHead {
+  width: 85%;
+  margin: 50px auto 30px;
+}
+body .productHead nav {
+  color: #999999;
+}
+body .productHead nav span {
+  padding-right: 20px;
+}
+body .productHead nav a {
+  text-decoration: none;
+  color: #999999;
+}
+body .productHead .section1 {
+  overflow: hidden;
+}
+body .productHead .section1 .productImg {
+  width: 45%;
+  float: left;
+}
+body .productHead .section1 .productImg .productImg_big {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 58px 30px;
+}
+body .productHead .section1 .productImg .productImg_big img {
+  width: 523px;
+  height: 292px;
+}
+body .productHead .section1 .productImg .productImg_small ul {
+  margin: 0 auto;
+  width: 244px;
+  height: 46px;
+}
+body .productHead .section1 .productImg .productImg_small ul li {
+  border: 1px solid #cccccc;
+  list-style: none;
+  float: left;
+  padding: 0 6px;
+  margin-right: 5%;
+  cursor: pointer;
+}
+body .productHead .section1 .productImg .productImg_small ul li:hover {
+  border: 1px solid #ff5a00;
+}
+body .productHead .section1 .productImg .productImg_small ul li:last-child {
+  margin-right: 0;
+}
+body .productHead .section1 .productImg .productImg_small ul li img {
+  width: 59px;
+  height: 46px;
+}
+body .productHead .section1 .priceDetails {
+  width: 40%;
+  float: right;
+}
+body .productHead .section1 .priceDetails h2 {
+  margin-top: 70px;
+  font-family: "微软雅黑", "Arial";
+  font-size: 32px;
+  font-weight: normal;
+}
+body .productHead .section1 .priceDetails ul {
+  margin-top: 40px;
+}
+body .productHead .section1 .priceDetails ul li {
+  margin-left: 12px;
+  color: #999999;
+  line-height: 26px;
+}
+body .productHead .section1 .priceDetails .price {
+  font-size: 32px;
+  color: #ff5a00;
+  line-height: 2em;
+}
+body .productHead .section1 .priceDetails .postage span {
+  color: black;
+}
+body .productHead .section1 .priceDetails .postage,
+body .productHead .section1 .priceDetails .remark {
+  font-size: 15px;
+  line-height: 2em;
+  color: #999999;
+}
+body .productHead .section1 .priceDetails .btnGroup {
+  margin-top: 20px;
+}
+body .productHead .section1 .priceDetails .btnGroup a {
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 40px;
+  width: 140px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+body .productHead .section1 .priceDetails .btnGroup .buy {
+  border: 1px solid #ff5a00;
+  color: #ff5a00;
+  background-color: rgba(255, 90, 0, 0.06);
+}
+body .productHead .section1 .priceDetails .btnGroup .buy:hover {
+  background-color: rgba(255, 90, 0, 0.17);
+}
+body .productHead .section1 .priceDetails .btnGroup .cart {
+  background-color: #ff5a00;
+  color: white;
+  margin-left: 20px;
+}
+body .productHead .section1 .priceDetails .btnGroup .cart:hover {
+  background-color: #ff4600;
+}
+body .productDetailWarp {
+  width: 100%;
+}
+body .productDetailWarp .tab-title {
+  height: 53px;
+  background-color: #6a6e72;
+}
+body .productDetailWarp .tab-title ul {
+  width: 85%;
+  margin: 0 auto;
+}
+body .productDetailWarp .tab-title ul li {
+  cursor: pointer;
+  float: left;
+  list-style: none;
+  height: 53px;
+  line-height: 53px;
+  color: white;
+  padding: 0 15px;
+}
+body .productDetailWarp .tab-content {
+  background-color: #53565A;
+}
+body .productDetailWarp .tab-content .item {
+  display: none;
+  width: 1149px;
+  margin: 0 auto;
+}
+body .productDetailWarp .tab-content .item .itemMain {
+  padding: 50px 0;
+}
+body .productDetailWarp .tab-content .item .itemMain img {
+  width: 1149px;
+}
+body .productDetailWarp .tab-content .roduct-param {
+  padding: 50px 0;
+}
+body .productDetailWarp .tab-content .roduct-param table {
+  width: 1149px;
+  box-sizing: border-box;
+  padding: 15px 40px;
+  background-color: #999999;
+  color: white;
+  border-spacing: 0 20px;
+}
+body .productDetailWarp .tab-content .roduct-param table tr .row1 {
+  width: 15%;
+}
+body .productDetailWarp .tab-content .download {
+  padding: 50px 0;
+}
+body .productDetailWarp .tab-content .download ul {
+  padding: 0 50px;
+}
+body .productDetailWarp .tab-content .download ul li {
+  color: #999999;
+}
+body .productDetailWarp .tab-content .download ul li a {
+  text-decoration: none;
+  color: #999999;
+  font-size: 14px;
+  line-height: 2.5em;
+}

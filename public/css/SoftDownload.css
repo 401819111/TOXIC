@@ -7,7 +7,7 @@ body {
   padding: 0;
 }
 .softMain {
-  width: 80%;
+  width: 85%;
   margin: 60px auto;
 }
 .softMain header {
@@ -150,6 +150,7 @@ body {
   margin-top: 20px;
 }
 .downloadFooter .center .btnGroup button {
+  outline: none;
   width: 230px;
   height: 39px;
   border-radius: 3px;

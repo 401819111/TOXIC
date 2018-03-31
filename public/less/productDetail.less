@@ -1,0 +1,216 @@
+@mainColor: #444444;
+//主色调：#444444
+@pointColor: #ff5a00;
+//点睛色：#ff5a00；
+@bgColor: #eeeeee;
+//页面背景色：#eeeeee
+@fontfamily: "微软雅黑", "Arial";
+//中文：微软雅黑；
+@fontSize: 13px;
+//正文字体大小
+@fontSizeTitle: 14px;
+//正文标题大小
+@fontColor: rgb(153, 153, 153);
+//正文字体颜色;
+@fontColorTitle: #666666;
+//正文标题颜色;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: @fontfamily;
+  font-size: @fontSize;
+  .productHead {
+    width: 85%;
+    margin: 50px auto 30px;
+    nav {
+      span{
+        padding-right: 20px;
+      }
+      //border: 1px solid red;
+      color: #999999;
+      a {
+        text-decoration: none;
+        color: #999999;
+      }
+    }
+    .section1 {
+      overflow: hidden;
+      .productImg {
+        width: 45%;
+        float: left;
+        .productImg_big {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 58px 30px;
+          img {
+            width: 523px;
+            height: 292px;
+          }
+        }
+        .productImg_small {
+
+          ul {
+            margin: 0 auto;
+            width: 244px;
+            height: 46px;
+            li {
+              border: 1px solid #cccccc;
+              list-style: none;
+              float: left;
+              padding: 0 6px;
+              margin-right: 5%;
+              cursor: pointer;
+              &:hover {
+                border: 1px solid @pointColor;
+              }
+              &:last-child {
+                margin-right: 0;
+              }
+              img {
+                width: 59px;
+                height: 46px;
+              }
+            }
+          }
+        }
+      }
+      .priceDetails {
+        width: 40%;
+        float: right;
+        h2 {
+          margin-top: 70px;
+          font-family: @fontfamily;
+          font-size: 32px;
+          font-weight: normal;
+        }
+        ul {
+          margin-top: 40px;
+          li {
+            //list-style: none;
+            margin-left: 12px;
+            color: #999999;
+            line-height: 26px;
+          }
+        }
+        .price {
+          font-size: 32px;
+          color: @pointColor;
+          line-height: 2em;
+        }
+        .postage span{
+          color: black;
+        }
+        .postage, .remark {
+          font-size: 15px;
+          line-height: 2em;
+          color:#999999;
+        }
+        .btnGroup {
+          margin-top: 20px;
+          a{
+            display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+            line-height: 40px;
+            width: 140px;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+          }
+          .buy {
+            border: 1px solid @pointColor;
+            color: @pointColor;
+            background-color: rgba(255, 90, 0, 0.06);
+            &:hover{
+              background-color: rgba(255, 90, 0, 0.17);;
+            }
+          }
+          .cart {
+            background-color: @pointColor;
+            color: white;
+            margin-left: 20px;
+            &:hover{
+              background-color: #ff4600;
+            }
+          }
+        }
+      }
+    }
+  }
+  .productDetailWarp{
+    width: 100%;
+    .tab-title{
+      height: 53px;
+      background-color: rgba(106, 110, 114, 1);
+      ul{
+        width: 85%;
+        margin: 0 auto;
+        li{
+          cursor: pointer;
+          float: left;
+          list-style: none;
+          height: 53px;
+          line-height: 53px;
+          color: white;
+          padding:0 15px;
+        }
+      }
+    }
+    .tab-content{
+      background-color:#53565A;
+      .item{
+        display: none;
+        width: 1149px;
+        margin: 0 auto;
+        .itemMain{
+          padding: 50px 0;
+          img{
+            width: 1149px;
+          }
+        }
+      }
+      .roduct-param{
+        padding: 50px 0;
+        table{
+          width: 1149px;
+          box-sizing: border-box;
+          //border: 1px solid red;
+          padding: 15px 40px;
+          background-color: rgba(153, 153, 153, 1);
+          color:white;
+          border-spacing: 0 20px;
+          tr{
+            .row1{
+              width: 15%;
+            }
+          }
+        }
+      }
+      .download{
+        padding: 50px 0;
+        ul{
+          padding: 0 50px;
+          li{
+            color:#999999;
+            a{
+              text-decoration: none;
+              color:#999999;
+              font-size: 14px;
+              line-height: 2.5em;
+            }
+
+
+          }
+        }
+      }
+    }
+  }
+
+}
+

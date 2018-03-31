@@ -54,7 +54,7 @@
             src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
     <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css"/>
     <title>Toxic网点查询</title>
-    <link rel="stylesheet/less" href="less/Network.less">
+    <link rel="stylesheet" href="css/Network.css">
 </head>
 <!--<link rel="stylesheet/less" href="less/Network.less">-->
 <body>
@@ -70,7 +70,7 @@
                     <img src="images/other/u5666.png" alt="">
                     <div class="site">
                         <h1>四川省成都市</h1>
-                        <p>国家西部信息安全产业基地（成都市高新区云华路333号）</p>
+                        <p>国家西部信息安全产业基地（成都高新区云华路333号）</p>
                     </div>
                 </li>
                 <li onclick="place(poi2,content2,'航天大厦')">
@@ -121,6 +121,7 @@
 <script type="text/javascript">
     // 百度地图API功能
     var map = new BMap.Map('allmap');
+    // map.centerAndZoom("成都",16);
     var poi1 = new BMap.Point(104.065912,30.555275);
     var poi2 = new BMap.Point(104.073126,30.659193);
     var poi3 = new BMap.Point(104.069533,30.553699);
