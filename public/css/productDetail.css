@@ -148,20 +148,20 @@ body .productDetailWarp .tab-content {
 }
 body .productDetailWarp .tab-content .item {
   display: none;
-  width: 1149px;
+  width: 85%;
   margin: 0 auto;
 }
 body .productDetailWarp .tab-content .item .itemMain {
   padding: 50px 0;
 }
 body .productDetailWarp .tab-content .item .itemMain img {
-  width: 1149px;
+  width: 100%;
 }
 body .productDetailWarp .tab-content .roduct-param {
   padding: 50px 0;
 }
 body .productDetailWarp .tab-content .roduct-param table {
-  width: 1149px;
+  width: 100%;
   box-sizing: border-box;
   padding: 15px 40px;
   background-color: #999999;
