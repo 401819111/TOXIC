@@ -139,9 +139,10 @@ $(function () {
         }
     })
 })
-setInterval(function(){
-    $.fn.fullpage.moveSlideRight();
- },2000)
+//slide轮播
+// setInterval(function(){
+//     $.fn.fullpage.moveSlideRight();
+//  },3000)
 //按钮1弹起按下事件
 $("button").mousedown(function(){
     $(this).css({"color":"white","background":"#ff5a00"})
@@ -171,7 +172,6 @@ function index_keybordlb(){
 }
 //数字递增
 var index_number=0;
-// setInterval(numberChange,50)
 function numberChange(){
     if(index_number>=20){
         clearInterval(numberChange);

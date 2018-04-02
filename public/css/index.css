@@ -19,12 +19,20 @@ button {
   font-weight: bold;
   background-color: rgba(255, 90, 0, 0.06);
   font-size: 18px;
-  padding: 8px 20px;
+  padding: 8px 37px;
+}
+body {
+  background: url(../images/index/net_img_bak.jpg) no-repeat;
+  background-size: auto 100%;
+  background-color: transparent;
+  background-attachment: fixed;
 }
 #index_fullpage .section1 .index_slide1 {
   background: url(../images/index/u180.jpg);
   background-position: center;
+  background-color: #303133;
   background-repeat: no-repeat;
+  background-size: auto 100% ;
 }
 #index_fullpage .section1 .index_slide1 div {
   color: white;
@@ -39,13 +47,13 @@ button {
   font-size: 35px;
 }
 #index_fullpage .section1 .index_slide1 div p {
-  font-size: 20px;
+  font-size: 28px;
 }
 #index_fullpage .section1 .index_slide2 {
   background: url(../images/index/u221.jpg);
   background-position: right;
   background-color: #c4c5c9;
-  background-size: 80% auto;
+  background-size: 70% auto;
   background-repeat: no-repeat;
 }
 #index_fullpage .section1 .index_slide2 div {
@@ -61,7 +69,7 @@ button {
   font-size: 35px;
 }
 #index_fullpage .section1 .index_slide2 div p {
-  font-size: 20px;
+  font-size: 28px;
 }
 #index_fullpage .index_slide3 {
   background: url(../images/index/u193.jpg);
@@ -70,10 +78,10 @@ button {
   background-repeat: no-repeat;
 }
 #index_fullpage .index_slide3 div {
-  color: #616161;
+  color: white;
   position: relative;
-  top: 27%;
-  left: 10%;
+  text-align: center;
+  top: 10%;
 }
 #index_fullpage .index_slide3 div h2 {
   font-size: 50px;
@@ -82,7 +90,7 @@ button {
   font-size: 35px;
 }
 #index_fullpage .index_slide3 div p {
-  font-size: 20px;
+  font-size: 28px;
 }
 #index_fullpage .index_slide4 {
   background: url(../images/index/u207.jpg);
@@ -105,7 +113,7 @@ button {
   font-size: 35px;
 }
 #index_fullpage .index_slide4 div p {
-  font-size: 20px;
+  font-size: 28px;
 }
 #index_fullpage .slide {
   background-repeat: no-repeat;
@@ -340,8 +348,8 @@ button {
   box-shadow: #696c72 0 0 10px;
 }
 #index_fullpage .section7 {
-  background: url(../images/index/net_img_bak.jpg) no-repeat;
   background-size: 100% 100%;
+  background-color: transparent;
   color: white;
   font-weight: bold;
   text-align: center;
