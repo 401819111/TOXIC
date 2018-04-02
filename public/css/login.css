@@ -1,0 +1,149 @@
+* {
+  background-color: none;
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100%;
+}
+#login-key > img:first-child {
+  margin-top: 20px;
+  width: 66.2%;
+  margin-left: 25%;
+}
+#login-key {
+  border: none;
+  width: 100%;
+}
+#login {
+  width: 80%;
+  border: none;
+  margin: 0 auto;
+}
+.login-logo {
+  height: 40px;
+  float: right;
+  opacity: 0.7;
+}
+.login-logo2 {
+  height: 40px;
+  opacity: 0.7;
+}
+#login-logo div p {
+  float: right;
+  clear: both;
+  margin-right: 6%;
+}
+#login {
+  height: 409px;
+}
+#login > div:first-child {
+  width: 50%;
+  height: 409px;
+  border-right: none;
+  float: left;
+}
+#login-logo {
+  margin-right: 7%;
+  float: right;
+  margin-top: 40px;
+  opacity: 0.5;
+  width: 40%;
+}
+#login-div2 {
+  border: none;
+  float: left;
+  width: 49%;
+  height: 409px;
+}
+#login-div2 > div > p {
+  font-size: 30px;
+  opacity: 0.5;
+  margin-left: 12%;
+  margin-top: 55px;
+}
+.input-group {
+  margin-left: 12%;
+}
+.loginInput {
+  display: block;
+  width: 350px;
+  height: 43px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+}
+#login-form1input:first-child {
+  margin-top: 25px;
+}
+#login-form1 > input:nth-of-type(2) {
+  margin-top: 15px;
+}
+.loginBtn {
+  clear: both;
+  width: 150px;
+  height: 41px;
+  margin-top: 15px;
+  background-color: #ff5a00;
+  border-radius: 0;
+  border: none;
+  float: right;
+  color: white;
+}
+.login-btn-styles {
+  width: 150px;
+  height: 41px;
+  margin-top: 15px;
+  border-radius: 0;
+  border: 1px solid #fcd7c3;
+  background-color: white;
+  color: #ff5a00;
+}
+#login-line {
+  float: left;
+  margin-left: -50px;
+  height: 440px;
+}
+#login-login {
+  transition: all .6s ease;
+  -ms-transform: perspective(100px);
+  -moz-transform: perspective(100px);
+  transform-style: preserve-3d;
+  transform-origin: 250px 131px;
+}
+#login-form2 {
+  transition: all .6s ease;
+  transition: all 0.6s 0.85090352;
+  -ms-transform: perspective(100px);
+  -moz-transform: perspective(100px);
+  transform-style: preserve-3d;
+  transform-origin: 160px 131px;
+}
+#login-email {
+  margin-top: 15px;
+  width: 200px;
+  float: left;
+}
+#login-mess {
+  width: 100px;
+  margin-top: 15px;
+  float: left;
+  margin-left: 50px;
+}
+#sign-up-pwd {
+  margin-top: 15px;
+}
+#login-form2 {
+  float: left;
+  display: none;
+  margin-left: 8.6%;
+}
+#login-form2 > p {
+  font-size: 30px;
+  opacity: 0.5;
+  margin-top: 50px;
+}

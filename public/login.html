@@ -1,0 +1,94 @@
+<!-- 
+ * @Author: 14k 
+ * @Date: 2018-03-28 16:04:59 
+ * @Last Modified by:   14k 
+ * @Last Modified time: 2018-03-28 16:04:59 
+  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>登陆/注册</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+
+
+
+  <section>
+
+
+
+    <div id="login">
+      <div>
+        <div id="login-logo">
+          <div>
+
+            <img src="images/sign in/QQ图片20180328171310.png" class="login-logo" alt="">
+            <p> 或使用第三方登陆</p>
+          </div>
+
+
+        </div>
+        <div id="login-key">
+          <img src="images/sign in/u50.png" alt="">
+
+        </div>
+
+      </div>
+
+      <div id="login-div2">
+        <img src='images/sign in/QQ图片20180329113557.png' id="login-line" alt="">
+        <div id="login-login">
+          <p>登陆</p>
+          <div class="input-group input-group-lg">
+            <!-- 这里是登陆表单 -->
+            <div id="login-div1">
+              <form action="" id="login-form1">
+                <input type="text" class=" loginInput" id="sign-in-name" placeholder="用户名" aria-describedby="sizing-addon1">
+                <input type="password" class=" loginInput" id="sign-in-pwd" placeholder="密码" aria-describedby="sizing-addon1">
+                <button type="button" id="login-signup" class="btn login-btn-styles">注册</button>
+                <button type="button" id="loginBtn" class="btn loginBtn">登陆</button>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Remember me
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>  
+              <!-- 登陆--end -->
+
+
+
+              <!-- 注册start -->
+        <form action="" id="login-form2">
+          <p>注册</p>
+          <input type="text" class=" loginInput" id="sign-up-name" placeholder="用户名" aria-describedby="sizing-addon1">
+          <input type="password" class=" loginInput" id="sign-up-pwd" placeholder="密码" aria-describedby="sizing-addon1">
+          <input type="text" id="login-email" class=" loginInput" placeholder="手机号码" aria-describedby="sizing-addon1">
+          <input type="text" id="login-mess" class=" loginInput" placeholder="验证码" aria-describedby="sizing-addon1">
+          <div>
+            <button type="button" id="login-re" class="login-btn-styles btn">返回登陆</button>
+            <button type="button" id="login-up" class="btn loginBtn">确认注册</button>
+          </div>
+        </form>
+              <!-- 注册--end -->
+
+      </div>
+    </div>
+
+  </section>
+
+  <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
+</body>
+
+</html>
