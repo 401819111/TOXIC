@@ -181,3 +181,16 @@ function numberChange(){
     $('#index_degree').html(index_number+"°")
     
 }
+//收藏点击动画
+// var collectionState=0;
+// $('.collection').click(function(){
+//     if(collectionState==0){
+//         $('.collection').html('&#xe66a;');
+//         collectionState++;
+//     }else{
+//         $('.collection').html('&#xe795;');
+//         collectionState=0;
+//     }
+// })
+    
+

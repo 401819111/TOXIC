@@ -1,6 +1,16 @@
 * {
   outline: none;
 }
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/font_icon/iconfont.eot');
+  src: url('../font/font_icon/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/font_icon/iconfont.woff') format('woff'), url('../font/font_icon/iconfont.ttf') format('truetype'), url('../font/font_icon/iconfont.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont2';
+  src: url('../font/font_icon2/iconfont.eot');
+  src: url('../font/font_icon2/iconfont.woff') format('woff');
+}
 button {
   cursor: pointer;
   color: #ff5a00;
