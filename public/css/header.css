@@ -12,7 +12,6 @@ nav {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 999;
   transition: all .3s ease;
 }
 #header_topFrame {
