@@ -1,0 +1,247 @@
+@zongkuan:100%;
+@lh_kuan:80%;
+@font_width:40px;
+@font_heigth:40px;
+@lh_xiankuan:60%;
+@lh_jianpan:100px;
+@lh_buttonwidth:120px;
+@lh_buttonheight:35px;
+@lh_yuanjiao:5px;
+@lh_erjiGMwidth:80px;
+@lh_erjiGMheigth:25px;
+@lh_fontcolor:#ff4903;
+h3{
+  font-weight: normal;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: Arial;
+  font-family: 微软雅黑;
+}
+//<!--video 播放-->
+#lh_videodiv{
+  margin-top: 60px;
+  height: 700px;
+  overflow: hidden;
+  width: @zongkuan;
+}
+#lh_videodiv>video{
+  width: @zongkuan;
+}
+//<!--按钮的切换商品详情-->
+#lh_daohang{
+  height: 160px;
+  width: @zongkuan;
+}
+.lh_font{
+  width: @font_width;
+  height: @font_heigth;
+}
+
+.lh_fontdiv{
+  float: left;
+  margin-left: 6%;
+  margin-top: 3%;
+  text-align: center;
+}
+
+.lh_fontdiv:first-child{
+  margin-left: 24%;
+}
+
+         //商品内容！！！！
+.lh_xiankuang>h3{
+  font-size: 23px;
+  width: 250px;
+  text-align: center;
+  background-color: #ffffff;
+  position: absolute;
+  margin-left: 42%;
+  margin-top: -16px;
+}
+.lh_xian{
+  width:@lh_xiankuan;
+  border: 1px #787771 solid;
+  margin: 0 auto;
+  margin-top: 29px;
+}
+
+.lh_xiankuang{
+  height: 30px;
+  position: relative;
+}
+
+         //热卖商品!!!!
+.lh_jianpan{
+  float: left;
+}
+
+
+.lh_jianpan>img{
+  width: 100%;
+}
+.lh_jiantxet{
+  position: relative;
+  float: left;
+  margin-top: 9%;
+  margin-right: 3%;
+  div a{
+    text-decoration:none;
+    color: @lh_fontcolor;
+    font-size:18px;
+  }
+  h2{
+    font-size: 23px;
+    font-weight: normal;
+  }
+  h3{
+    font-size: 25px;
+    color: @lh_fontcolor;
+    margin-top: 160px;
+
+  }
+  p{
+    font-size: 17px;
+  }
+
+}
+
+.lh_goumai{
+  border: 2px #ff4903 solid;
+  width: @lh_buttonwidth;
+  height: @lh_buttonheight;
+  text-align: center;
+  line-height: @lh_buttonheight;
+  margin-left: 300px;
+  margin-top: -35px;
+  border-radius:5px;
+
+}
+.lh_goumai:hover{
+  background-color: @lh_fontcolor;
+}
+.lh_goumai:hover a{
+  color: #ffffff;
+
+}
+
+.lh_box{
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.lh_dabox{
+  width: @lh_kuan;
+  margin: 0  auto;
+}
+
+
+
+//热卖商品耳机
+.lh_zhanshi{
+  height: 1000px;
+  width: @lh_kuan;
+  margin: 0 auto;
+  margin-top: 50px;
+  
+  .lh_erjiJG{
+    color: @lh_fontcolor;
+    font-size: 18px;
+  }
+  .lh_erjiXH{
+    font-size: 18px;
+  }
+  .lh_erjiGM>a{
+    color: @lh_fontcolor;
+    font-size:15px;
+    text-decoration:none;
+  }
+  .lh_erjiGM{
+    border: 2px  #ff4903 solid;
+    width:@lh_erjiGMwidth ;
+    height: @lh_erjiGMheigth;
+    border-radius:5px ;
+    text-align: center;
+    line-height:@lh_erjiGMheigth ;
+    position: absolute;
+    margin-left: 130px;
+    margin-top: -30px;
+
+  }
+  .lh_ulHuan{
+    display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  }
+  .lh_ulHuan>ul{
+    float: left;
+    position: relative;
+    height: 340px;
+    // margin-left:7%;
+  }
+
+}
+.lh_erjiGM:hover{
+  background-color:@lh_fontcolor ;
+}
+
+.lh_zhanshi .lh_erjiGM:hover a{
+  color:white;
+}
+
+
+//商品左右距离和上下距离分割
+
+
+//.lh_ulHuan>ul:nth-child(1){
+//  margin-left:3%;
+//}
+
+//板块点击隐藏
+.lh_bankuai{
+  display: none;
+}
+//.lh_bankuai:nth-child(1){
+//  display: block;
+//}
+.showclass{
+  display: block;
+}
+
+//收藏的字体图标引入和更改
+@font-face {
+  font-family: "lh_font";
+  src: url("../font/font_sizi/iconfont.woff"),
+  url("../font/font_sizi/iconfont.eot"),
+  url("../font/font_sizi/demo.css")
+}
+.lh_shouchang{
+  font-family: lh_font;
+  position: absolute;
+  font-size: 30px;
+  color: @lh_fontcolor;
+  margin-top: -280px;
+  margin-left: 175px;
+  display: none;
+  cursor: pointer;
+}
+.lh_ulHuan>ul:hover .lh_shouchang{
+  display: block;
+}
+
+.lh_fontSC{
+  font-family: lh_font;
+  position: absolute;
+  font-size: 40px;
+  color: @lh_fontcolor;
+  margin-top: -50px;
+  margin-left: 240px;
+  //display: none;
+  cursor: pointer;
+}
+
+
