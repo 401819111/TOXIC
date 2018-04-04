@@ -43,11 +43,7 @@ section {
   font-weight: 600;
   font-size: 24px;
 }
-<<<<<<< HEAD
 .myShopcar > h3 span {
-=======
-span {
->>>>>>> f9a26bf95a7492c346a77324aec45729eb213267
   font-weight: 300;
   font-size: 16px;
   color: silver;
@@ -117,23 +113,17 @@ span {
   margin-left: 7%;
   margin-bottom: 5px;
 }
-<<<<<<< HEAD
 .myHome div > span:nth-child(1) {
-=======
-.myHome div span {
->>>>>>> f9a26bf95a7492c346a77324aec45729eb213267
   margin-left: 5%;
   color: #ff5a00;
   opacity: 0;
 }
-<<<<<<< HEAD
 .myHome div .moRen {
   margin-left: 5%;
   color: black;
   opacity: 0;
+  cursor: pointer;
 }
-=======
->>>>>>> f9a26bf95a7492c346a77324aec45729eb213267
 #table {
   width: 95%;
   margin-left: 2%;
@@ -356,20 +346,12 @@ tfoot {
 .leftDiv > span {
   color: black;
   position: absolute;
-<<<<<<< HEAD
   left: 4%;
   top: 15px;
 }
 .leftDiv textarea {
   position: absolute;
   left: 16%;
-=======
-  top: 14px;
-}
-.leftDiv textarea {
-  position: absolute;
-  left: 14%;
->>>>>>> f9a26bf95a7492c346a77324aec45729eb213267
   margin-top: 5px;
   overflow: hidden;
 }
