@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/PayWays.css">
+</head>
+<body>
+<header>
+    <div>头部</div>
+</header>
+<section>
+    <div class="myShopcar">
+        <h3>我的收银台</h3>
+        <div class="payLine"></div>
+        <div class="textWe">订单提交成功，请尽快付款！订单号：72496605552
+            <p>Masterkeys Pro S 机械键盘
+             <span> 颜色分类：白色</span>  <span>类型：茶轴 104键</span></p>
+        </div>
+        <div class="trueMoney">应付金额：<span>￥899.00</span><p class="toPaylist">订单详情</p></div>
+        <p>请您在6小时内完成支付，否则订单会被自动取消(库存紧俏订单请参见详情页时限</p>
+        <div class="payWays">
+           <div class="divOne"><input type="radio" name="browser" class="inputOne"> 支付宝<span>&#xe608;</span> <div class="div1">支付 <span class="payMoney">￥899.00</span></div></div>
+            <div class="divTwo"></div>
+            <div class="divThree" ><input type="radio" name="browser" class="inputTwo">  微  信<span>&#xe6ed;</span> <div class="div2">支付 <span class="payMoney">￥899.00</span></div></div>
+            <div class="divFour"></div>
+            <button  id="otherWay" class="btn  btn-lg" data-toggle="modal" data-backdrop="static" data-target="#myModal">其他方式支付</button>
+            <!--模态框-->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="close" data-dismiss="modal" aria-hidden="true">&#xe69a;</p>
+                            <h4 class="modal-title" id="myModalLabel">合作银行/机构</h4>
+                        </div>
+                        <div class="modal-body "><span>*</span>持卡人姓名：<input  class="trb" type="text" value="请输入持卡人" onfocus="this.value=''"></div>
+                        <div class="modal-body"><span>*</span>银行卡号：<input class="trc" type="text" value="请输入银行卡号"> </div>
+                        <div class="modal-body"><span>*</span>输入支付密码：<input  class="trd" type="password" value=""></div>
+                        <div class="modal-body"><span>&#xe6a4;</span><p>支持百余家全国及地方银行、多家境外银行及卡组织</p></div>
+                        <div class="modal-footer"><button type="button" class="btn" id="truePay"  data-dismiss="modal">确定支付</button></div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+
+            <div class="payOne">
+                <p><img src="images/howToPay/u3837.png" alt="">安全设置检测成功！无需短信校验。</p>
+                <div><img src="images/howToPay/u3826.jpg" alt=""></div>
+            </div>
+            <div class="payTwo">
+                <p><img src="images/howToPay/u3837.png" alt="">安全设置检测成功！无需短信校验。</p>
+                <div><img src="images/howToPay/u3831.jpg" alt=""></div>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
+<section  id="mencheng" class="menceng">
+    <div class="succpay">
+        <p><span>&#xe6b1;</span>支付成功！</p>
+        <button type="button" class="btn" id="succPay" >我的订单</button>
+        <button type="button" class="btn" id="toMyroom" >继续购物</button>
+    </div>
+</section>
+<script src="js/jquery-1.11.3.js"></script>
+<script  src="bootstrap/js/bootstrap.js"></script>
+<script src="js/PayWays_js.js"></script>
+</body>
+</html>

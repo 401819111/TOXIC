@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/ShopCart.css">
+</head>
+<body>
+<header>
+    <div>头部</div>
+</header>
+<section>
+    <div class="myShopcar">
+        <h3>我的购物车<span class="spanT">account management </span></h3>
+        <div class="line"></div>
+        <div><span>当前位置：</span><span>首页></span><span>购物车</span></div>
+        <!--购物车列表-->
+        <div class="shopcarList">
+            <div class="headColor"><p>购物车清单 <img src="images/shopcar/购物车_2.png" alt=""></p></div>
+               <table id="table">
+                   <thead>
+                   <tr>
+                       <th><input type="checkbox" class="allCheck">  全选</th>
+                       <th>商品信息</th>
+                       <th>单价</th>
+                       <th>数量</th>
+                       <th>小计</th>
+                       <th>操作</th>
+                   </tr>
+                   </thead>
+                   <tbody>
+                   <!--第一个商品-->
+                   <tr>
+                       <td><input type="checkbox" class="inputFill"></td>
+                       <td><img src="images/fenlei/u1865.jpg" alt="" ><p>Masterkeys Pro S 机械键盘</p><h6>颜色分类：白色  类型：茶轴 104键</h6> <h5>发货时间：卖家承诺72小时</h5></td>
+                       <td>￥<label  class="price">899.00</label></td>
+                       <td class="tdFour"><input class="min" name="" type="button" value="-">
+                           <input  class="text_box" name="" type="text" value="1">
+                           <input class="add" name="" type="button" value="+">
+                       </td>
+                       <td>￥<label class="subtotal">899.00</label></td>
+                       <td><span class="shoucang">&#xe795;</span> <span>&#xe62e;</span></td>
+                   </tr>
+
+                   <!--第二个商品-->
+                   <tr>
+                       <td><input type="checkbox"  class="inputFill" ></td>
+                       <td><img src="images/fenlei/u1865.jpg" alt="" ><p>Masterkeys Pro S 机械键盘</p><h6>颜色分类：白色  类型：茶轴 104键</h6> <h5>发货时间：卖家承诺72小时</h5></td>
+                       <td>￥<label  class="price">899.00</label></td>
+                       <td class="tdFour"><input class="min" name="" type="button" value="-">
+                           <input  class="text_box" name="" type="text" value="1">
+                           <input class="add" name="" type="button" value="+">
+                       </td>
+                       <td>￥<label class="subtotal">899.00</label></td>
+                       <td><span class="shoucang">&#xe795;</span> <span>&#xe62e;</span></td>
+                   </tr>
+
+                   </tbody>
+                   <!--tfoot  总计-->
+                   <tfoot>
+                   <tr>
+                       <td><input type="checkbox" class="allCheck">全选 <span>删除</span></td>
+                       <td> <span>移入收藏夹</span></td>
+                       <td> </td>
+                       <td> </td>
+                       <td></td>
+                       <td>总计（包邮）：<span id="total" style="font-weight: 600"></span></td>
+                   </tr>
+                   </tfoot>
+               </table>
+            <div class="butShop">
+                <button><span>&#xe6ca;</span>继续购物</button>
+                <button>  去结算<span>&#xe6ca;</span></button>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<footer></footer>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/ShopCart_js.js"></script>
+</body>
+</html>
