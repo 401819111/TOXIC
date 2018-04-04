@@ -18,7 +18,53 @@
 </head>
 
 <body>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <img id="user-center-logo" src="images/sign in/blacklogo.png" alt="">
+            </div>
+            <form class="form-inline" id="user-center-modal">
+                <div class="form-group" id="user-center-change-name">
+                    <label for="exampleInputName2">昵称：</label>
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                </div>
+                
+                <div class="dropdown">
+                        <label>性别：</label>
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                          选择
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                          <li><a href="#">男</a></li>
+                          
+                          <li role="separator" class="divider"></li>
+                          <li><a href="#">女</a></li>
+                        </ul>
+                      </div>
+                <div id="user-center-bir">
+                    <label>生日：</label>
+                    <input type="date" value="2015-09-24" />
+                </div>
+                <div class="form-group " id="user-center-change-phone">
+                    <label for="exampleInputEmail2">电话：</label>
+                    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="">
+                </div>
 
+            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">修改</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
     <div id="personal-bgimg">
     </div>
     <section id="section">
@@ -78,53 +124,7 @@
                 </div>
             </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <img id="user-center-logo" src="images/sign in/QQ图片20180328171310.png" alt="">
-                        </div>
-                        <form class="form-inline" id="user-center-modal">
-                            <div class="form-group" id="user-center-change-name">
-                                <label for="exampleInputName2">昵称：</label>
-                                <input type="text" class="form-control" id="exampleInputName2" placeholder="">
-                            </div>
-                            
-                            <div class="dropdown">
-                                    <label>性别：</label>
-                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                      选择
-                                      <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                      <li><a href="#">男</a></li>
-                                      
-                                      <li role="separator" class="divider"></li>
-                                      <li><a href="#">女</a></li>
-                                    </ul>
-                                  </div>
-                            <div id="user-center-bir">
-                                <label>生日：</label>
-                                <input type="date" value="2015-09-24" />
-                            </div>
-                            <div class="form-group " id="user-center-change-phone">
-                                <label for="exampleInputEmail2">电话：</label>
-                                <input type="text" class="form-control" id="exampleInputEmail2" placeholder="">
-                            </div>
-
-                        </form>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                            <button type="button" class="btn btn-primary">修改</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+          
 
 
          <!-- Modal -->
@@ -135,7 +135,7 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <img id="user-center-logo" src="images/sign in/QQ图片20180328171310.png" alt="">
+                            <img id="user-center-logo" src="images/sign in/blacklogo.png" alt="">
                         </div>
                         <form class="form-inline" id="user-center-modal">
                             <div class="form-group" id="user-center-change-email">
@@ -317,26 +317,46 @@
         <!-- 收藏end -->
 
 
-
+   
         <div id="user-location">
-            <div class="user-collect-line">
-                <span>地址管理</span>
                 <button type="button" id="user-add-dress" class="btn loginBtn" data-toggle="modal" data-target="#myModal4">添加地址</button>
+            
+    <table id="user-Order-table">
+            <thead>
+                <tr>
+                    <th>收货人</th>
+                    <th>电话</th>
+                    <th>地址详情</th>
+                    <th>操作</th>
 
-            </div>
+                </tr>
+            </thead>
+            <tbody id="user-location-div">
 
+                <tr id="user-center-dizhi">
+                    <td>14k</td>
+                    <td>13888888888</td>
+                    <td>四川省成都市高新区青年公寓1314</td>
+                    <td id="user-center-do">
+                         <span data-toggle="modal" data-target="#myModal3"> 修改 </span> |
+                         <span data-toggle="modal" data-target="#myModal5"> 删除 </span>
+                        <span> | 默认地址</span>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+<!--         
             <div id="user-location-div">
                 <ul id="user-center-dizhi">
                     <li>14k</li>
                     <li>13888888888</li>
                     <li>四川省成都市高新区青年公寓1314</li>
                     <li>
-                        <span data-toggle="modal" data-target="#myModal3"> 修改 </span> |
-                        <span data-toggle="modal" data-target="#myModal5"> 删除 </span>
+                        
                     </li>
                 </ul>
 
-            </div>
+            </div> -->
 
 
             <!-- Modal -->
@@ -347,7 +367,7 @@
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                <img id="user-center-logo" src="images/sign in/QQ图片20180328171310.png" alt="">
+                                <img id="user-center-logo" src="images/sign in/blacklogo.png" alt="">
                             </div>
                             <form class="form-inline" id="user-center-change-location">
                                 <div class="form-group" id="">
@@ -381,7 +401,7 @@
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                <img id="user-center-logo" src="images/sign in/QQ图片20180328171310.png" alt="">
+                                <img id="user-center-logo" src="images/sign in/blacklogo.png" alt="">
                             </div>
                             <form class="form-inline" id="user-center-change-location">
                                 <div class="form-group" id="">
@@ -417,7 +437,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <img id="user-center-logo" src="images/sign in/QQ图片20180328171310.png" alt="">
+                        <img id="user-center-logo" src="images/sign in/blacklogo.png" alt="">
                     </div>
                     <button type="button" class="btn btn-default" id="user-center-quxiao">取消操作</button>
                     <button type="button" class="btn btn-danger"id="user-center-delBtn">确认删除</button>
