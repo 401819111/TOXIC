@@ -37,8 +37,8 @@ window.onload = function(){
         }
         mark.style.left = left+'px';
         mark.style.top = top+'px';
-        console.log(left);
-        console.log(top);
+        //console.log(left);
+        //console.log(top);
         //计算大图随着遮罩层移动显示的百分比
         persentX = left/(mediumOffsetWidth - markOffsetWidth);
         persentY = top/(mediumOffsetWidth - markOffsetWidth);
@@ -83,9 +83,7 @@ window.onload = function(){
             mediumImg.setAttribute('src',img.getAttribute('msrc'));
             bigImg.setAttribute('src',img.getAttribute('bsrc'));
         }
-
     }
-
     //导航左右按钮
     var totalWidth = liWidth*liNum;
     var mcount = liNum - 5;
@@ -124,3 +122,5 @@ window.onload = function(){
         return window.getComputedStyle ? window.getComputedStyle(node,null):node.correntStyle;
     }
 }
+
+//数据绑定

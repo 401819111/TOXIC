@@ -9,7 +9,7 @@ module.exports={
             host   : 'localhost',
             user   : 'root',
             password : 'root',
-            database : 'userlogin'
+            database : 'toxic'
           }; 
           var connection = mysql.createConnection(mysql_user); //建立数据库链接
            // 2                                        

@@ -32,12 +32,12 @@
                         <a href="javascript:;" class="right" id="right">&gt</a>
                         <div class="img-list-items">
                             <ul id="img-items">
-                                <li><img src="images/pruduct/keybord/masterkeys_pro_s/u2930.png" msrc="images/pruduct/keybord/masterkeys_pro_s/u2930.png" bsrc="images/pruduct/keybord/masterkeys_pro_s/u2930.png" alt="" /></li>
-                                <li><img src="images/pruduct/keybord/masterkeys_pro_s/u2751.jpg" msrc="images/pruduct/keybord/masterkeys_pro_s/u2751.jpg" bsrc="images/pruduct/keybord/masterkeys_pro_s/u2751.jpg" alt="" /></li>
-                                <li><img src="images/pruduct/keybord/masterkeys_pro_s/u2932.png" msrc="images/pruduct/keybord/masterkeys_pro_s/u2932.png" bsrc="images/pruduct/keybord/masterkeys_pro_s/u2932.png" alt="" /></li>
-                                <li><img src="images/pruduct/keybord/MasterKeys_Pro_L_RGB/600x600_20160823171948_3576.jpg" msrc="images/pruduct/keybord/MasterKeys_Pro_L_RGB/600x600_20160823171948_3576.jpg" bsrc="images/pruduct/keybord/MasterKeys_Pro_L_RGB/600x600_20160823171948_3576.jpg" alt="" /></li>
-                                <li><img src="images/pruduct/keybord/masterkeys_pro_s/1.jpg" msrc="images/pruduct/keybord/masterkeys_pro_s/1.jpg" bsrc="images/pruduct/keybord/masterkeys_pro_s/1.jpg" alt="" /></li>
-                                <li><img src="images/pruduct/keybord/masterkeys_pro_s/u2949.jpg" msrc="images/pruduct/keybord/masterkeys_pro_s/u2949.jpg" bsrc="images/pruduct/keybord/masterkeys_pro_s/u2949.jpg" alt="" /></li>
+                                <li><img  src="/" alt=""/></li>
+                                <li><img src="images/pruduct/keybord/masterkeys_pro_s/u2751.jpg" msrc="../public/images/pruduct/keybord/masterkeys_pro_s/u2751.jpg" bsrc="../public/images/pruduct/keybord/masterkeys_pro_s/u2751.jpg" alt="" /></li>
+                                <li><img src="images/pruduct/keybord/masterkeys_pro_s/u2932.png" msrc="../public/images/pruduct/keybord/masterkeys_pro_s/u2932.png" bsrc="../public/images/pruduct/keybord/masterkeys_pro_s/u2932.png" alt="" /></li>
+                                <li><img src="images/pruduct/keybord/MasterKeys_Pro_s/600x600_20160823171948_3576.jpg" msrc="images/pruduct/keybord/MasterKeys_Pro_s/600x600_20160823171948_3576.jpg" bsrc="images/pruduct/keybord/MasterKeys_Pro_s/600x600_20160823171948_3576.jpg" alt="" /></li>
+                                <li><img src="images/pruduct/keybord/masterkeys_pro_s/1.jpg" msrc="images/pruduct/keybord/masterkeys_pro_s/1.jpg" bsrc="../public/images/pruduct/keybord/masterkeys_pro_s/1.jpg" alt="" /></li>
+                                <li><img src="images/pruduct/keybord/masterkeys_pro_s/u2949.jpg" msrc="../public/images/pruduct/keybord/masterkeys_pro_s/u2949.jpg" bsrc="../public/images/pruduct/keybord/masterkeys_pro_s/u2949.jpg" alt="" /></li>
                             </ul>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
         </div>
         <!--产品价格描述-->
         <div class="priceDetails">
-            <h2>Masterkeys Pro S机械键盘</h2>
+            <h2></h2>
             <ul>
                 <li>德国原厂Cherry MX RGB技术的机械式轴体，轻松实现1670万种绚丽色彩</li>
                 <li>提供多种仿生灯效，如午后呼吸、音浪、涟漪、色彩循环、单亮点等</li>
@@ -164,9 +164,11 @@
             </ul>
         </div>
     </div>
+    <div class="data"></div>
 </div>
 
-<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/vue.min.js"></script>
 <script type="text/javascript" src="js/productDetail-fdj.js"></script>
 <script>
     $(function () {
@@ -178,8 +180,41 @@
             var showDiv = $(this).attr("showDiv");
             $("." + showDiv).show();
         })
-
     })
+    //数据绑定
+    $(document).ready(function(){
+        var goods_id=1
+        console.log('00');
+        $.ajax({
+            type:'get',
+            url:'/details.do',
+            dataType:"json",
+            data:{goods_id:goods_id},
+            success:function(data){
+//                console.log(data[0]);
+                var data=data[0]
+                //标题加载
+                $('.priceDetails h2').html(data.goods_name+'键盘')
+                //图片加载
+                var imgSrc= $('#img-items li img')
+                var sunsrc=data.goods_img.toString()
+                var srco=sunsrc.split('@')
+                console.log(srco);
+                for(var i=0;i<imgSrc.length; i++){
+                    imgSrc.eq(i).attr('src','images/pruduct/keybord/'+srco[i])
+                    console.log(imgSrc.eq(1));
+                    console.log('1');
+                    imgSrc.eq(i).attr('msrc','images/pruduct/keybord/'+srco[i])
+                    imgSrc.eq(i).attr('bsrc','images/pruduct/keybord/'+srco[i])
+                }
+            }
+        })
+    });
+
+    //加载数据
+
+
+
 </script>
 </body>
 </html>
