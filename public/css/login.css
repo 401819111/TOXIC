@@ -55,12 +55,20 @@ body {
   float: left;
   width: 49%;
   height: 409px;
+  margin-top: -20px;
 }
 #login-div2 > div > p {
   font-size: 30px;
   opacity: 0.5;
   margin-left: 12%;
   margin-top: 55px;
+
+}
+#login-form3 >p{
+  font-size: 30px;
+  opacity: 0.5;
+  margin-top: 55px;
+
 }
 .input-group {
   margin-left: 12%;
@@ -84,10 +92,9 @@ body {
   margin-top: 15px;
 }
 .loginBtn {
-  clear: both;
   width: 150px;
   height: 41px;
-  margin-top: 15px;
+
   background-color: #ff5a00;
   border-radius: 0;
   border: none;
@@ -123,18 +130,29 @@ body {
   transform-style: preserve-3d;
   transform-origin: 160px 131px;
 }
+#login-form3 {
+  transition: all .6s ease;
+  transition: all 0.6s 0.85090352;
+  -ms-transform: perspective(100px);
+  -moz-transform: perspective(100px);
+  transform-style: preserve-3d;
+  transform-origin: 170px 151px;
+}
 #login-email {
   margin-top: 15px;
   width: 200px;
   float: left;
 }
-#login-mess {
+.login-mess {
   width: 100px;
   margin-top: 15px;
   float: left;
-  margin-left: 50px;
 }
-#sign-up-pwd {
+#login-phone-div{
+  width: 300px;
+  height: 100px;
+}
+#sign-up-pwd{
   margin-top: 15px;
 }
 #login-form2 {
@@ -146,4 +164,47 @@ body {
   font-size: 30px;
   opacity: 0.5;
   margin-top: 50px;
+}
+#login-forgetpwd{
+  float: right;
+  margin-right: 150px;
+  color: blue;
+  cursor: pointer;
+}
+
+.loginBtn2 {
+  clear: both;
+  width: 150px;
+  height: 41px;
+  margin-top: 15px;
+  background-color: #ff5a00;
+  border-radius: 0;
+  border: none;
+  color: white;
+}
+#sign-up-Newpwd{
+  margin-top: 30px
+}
+.login-sendMess{
+  height: 43px;
+  margin-top: 15px;
+  width: 100px;
+}
+#login-form3{
+  display: none;
+  margin-left:12%;
+}
+
+#login-div-button{
+  height: 50px;
+  clear: both;
+}
+#login-up{
+  margin-top: 15px
+}
+#loginBtn{
+  margin-top: 15px;
+}
+#login-up-backUser{
+  margin-left: 50px;
 }
