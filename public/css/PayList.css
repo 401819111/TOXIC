@@ -43,7 +43,7 @@ section {
   font-weight: 600;
   font-size: 24px;
 }
-span {
+.myShopcar > h3 span {
   font-weight: 300;
   font-size: 16px;
   color: silver;
@@ -113,10 +113,16 @@ span {
   margin-left: 7%;
   margin-bottom: 5px;
 }
-.myHome div span {
+.myHome div > span:nth-child(1) {
   margin-left: 5%;
   color: #ff5a00;
   opacity: 0;
+}
+.myHome div .moRen {
+  margin-left: 5%;
+  color: black;
+  opacity: 0;
+  cursor: pointer;
 }
 #table {
   width: 95%;
@@ -340,11 +346,12 @@ tfoot {
 .leftDiv > span {
   color: black;
   position: absolute;
-  top: 14px;
+  left: 4%;
+  top: 15px;
 }
 .leftDiv textarea {
   position: absolute;
-  left: 14%;
+  left: 16%;
   margin-top: 5px;
   overflow: hidden;
 }

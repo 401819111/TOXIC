@@ -189,16 +189,20 @@ tfoot > tr {
   height: 40px;
 }
 tfoot > tr > td {
-  width: 12%;
+  width: 14%;
 }
 tfoot > tr > td > input {
   margin-left: 28%;
 }
 tfoot > tr > td:nth-child(1) > span {
   margin-left: 15%;
+  color: black;
+  font-size: 14px;
 }
 tfoot > tr > td:nth-child(2) > span {
   margin-left: -70%;
+  color: black;
+  font-size: 14px;
 }
 tfoot > tr > td:nth-child(2) > span:hover {
   color: #ff5a00;
@@ -207,8 +211,10 @@ tfoot > tr > td:nth-child(2) > span:hover {
 tfoot > tr > td:nth-child(5) span {
   color: #ff5a00;
 }
+tfoot > tr > td:nth-child(6) {
+  margin-left: -10%;
+}
 span {
-  margin-left: 20%;
   font-size: 20px;
   color: #ff5a00;
 }
@@ -247,8 +253,9 @@ span {
   border: none;
 }
 .butShop button:nth-child(2) span {
+  color: white;
   display: inline-block;
   transform: rotateY(180deg);
   margin-left: 5%;
   font-size: 25px;
-}
+}                                                                                                                                                                                                                                                                  

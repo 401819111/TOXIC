@@ -1,7 +1,7 @@
 body {
   background-color: #f3f3f3;
   font-size: 14px;
-  font-family: myfont;
+  font-family: '微软雅黑', 'myfont';
 }
 .user-center-li-bgcolor {
   background-color: #515151;
@@ -72,9 +72,9 @@ body {
   cursor: pointer;
 }
 #center-user-div2 {
-  margin-top: 50px;
+  margin-top: 76px;
   height: 690px;
-  width: 77%;
+  width: 74%;
   margin-left: 22%;
   position: absolute;
   background-color: #ffffff;
@@ -108,7 +108,7 @@ body {
 #user-Order,
 #user-Order-DIY,
 #user-location {
-  margin-top: 50px;
+  margin-top: 76px;
   height: 690px;
   width: 74%;
   margin-left: 22%;
@@ -132,7 +132,7 @@ body {
 }
 .user-information-input {
   width: 63%;
-  height: 43px;
+  height: 36px;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
@@ -142,7 +142,7 @@ body {
   border: 1px solid #ccc;
 }
 .user-information-btn {
-  height: 43px;
+  height: 36px;
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
@@ -154,10 +154,12 @@ body {
   vertical-align: middle;
   cursor: pointer;
   border: 1px solid transparent;
-  margin-left: -3px;
+  margin-left: -5px;
+  margin-top: -5px;
+  background-color: #ff5a00;
 }
 .Order-serch {
-  width: 250px;
+  width: 300px;
 }
 #user-Order ul {
   clear: both;
@@ -222,17 +224,16 @@ body {
   clear: both;
 }
 .user-collect-img {
-  width: 300px;
-  -webkit-transition: all 0.15s linear;
+  width: 80%;
 }
 .user-collect-img img {
-  width: 300px;
+  width: 100%;
 }
 .user-collect-div2 {
   clear: both;
-  margin-top: 250px;
+  margin-top: 20%;
   position: absolute;
-  width: 40%;
+  width: 21%;
   margin-left: 3%;
 }
 .user-collect-div2 > p {
@@ -242,26 +243,22 @@ body {
 .user-collect-div2 > p:nth-of-type(2) {
   clear: both;
 }
-.user-collect-img:hover {
-  margin-top: -10px;
-}
 .user-collect-div2 > p:last-child {
-  float: left;
+  float: right;
   font-size: 24px;
-  margin-left: 15%;
 }
 .user-collect-div2 > p:last-child span {
   margin-left: 10px;
-}
-.user-collect-img > img {
-  margin-top: 10px;
 }
 .user-collect-div2 > p:first-child {
   color: red;
   font-size: 18px;
 }
 #user-add-dress {
+  margin-top: 40px;
   float: right;
+  margin-right: 10%;
+  border: 1px solid #ff5a00;
 }
 #user-location-div {
   width: 75%;
@@ -270,7 +267,6 @@ body {
 #user-location-div ul {
   width: 100%;
   margin: 0 auto;
-  border: 1px solid gray;
   height: 60px;
   border-radius: 5px;
   margin-top: 20px;
@@ -284,19 +280,25 @@ body {
   list-style: none;
   border-right: 1px solid #000000;
 }
-#user-center-dizhi li:first-child,
-#user-center-dizhi li:nth-of-type(2),
-#user-center-dizhi li:nth-of-type(3) {
-  width: 19%;
-}
-#user-center-dizhi li:nth-of-type(3) {
-  width: 43%;
-}
 #user-location-div > ul li:last-child {
   border-right: none;
 }
 #user-location {
   display: none;
+}
+#user-location table {
+  float: left;
+  margin-top: 20px;
+}
+#user-location table thead tr th {
+  width: 28%;
+}
+#user-location table tbody tr td:first-child {
+  padding-left: 13%;
+}
+#user-center-do span {
+  color: #ff5a00;
+  cursor: pointer;
 }
 .change-user-information {
   cursor: pointer;

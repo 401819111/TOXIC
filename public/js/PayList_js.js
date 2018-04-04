@@ -3,8 +3,21 @@ $(function(){
         $(".myHome span").css("opacity","0");
         $(this).prev("span").css("opacity","1");
         $(this).next("span").css("opacity","1");
-        $(this).parent().css("background-color","gainsboro");
+        if(this.checked==true){
+            console.log(111)
+            $(this).prop('checked', true);
+            $(this).parent("div").css("background-color","gainsboro");
+            $(this).parent("div").siblings("div").css("background-color","white")
+        }else{
+            $(this).prop('checked', false);
+            $(this).parent().css("background-color", "white");
+        }
     });
+    $(".moRen").click(function () {
+        $(this).css("color", " #ff5a00");
+        $(this).parent("div").siblings("div").children(".moRen").css("color", "black");
+
+    })
     $("textarea").focus(function(){
         $("textarea").css("height","120px")
     });
