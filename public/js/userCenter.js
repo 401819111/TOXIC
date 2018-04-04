@@ -1,6 +1,5 @@
 $("#center-user ul li").click(function(){
     var index=$(this).index()
-    console.log(index)
     if(index==0){
         $("#center-user-div2").css("display","block")                                
         $("#user-Order").css("display","none")
@@ -51,4 +50,14 @@ $("#user-center-img-change").hover(()=>{
     $("#user-center-img-change div").css("display","block")
 },()=>{
     $("#user-center-img-change div").css("display","none")
+})
+
+$("#center-user ul li").click(function(){
+    var index=$(this).index()
+
+        $(this).addClass("user-center-li-bgcolor")
+        $("#center-user ul li").each(function(){
+            $("#center-user ul li").not($("#center-user ul li").eq(index)).removeClass("user-center-li-bgcolor")
+            
+        })
 })

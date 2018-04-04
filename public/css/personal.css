@@ -3,6 +3,10 @@ body {
   font-size: 14px;
   font-family: myfont;
 }
+.user-center-li-bgcolor {
+  background-color: #515151;
+  color: #ffffff;
+}
 @font-face {
   font-family: "myfont";
   src: url('../font/font_icon/iconfont.eot');
@@ -89,12 +93,12 @@ body {
   margin: 0 auto;
   position: relative;
 }
+#user-information-div ul {
+  float: left;
+}
 #user-information-div ul li {
   list-style: none;
   padding: 20px 80px;
-}
-#user-information-div ul {
-  float: left;
 }
 #user-information2 {
   width: 100%;
@@ -123,8 +127,8 @@ body {
 }
 #user-Order ul,
 #user-Order-DIY ul {
-  width: 70%;
-  margin: 40px auto;
+  width: 80%;
+  margin: 40px 8%;
 }
 .user-information-input {
   width: 63%;
@@ -157,27 +161,29 @@ body {
 }
 #user-Order ul {
   clear: both;
-  width: 100%;
-  margin-left: 15%;
+  width: 90%;
+  margin-left: 10%;
 }
 #user-Order-table {
   clear: both;
-  width: 60%;
-  margin: 0 17%;
-  text-align: center;
+  width: 80%;
+  margin: 0 10%;
+  line-height: 60px;
   border-collapse: collapse;
 }
-#user-Order-table > thead {
-  background-color: #808d8d;
+#user-Order-table thead {
+  background-color: #515151;
   color: white;
   margin: none;
 }
-#user-Order-table > thead > tr th {
-  border: none;
-  line-height: 40px;
+#user-Order-table thead tr th:first-child {
+  text-align: center;
 }
-#user-Order-table > tbody > tr td {
-  line-height: 60px;
+#user-Order-table thead tr th {
+  border: none;
+}
+#user-Order-table tbody tr td {
+  margin-top: 20px;
 }
 .loginBtn {
   clear: both;
@@ -261,7 +267,7 @@ body {
   width: 75%;
   margin: 0 auto;
 }
-#user-location-div > ul {
+#user-location-div ul {
   width: 100%;
   margin: 0 auto;
   border: 1px solid gray;
@@ -269,14 +275,22 @@ body {
   border-radius: 5px;
   margin-top: 20px;
 }
-#user-location-div > ul li {
+#user-location-div ul li {
   margin-top: 10px;
   line-height: 40px;
-  margin-left: 5%;
-  padding-right: 40px;
+  padding: 0px 20px;
+  text-align: center;
   float: left;
   list-style: none;
   border-right: 1px solid #000000;
+}
+#user-center-dizhi li:first-child,
+#user-center-dizhi li:nth-of-type(2),
+#user-center-dizhi li:nth-of-type(3) {
+  width: 19%;
+}
+#user-center-dizhi li:nth-of-type(3) {
+  width: 43%;
 }
 #user-location-div > ul li:last-child {
   border-right: none;

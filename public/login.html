@@ -29,8 +29,9 @@
       <div>
         <div id="login-logo">
           <div>
-
-            <img src="images/sign in/QQ图片20180328171310.png" class="login-logo" alt="">
+            <h1>
+              <img src="images/sign in/blacklogo.png" class="login-logo" alt="">
+            </h1>
             <p> 或使用第三方登陆</p>
           </div>
 
@@ -57,31 +58,51 @@
                 <button type="button" id="loginBtn" class="btn loginBtn">登陆</button>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox"> Remember me
+                    <input type="checkbox"> 记住密码
                   </label>
+                  <span id="login-forgetpwd">
+                    忘记密码?
+                  </span>
                 </div>
               </form>
             </div>
           </div>
-        </div>  
-              <!-- 登陆--end -->
+        </div>
+        <!-- 登陆--end -->
 
 
 
-              <!-- 注册start -->
+        <!-- 注册start -->
         <form action="" id="login-form2">
           <p>注册</p>
           <input type="text" class=" loginInput" id="sign-up-name" placeholder="用户名" aria-describedby="sizing-addon1">
           <input type="password" class=" loginInput" id="sign-up-pwd" placeholder="密码" aria-describedby="sizing-addon1">
-          <input type="text" id="login-email" class=" loginInput" placeholder="手机号码" aria-describedby="sizing-addon1">
-          <input type="text" id="login-mess" class=" loginInput" placeholder="验证码" aria-describedby="sizing-addon1">
-          <div>
+          <div id="login-phone-div">
+            <input type="text" id="login-email" class=" loginInput" placeholder="手机号码" aria-describedby="sizing-addon1">
+            <button type="button" class="btn btn-default login-sendMess">发送</button>
+            <input type="text" id="" class=" loginInput login-mess" placeholder="验证码" aria-describedby="sizing-addon1">
+          </div>
+          <div id="login-div-button">
             <button type="button" id="login-re" class="login-btn-styles btn">返回登陆</button>
             <button type="button" id="login-up" class="btn loginBtn">确认注册</button>
           </div>
         </form>
-              <!-- 注册--end -->
-
+        <!-- 注册--end -->
+        <!-- 忘记密码表单 -->
+        <form action="" id="login-form3">
+          <p>找回密码</p>
+          <input type="text" class=" loginInput" id="sign-up-name-back" placeholder="用户名" aria-describedby="sizing-addon1">
+          <div id="login-phone-div">
+            <input type="text" id="login-email" class=" loginInput" placeholder="手机号码" aria-describedby="sizing-addon1">
+            <button type="button" id="" class="btn btn-default login-sendMess">发送</button>
+            <input type="text" id="" class=" loginInput login-mess" placeholder="验证码" aria-describedby="sizing-addon1">
+          </div>
+          <input type="password" class=" loginInput" id="sign-up-Newpwd" placeholder="新密码" aria-describedby="sizing-addon1">
+          <div>
+            <button type="button" id="login-return" class="login-btn-styles btn">取消</button>
+            <button type="button" id="login-up-backUser" class="btn loginBtn2">确认</button>
+          </div>
+        </form>
       </div>
     </div>
 
