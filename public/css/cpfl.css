@@ -1,0 +1,187 @@
+h3 {
+  font-weight: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial;
+  font-family: 微软雅黑;
+  list-style: none;
+}
+#lh_videodiv {
+  margin-top: 60px;
+  height: 700px;
+  overflow: hidden;
+  width: 100%;
+}
+#lh_videodiv > video {
+  width: 100%;
+}
+#lh_daohang {
+  height: 160px;
+  width: 100%;
+}
+.lh_font {
+  width: 40px;
+  height: 40px;
+}
+.lh_fontdiv {
+  float: left;
+  margin-left: 6%;
+  margin-top: 3%;
+  text-align: center;
+}
+.lh_fontdiv:first-child {
+  margin-left: 24%;
+}
+.lh_xiankuang > h3 {
+  font-size: 23px;
+  width: 250px;
+  text-align: center;
+  background-color: #ffffff;
+  position: absolute;
+  margin-left: 42%;
+  margin-top: -16px;
+}
+.lh_xian {
+  width: 60%;
+  border: 1px #787771 solid;
+  margin: 0 auto;
+  margin-top: 29px;
+}
+.lh_xiankuang {
+  height: 30px;
+  position: relative;
+}
+.lh_jianpan {
+  float: left;
+}
+.lh_jianpan > img {
+  width: 100%;
+}
+.lh_jiantxet {
+  position: relative;
+  float: left;
+  margin-top: 9%;
+  margin-right: 3%;
+}
+.lh_jiantxet div a {
+  text-decoration: none;
+  color: #ff4903;
+  font-size: 18px;
+}
+.lh_jiantxet h2 {
+  font-size: 23px;
+  font-weight: normal;
+}
+.lh_jiantxet h3 {
+  font-size: 25px;
+  color: #ff4903;
+  margin-top: 160px;
+}
+.lh_jiantxet p {
+  font-size: 17px;
+}
+.lh_goumai {
+  border: 2px #ff4903 solid;
+  width: 120px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 300px;
+  margin-top: -35px;
+  border-radius: 5px;
+}
+.lh_goumai:hover {
+  background-color: #ff4903;
+}
+.lh_goumai:hover a {
+  color: #ffffff;
+}
+.lh_box {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.lh_dabox {
+  width: 80%;
+  margin: 0  auto;
+}
+.lh_zhanshi {
+  height: 1000px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.lh_zhanshi .lh_erjiJG {
+  color: #ff4903;
+  font-size: 18px;
+}
+.lh_zhanshi .lh_erjiXH {
+  font-size: 18px;
+}
+.lh_zhanshi .lh_erjiGM > a {
+  color: #ff4903;
+  font-size: 15px;
+  text-decoration: none;
+}
+.lh_zhanshi .lh_erjiGM {
+  border: 2px  #ff4903 solid;
+  width: 80px;
+  height: 25px;
+  border-radius: 5px ;
+  text-align: center;
+  line-height: 25px;
+  position: absolute;
+  margin-left: 130px;
+  margin-top: -30px;
+}
+.lh_zhanshi .lh_ulHuan {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.lh_zhanshi .lh_ulHuan > ul {
+  position: relative;
+  height: 340px;
+}
+.lh_erjiGM:hover {
+  background-color: #ff4903;
+}
+.lh_zhanshi .lh_erjiGM:hover a {
+  color: white;
+}
+.lh_bankuai {
+  display: none;
+}
+.showclass {
+  display: block;
+}
+@font-face {
+  font-family: "lh_font";
+  src: url("../font/font_sizi/iconfont.woff"), url("../font/font_sizi/iconfont.eot"), url("../font/font_sizi/demo.css");
+}
+.lh_shouchang {
+  font-family: lh_font;
+  position: absolute;
+  font-size: 30px;
+  color: #ff4903;
+  margin-top: -280px;
+  margin-left: 175px;
+  display: none;
+  cursor: pointer;
+}
+.lh_ulHuan > ul:hover .lh_shouchang {
+  display: block;
+}
+.lh_fontSC {
+  font-family: lh_font;
+  position: absolute;
+  font-size: 40px;
+  color: #ff4903;
+  /*margin-top: -50px;*/
+  line-height: 60px;
+  margin-left: 240px;
+  cursor: pointer;
+}
