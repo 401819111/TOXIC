@@ -1,0 +1,374 @@
+/*背景颜色*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+@font-face {
+  font-family: "iconfont";
+  src: url('../font/font_icon/iconfont.eot');
+  /* IE9*/
+  src: url('../font/font_icon/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/font_icon/iconfont.woff') format('woff'), /* chrome, firefox */ url('../font/font_icon/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../font/font_icon/iconfont.svg#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+@font-face {
+  font-family: "myfont";
+  src: url('../font/font_two/iconfont.eot'), url('../font/font_two/iconfont.ttf'), url('../font/font_two/iconfont.woff');
+}
+header div {
+  width: 100%;
+  font-family: 微软雅黑;
+  height: 60px;
+  background-color: gray;
+}
+section {
+  width: 100%;
+  height: 1700px;
+  background-color: #eeeeee;
+}
+.myShopcar {
+  width: 85%;
+  font-family: 微软雅黑;
+  height: 700px;
+  margin: 0 auto;
+  padding-top: 2%;
+}
+.line {
+  width: 30%;
+  height: 1px;
+  margin-bottom: 2%;
+  background-color: gainsboro;
+  margin-top: 2%;
+}
+.myShopcar > h3 {
+  font-weight: 600;
+  font-size: 24px;
+}
+span {
+  font-weight: 300;
+  font-size: 16px;
+  color: silver;
+  margin-left: 3%;
+}
+.myShopcar > div > span {
+  font-size: 14px;
+  color: silver;
+  margin-right: 1%;
+}
+.shopcarList {
+  width: 100%;
+  margin-top: 50px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #88888888;
+  background-color: white;
+}
+.shopcarList > .headColor {
+  font-family: "iconfont";
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  padding-left: 20px;
+  background-color: #444444;
+  color: white;
+  position: relative;
+}
+.shopcarList > .headColor p {
+  font-size: 18px;
+  float: left;
+}
+.shopcarList > .headColor h5 {
+  float: right;
+  color: white;
+  font-size: 12px;
+  margin-right: 2%;
+  margin-top: 15px;
+}
+.myHome > div:hover {
+  background-color: gainsboro;
+}
+.myHome {
+  width: 100%;
+  padding-top: 15px;
+  height: 330px;
+  font-size: 14px;
+}
+.myHome h4 {
+  margin-left: 4%;
+  margin-bottom: 20px;
+}
+.myHome .btn {
+  width: 120px;
+  height: 36px;
+  border-radius: 5px;
+  background-color: #ff5a00;
+  font-size: 14px;
+  border: none;
+  color: white;
+  margin-left: 24%;
+  margin-top: 10px;
+}
+.myHome div {
+  width: 70%;
+  line-height: 30px;
+  height: 10%;
+  margin-left: 7%;
+  margin-bottom: 5px;
+}
+.myHome div span {
+  margin-left: 5%;
+  color: #ff5a00;
+  opacity: 0;
+}
+#table {
+  width: 95%;
+  margin-left: 2%;
+  height: 220px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: "iconfont";
+  font-family: "myfont";
+}
+#table thead > tr {
+  width: 100%;
+  height: 70px;
+  font-size: 14px;
+  font-family: 微软雅黑;
+  font-weight: 200;
+  color: grey;
+}
+#table thead > tr th {
+  width: 10%;
+  text-align: center;
+}
+#table thead > tr th:nth-child(1) {
+  text-align: left;
+  padding-left: 15% ;
+  overflow: hidden;
+  width: 33%;
+}
+tbody > tr {
+  height: 150px;
+  text-align: center;
+  border-top: 2px solid #cccccc;
+}
+tbody > tr td span {
+  color: blue;
+}
+tbody > tr td:nth-child(1) {
+  position: relative;
+}
+tbody > tr td:nth-child(1) input {
+  margin-left: -20%;
+}
+tbody > tr h6 {
+  position: absolute;
+  top: 43%;
+  left: 42%;
+  font-weight: 300;
+  color: darkgray;
+}
+tbody > tr h5 {
+  position: absolute;
+  top: 58%;
+  left: 42%;
+  font-weight: 300;
+  font-size: 12px;
+  color: #555555;
+}
+tbody > tr img {
+  width: 160px;
+  margin-left: -55%;
+}
+tbody > tr span {
+  color: blue;
+  margin-left: 8%;
+}
+#table p {
+  position: absolute;
+  top: 30%;
+  left: 42%;
+}
+tbody > tr > td:nth-child(5) {
+  color: #ff5a00;
+}
+tbody > tr > td:nth-child(7) span {
+  color: blue;
+}
+tfoot {
+  width: 100%;
+  height: 60px;
+  font-size: 14px;
+  font-family: 微软雅黑;
+  font-weight: 200;
+  color: black;
+  text-align: center;
+  border-top: 2px solid #cccccc;
+  border-bottom: 2px solid #cccccc;
+}
+.butShop {
+  clear: both;
+  margin-top: 60px;
+  float: right;
+  margin-bottom: 70px;
+  margin-right: 50px;
+}
+.butShop button:nth-child(1) {
+  font-family: "myfont";
+  width: 130px;
+  height: 46px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 2px solid #ff5a00;
+  color: #ff5a00;
+  background-color: white;
+}
+.butShop button:nth-child(1) span {
+  color: #ff5a00;
+}
+.butShop button:nth-child(2) {
+  font-family: "myfont";
+  font-size: 18px;
+  width: 130px;
+  margin-left: 30px;
+  text-align: center;
+  height: 46px;
+  line-height: 20px;
+  border-radius: 5px;
+  color: white;
+  background-color: #ff5a00;
+  border: none;
+}
+.butShop button:nth-child(2) > span {
+  display: inline-block;
+  transform: rotateY(180deg);
+  color: white;
+  margin-left: 5%;
+}
+.butShop span {
+  font-size: 25px;
+}
+.close {
+  font-family: "iconfont";
+  float: right;
+  font-size: 24px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+#myModal {
+  width: 117%;
+  height: 100%;
+  margin-left: -8.5%;
+}
+.modal-title {
+  color: #ff5a00;
+  font-size: 18px;
+  margin-left: 3%;
+  padding-top: 10px;
+}
+.modal-dialog {
+  width: 700px;
+  height: 300px;
+  margin: 0 auto;
+  padding-top: 8%;
+}
+.modal-dialog .modal-content {
+  background-color: white;
+  height: 350px;
+}
+.modal-dialog .modal-footer > button {
+  margin-top: 10px;
+  width: 120px;
+  height: 35px;
+}
+.modal-body {
+  margin-top: 10px;
+  margin-left: 15%;
+  height: 20px;
+}
+.modal-body span {
+  color: #ff5a00;
+}
+.modal-body > input {
+  height: 28px;
+  width: 200px;
+  color: #9d9d9d;
+}
+.modal-body select {
+  width: 120px;
+  height: 25px;
+}
+.modal-content > div:nth-child(3) {
+  margin-left: 17.5%;
+}
+.modal-content > div:nth-child(4) {
+  margin-left: 13%;
+}
+.modal-content > div:nth-child(5) {
+  margin-left: 13%;
+}
+.modal-content > div:nth-child(5) input {
+  width: 320px;
+}
+.modal-footer {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.modal-footer > button {
+  width: 80px;
+  height: 30px;
+  float: left;
+  margin-left: 40%;
+  background-color: #ff5a00;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.myHome button,
+.modal button:hover {
+  cursor: pointer;
+  color: white;
+}
+.leftDiv {
+  float: left;
+  width: 50%;
+  margin-left: 1%;
+  padding-top: 10px;
+  position: relative;
+}
+.leftDiv > span {
+  color: black;
+  position: absolute;
+  top: 14px;
+}
+.leftDiv textarea {
+  position: absolute;
+  left: 14%;
+  margin-top: 5px;
+  overflow: hidden;
+}
+.rightDiv {
+  color: #777777;
+  float: right;
+  margin-right: 50px;
+}
+.rightDiv > ul > li {
+  margin-top: 20px;
+  text-align: right;
+  list-style: none;
+}
+.rightDiv > ul > li span {
+  color: #ff5a00;
+  margin-left: 20px;
+}
+.rightDiv > ul > li h2 {
+  color: #ff5a00;
+}
+.rightDiv > ul > li div {
+  width: 100%;
+  height: 2px;
+  background-color: gainsboro;
+  margin-right: 20px;
+  margin-left: 20px;
+}

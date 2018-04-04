@@ -1,0 +1,364 @@
+/*背景颜色*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+@font-face {
+  font-family: "iconfont";
+  src: url('../font/font_icon/iconfont.eot');
+  /* IE9*/
+  src: url('../font/font_icon/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/font_icon/iconfont.woff') format('woff'), /* chrome, firefox */ url('../font/font_icon/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../font/font_icon/iconfont.svg#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+@font-face {
+  font-family: "myfont";
+  src: url('../font/font_two/iconfont.eot'), url('../font/font_two/iconfont.ttf'), url('../font/font_two/iconfont.woff');
+}
+.menceng {
+  display: none;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(68, 68, 68, 0.7);
+}
+.menceng .succpay {
+  font-family: iconfont;
+  clear: both;
+  margin-top: 15%;
+  margin-left: 38%;
+  background-color: white;
+  text-align: center;
+  height: 160px;
+  width: 300px;
+  padding-top: 30px;
+}
+.menceng .succpay p {
+  font-size: 16px;
+}
+.menceng .succpay p span {
+  background-color: green;
+  color: white;
+  border-radius: 50px;
+}
+.menceng .succpay .btn {
+  width: 80px;
+  height: 36px;
+  margin-left: 3%;
+  margin-top: 8%;
+  margin-right: 5px;
+  background-color: #ff5a00;
+  color: white;
+}
+header div {
+  width: 100%;
+  font-family: 微软雅黑;
+  height: 60px;
+  background-color: gray;
+}
+section {
+  width: 100%;
+  height: 1700px;
+  background-color: #eeeeee;
+}
+section .myShopcar {
+  position: relative;
+  width: 85%;
+  font-family: 微软雅黑;
+  margin: 0 auto;
+  padding-top: 3%;
+}
+section .myShopcar > h3 {
+  float: left;
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 12px;
+}
+section .myShopcar .payLine {
+  font-family: 微软雅黑;
+  width: 2px;
+  height: 70px;
+  float: left;
+  margin-left: 3%;
+  background-color: gainsboro;
+}
+section .myShopcar .textWe {
+  width: 42%;
+  float: left;
+  position: relative;
+  margin-left: 3%;
+  margin-top: 5px;
+  font-size: 17px;
+}
+section .myShopcar .textWe p {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  color: #9d9d9d;
+  font-size: 14px;
+  margin-top: 20px;
+}
+section .myShopcar .textWe p span {
+  margin-left: 3%;
+}
+section .myShopcar .trueMoney {
+  width: 20%;
+  height: 80px;
+  float: right;
+  margin-top: 25px;
+  position: relative;
+}
+section .myShopcar .trueMoney span {
+  color: #ff5a00;
+  font-size: 20px;
+  font-weight: 600;
+}
+section .myShopcar .toPaylist {
+  margin-top: 20px;
+  margin-left: 30%;
+  color: #ff5a00;
+  font-size: 16px;
+}
+section .myShopcar > p {
+  clear: both;
+  color: #444444;
+  font-size: 14px;
+  position: absolute;
+  top: 124px;
+  left: 3%;
+}
+section .payWays {
+  clear: both;
+  margin-top: 8%;
+  width: 100%;
+  font-size: 18px;
+  background-color: white;
+  font-family: "myfont";
+}
+section .payWays .divOne {
+  float: left;
+  position: relative;
+  width: 80%;
+  padding-top: 80px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-left: 15%;
+}
+section .payWays .divOne span {
+  margin-left: 1%;
+  color: blue;
+}
+section .payWays .divOne > div {
+  display: none;
+  font-family: 微软雅黑;
+  width: 20%;
+  float: right;
+  font-size: 18px;
+  margin-right: 9%;
+}
+section .payWays .divOne > div .payMoney {
+  color: #ff5a00;
+  font-size: 20px;
+  font-weight: bold;
+}
+section .payWays .divTwo {
+  clear: both;
+  width: 70%;
+  height: 1px;
+  background-color: gainsboro;
+  margin-left: 14%;
+  margin-bottom: 50px;
+}
+section .payWays .divThree {
+  float: left;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-left: 15%;
+}
+section .payWays .divThree span {
+  margin-left: 2%;
+  color: green;
+}
+section .payWays .divThree > div {
+  display: none;
+  font-family: 微软雅黑;
+  width: 20%;
+  float: right;
+  margin-right: 9%;
+}
+section .payWays .divThree > div .payMoney {
+  color: #ff5a00;
+  font-size: 20px;
+  font-weight: bold;
+}
+section .payWays .divFour {
+  clear: both;
+  width: 70%;
+  height: 1px;
+  background-color: gainsboro;
+  margin-left: 14%;
+}
+section .payWays button {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid  #ff5a00;
+  color: #ff5a00;
+  text-align: center;
+  font-size: 16px;
+  margin-left: 15%;
+  background-color: white;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+section .payWays button:hover {
+  background-color: #ff5a00;
+  color: white;
+}
+section #myModal {
+  font-family: iconfont;
+  width: 117%;
+  height: 100%;
+  margin-left: -8.5%;
+}
+section .modal-title {
+  color: #ff5a00;
+  font-size: 18px;
+  margin-left: 3%;
+  font-weight: 600;
+  padding-top: 10px;
+}
+section .modal-dialog {
+  width: 700px;
+  height: 300px;
+  margin: 0 auto;
+  padding-top: 8%;
+}
+section .modal-dialog .modal-content {
+  background-color: white;
+  width: 100%;
+  height: 350px;
+}
+section .modal-dialog .modal-footer > button {
+  margin-top: 10px;
+  width: 120px;
+  height: 35px;
+}
+section .btn:focus {
+  color: white;
+  background-color: #ff5a00;
+}
+section .modal-body {
+  margin-top: 10px;
+  margin-left: 15%;
+  height: 20px;
+}
+section .modal-body span {
+  color: #ff5a00;
+}
+section .modal-body .trb {
+  height: 28px;
+  width: 180px;
+  font-size: 14px;
+  color: #9d9d9d;
+}
+section .modal-body .trc {
+  height: 28px;
+  width: 300px;
+  font-size: 14px;
+  color: #9d9d9d;
+}
+section .modal-body .trd {
+  height: 28px;
+  font-size: 14px;
+  width: 100px;
+  color: #9d9d9d;
+}
+section .modal-body select {
+  width: 120px;
+  height: 25px;
+}
+section .modal-content > div:nth-child(3) {
+  margin-left: 12.5%;
+}
+section .modal-content > div:nth-child(4) {
+  margin-left: 7%;
+}
+section .modal-content > div:nth-child(4) input {
+  width: 100px;
+}
+section .modal-content > div:nth-child(5) {
+  margin-left: 12%;
+}
+section .modal-content > div:nth-child(5) span {
+  float: left;
+  margin-top: 5px;
+  margin-right: 5px;
+  color: blue;
+}
+section .modal-content > div:nth-child(5) p {
+  float: left;
+  font-size: 14px;
+  margin-top: 8px;
+}
+section .modal-content > div:nth-child(2) {
+  margin-left: 10%;
+}
+section .modal-footer {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+section .modal-footer > button {
+  width: 80px;
+  height: 30px;
+  float: left;
+  margin-left: 40%;
+  background-color: #ff5a00;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+section .payOne {
+  display: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: "iconfont";
+}
+section .payOne p {
+  margin-top: 50px;
+}
+section .payOne p img {
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+section .payOne div img {
+  margin-top: 30px;
+  margin-bottom: 90px;
+}
+section .payTwo {
+  display: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: "iconfont";
+}
+section .payTwo p {
+  margin-top: 50px;
+}
+section .payTwo p img {
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+section .payTwo div img {
+  margin-top: 30px;
+  margin-bottom: 90px;
+}
