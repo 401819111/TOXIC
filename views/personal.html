@@ -18,335 +18,311 @@
 </head>
 
 <body>
-        <%-include header.html %>
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <img id="user-center-logo" src="images/sign in/blacklogo.png" alt="">
-            </div>
-            <form class="form-inline" id="user-center-modal">
-                <div class="form-group" id="user-center-change-name">
-                    <label for="exampleInputName2">昵称：</label>
-                    <input type="text" class="form-control" id="exampleInputName2" placeholder="">
-                </div>
-                
-                <div class="dropdown">
-                        <label>性别：</label>
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                          选择
-                          <span class="caret"></span>
+    <%-include header.html %>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                          <li><a href="#">男</a></li>
-                          
-                          <li role="separator" class="divider"></li>
-                          <li><a href="#">女</a></li>
-                        </ul>
-                      </div>
-                <div id="user-center-bir">
-                    <label>生日：</label>
-                    <input type="date" value="2015-09-24" />
-                </div>
-                <div class="form-group " id="user-center-change-phone">
-                    <label for="exampleInputEmail2">电话：</label>
-                    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="">
-                </div>
+                        <img id="user-center-logo" src="images/sign in/blacklogo.png" alt="">
+                    </div>
+                    <form class="form-inline" id="user-center-modal">
+                        <div class="form-group" id="user-center-change-name">
+                            <label for="exampleInputName2">昵称：</label>
+                            <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                        </div>
+                        <div class="dropdown">
+                            <label>性别：</label>
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="true">
+                                选择
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li>
+                                    <a href="#">男</a>
+                                </li>
 
-            </form>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary">修改</button>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <a href="#">女</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="user-center-bir">
+                            <label>生日：</label>
+                            <input type="date" value="2015-09-24" />
+                        </div>
+                        <div class="form-group " id="user-center-change-phone">
+                            <label for="exampleInputEmail2">电话：</label>
+                            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="">
+                        </div>
+                    </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary">修改</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-</div>
-    <div id="personal-bgimg">
-    </div>
-    <section id="section">
-        <section id="center-user">
-            <div id="user-center-img-change">
-                <div>
-                    <span>&#xe69e;</span>
-                </div>
-                    <img src="images/userCenter/u548.png" id="user-center-img" alt="">
-            </div>
-           
-            <ul>
-                <li>我的信息</li>
-                <li>我的订单</li>
-                <li>我的定制</li>
-                <li>商品收藏</li>
-                <li>我的地址</li>
-            </ul>
-        </section>
-        <!-- 个人信息 STRAT -->
-        <div id="center-user-div2">
-
-            <div>
-                <div class="user-information">
-                    <span>个人信息</span>
-                    <span class="change-user-information" data-toggle="modal" data-target="#myModal">&#xe69e;</span>
-                </div>
-                <div id="user-information-div">
-                    <ul>
-                        <li>昵称</li>
-                        <li>性别</li>
-                        <li>生日</li>
-                        <li>电话</li>
-                        <li>默认收货地址</li>
-                    </ul>
-                    <ul id="user-information-ul">
-                        <li id="user-center-name">14k</li>
-                        <li>男</li>
-                        <li>xxxx</li>
-                        <li id="user-center-phone">13890404038</li>
-                        <li>四川省成都市高新区</li>
-                    </ul>
-                    <div class="user-information" id="user-information2">
-                        <span>账号信息</span>
-                        <span  data-toggle="modal" data-target="#myModal2" class="change-user-information">&#xe69e;</span>
+        </div>
+        <div id="personal-bgimg">
+        </div>
+        <section id="section">
+            <section id="center-user">
+                <div id="user-center-img-change">
+                    <div>
+                        <span>&#xe69e;</span>
                     </div>
-                    <ul>
-                        <li>绑定邮箱</li>
-                        <li>绑定手机</li>
-                        <li>密码</li>
-                    </ul>
-                    <ul>
-                        <li id="user-center-email">619113277@qq.com</li>
-                        <li>13899999999</li>
-                        <li>*****</li>
-                    </ul>
+                    <img src="images/userCenter/u548.png" id="user-center-img" alt="">
                 </div>
-            </div>
-
-          
-
-
-         <!-- Modal -->
-         <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <img id="user-center-logo" src="images/sign in/blacklogo.png" alt="">
+                <ul>
+                    <li>我的信息</li>
+                    <li>我的订单</li>
+                    <li>我的定制</li>
+                    <li>商品收藏</li>
+                    <li>我的地址</li>
+                </ul>
+            </section>
+            <!-- 个人信息 STRAT -->
+            <div id="center-user-div2">
+                <div>
+                    <div class="user-information">
+                        <span>个人信息</span>
+                        <span class="change-user-information" data-toggle="modal" data-target="#myModal">&#xe69e;</span>
+                    </div>
+                    <div id="user-information-div">
+                        <ul>
+                            <li>昵称</li>
+                            <li>性别</li>
+                            <li>生日</li>
+                            <li>电话</li>
+                        </ul>
+                        <ul id="user-information-ul">
+                            <li id="user-center-name"></li>
+                            <li id="user-center-sex"></li>
+                            <li id="user-center-birth"></li>
+                            <li id="user-center-phone"></li>
+                        </ul>
+                        <div class="user-information" id="user-information2">
+                            <span>账号信息</span>
+                            <span data-toggle="modal" data-target="#myModal2" class="change-user-information">&#xe69e;</span>
                         </div>
-                        <form class="form-inline" id="user-center-modal">
-                            <div class="form-group" id="user-center-change-email">
-                                <label for="exampleInputName2">绑定邮箱：</label>
-                                <input type="email" class="form-control" id="exampleInputName2" placeholder="">
+                        <ul>
+                            <li>绑定邮箱</li>
+                            <li>绑定手机</li>
+                            <li>密码</li>
+                        </ul>
+                        <ul>
+                            <li id="user-center-email">619113277@qq.com</li>
+                            <li>13899999999</li>
+                            <li>*****</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <img id="user-center-logo" src="images/sign in/blacklogo.png" alt="">
                             </div>
-                           
-                            <div class="form-group " id="user-center-change-phone">
-                                <label for="exampleInputEmail2">绑定电话：</label>
-                                <input type="text" class="form-control" id="exampleInputEmail2" placeholder="">
-                            </div>
-                            <div class="form-group " id="user-center-change-pwd">
+                            <form class="form-inline" id="user-center-modal">
+                                <div class="form-group" id="user-center-change-email">
+                                    <label for="exampleInputName2">绑定邮箱：</label>
+                                    <input type="email" class="form-control" id="exampleInputName2" placeholder="">
+                                </div>
+
+                                <div class="form-group " id="user-center-change-phone">
+                                    <label for="exampleInputEmail2">绑定电话：</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="">
+                                </div>
+                                <div class="form-group " id="user-center-change-pwd">
                                     <label for="exampleInputEmail2">原密码：</label>
                                     <input type="text" class="form-control" id="exampleInputEmail2" placeholder="">
                                 </div>
 
                                 <div class="form-group " id="user-center-change-newpwd">
-                                        <label for="exampleInputEmail2">新密码：</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="">
-                                    </div>
-                        </form>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                            <button type="button" class="btn btn-primary">修改</button>
+                                    <label for="exampleInputEmail2">新密码：</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="">
+                                </div>
+                            </form>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-primary">修改</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- 个人信息 end -->
-
-        <!-- 订单STRAT -->
-        <div id="user-Order">
-            <ul id="user-Order-all">
-                <li>所有订单</li>
-                <li>待付款</li>
-                <li>待发货</li>
-                <li>待收货</li>
-                <li class="Order-serch">
-                    <form class="form-inline">
-                        <input type="text" class="user-information-input"  placeholder="商品名称/订单编号">
-                        <button type="button" class="user-information-btn" class="btn btn-primary">查找</button>
-                    </form>
-                </li>
-            </ul>
-            <table id="user-Order-table">
-                <thead>
-                    <tr>
-                        <th colspan="3">商品详情</th>
-                        <th>数量</th>
-                        <th>单价</th>
-                        <th>状态</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <!-- <table id="user-Order-table2"> -->
-                  
-                <!-- </table> -->
-<tbody>
-  
-    <tr>
-            
-        <td>2018-03-29-3:09</td><td>订单编号</td>
-        <td>123456789845</td>
-              
-    </tr>
-    
-    <tr>
-        <td>
-            <input type="checkbox">
-        </td>
-        <td>2</td>
-        <td>无线轨迹球专业FPS电竞游戏鼠标</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>
-            <button type="button" id="user-center-button" class="btn loginBtn">确认订单</button>
-        </td>
-    </tr>
-</tbody>
-         
-            </table>
-        </div>
-        <!-- 订单end -->
-
-        <div id="user-Order-DIY">
-            <ul id="user-Order-all">
-                <li>我的定制</li>
-                <li>未完成</li>
-                <li>已完成</li>
-                <li class="Order-serch">
-                    <form class="form-inline ">
-                        <input type="text" class="user-information-input"  placeholder="商品名称/订单编号">
-                        <button type="button" class="user-information-btn" class="btn btn-primary">查找</button>
-                    </form>
-                </li>
-            </ul>
-            <table id="user-Order-table">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th>定制详情</th>
-                        <th>定制型号</th>
-                        <th>状态</th>
-                        <th>操作</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2018-03-29-3:09</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="checkbox">
-                        </td>
-                        <td>2</td>
-                        <td>无线轨迹球专业FPS电竞游戏鼠标</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>
-                            <button type="button" id="user-center-button" class="btn loginBtn">确认订单</button>
-                        </td>
-                    </tr>
-
-
-                </tbody>
-            </table>
-        </div>
-        <!-- 订单end -->
-        <!--  收藏strat -->
-        <div class="user-collect">
-            <div class="user-collect-line">
-                <span>我的收藏</span>
+            <!-- 个人信息 end -->
+            <!-- 订单STRAT -->
+            <div id="user-Order">
+                <ul id="user-Order-all">
+                    <li>所有订单</li>
+                    <li>待付款</li>
+                    <li>待发货</li>
+                    <li>待收货</li>
+                    <li class="Order-serch">
+                        <form class="form-inline">
+                            <input type="text" class="user-information-input" placeholder="商品名称/订单编号">
+                            <button type="button" class="user-information-btn" class="btn btn-primary">查找</button>
+                        </form>
+                    </li>
+                </ul>
+                <table id="user-Order-table">
+                    <thead>
+                        <tr>
+                            <th colspan="3">商品详情</th>
+                            <th>数量</th>
+                            <th>单价</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <!-- <table id="user-Order-table2"> -->
+                    <!-- </table> -->
+                    <tbody>
+                        <tr>
+                            <td>2018-03-29-3:09</td>
+                            <td>订单编号</td>
+                            <td>123456789845</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>2</td>
+                            <td>无线轨迹球专业FPS电竞游戏鼠标</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>
+                                <button type="button" id="user-center-button" class="btn loginBtn">确认订单</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="user-collect-div">
+            <!-- 订单end -->
+            <div id="user-Order-DIY">
+                <ul id="user-Order-all">
+                    <li>我的定制</li>
+                    <li>未完成</li>
+                    <li>已完成</li>
+                    <li class="Order-serch">
+                        <form class="form-inline ">
+                            <input type="text" class="user-information-input" placeholder="商品名称/订单编号">
+                            <button type="button" class="user-information-btn" class="btn btn-primary">查找</button>
+                        </form>
+                    </li>
+                </ul>
+                <table id="user-Order-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>定制详情</th>
+                            <th>定制型号</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2018-03-29-3:09</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>2</td>
+                            <td>无线轨迹球专业FPS电竞游戏鼠标</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>
+                                <button type="button" id="user-center-button" class="btn loginBtn">确认订单</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 订单end -->
+            <!--  收藏strat -->
+            <div class="user-collect">
+                <div class="user-collect-line">
+                    <span>我的收藏</span>
+                </div>
+                <div class="user-collect-div">
+                    <div class="user-collect-money">
+                        <div class="user-collect-img">
+                            <img src="images/fenlei/u1868.jpg" alt="">
+                        </div>
+                        <div class="user-collect-div2">
+                            <p>￥999</p>
+                            <p>型号：
+                                <span>888</span>
+                            </p>
+                            <p>
+                                <span>&#xe698;</span>
+                                <span>&#xe6f7;</span>
+                                <span>&#xe69d;</span>
+                            </p>
+                        </div>
 
-                <div class="user-collect-money">
-                    <div class="user-collect-img">
-                        <img src="images/fenlei/u1868.jpg" alt="">
                     </div>
-                    <div class="user-collect-div2">
-                        <p>￥999</p>
-                        <p>型号：
-                            <span>888</span>
-                        </p>
-                        <p>
-                            <span>&#xe698;</span>
-                            <span>&#xe6f7;</span>
-                            <span>&#xe69d;</span>
-                        </p>
+                    <div class="user-collect-money">
+                        <div class="user-collect-img">
+                            <img src="images/fenlei/u1868.jpg" alt="">
+                        </div>
+                        <div class="user-collect-div2">
+                            <p>￥999</p>
+                            <p>型号：
+                                <span>888</span>
+                            </p>
+                            <p>
+                                <span>&#xe698;</span>
+                                <span>&#xe6f7;</span>
+                                <span>&#xe69d;</span>
+                            </p>
+                        </div>
+
                     </div>
 
                 </div>
-
-                <div class="user-collect-money">
-                    <div class="user-collect-img">
-                        <img src="images/fenlei/u1868.jpg" alt="">
-                    </div>
-                    <div class="user-collect-div2">
-                        <p>￥999</p>
-                        <p>型号：
-                            <span>888</span>
-                        </p>
-                        <p>
-                            <span>&#xe698;</span>
-                            <span>&#xe6f7;</span>
-                            <span>&#xe69d;</span>
-                        </p>
-                    </div>
-
-                </div>
-
             </div>
-        </div>
-        <!-- 收藏end -->
-
-
-   
-        <div id="user-location">
+            <!-- 收藏end -->
+            <div id="user-location">
                 <button type="button" id="user-add-dress" class="btn loginBtn" data-toggle="modal" data-target="#myModal4">添加地址</button>
-            
-    <table id="user-Order-table">
-            <thead>
-                <tr>
-                    <th>收货人</th>
-                    <th>电话</th>
-                    <th>地址详情</th>
-                    <th>操作</th>
-
-                </tr>
-            </thead>
-            <tbody id="user-location-div">
-
-                <tr id="user-center-dizhi">
-                    <td>14k</td>
-                    <td>13888888888</td>
-                    <td>四川省成都市高新区青年公寓1314</td>
-                    <td id="user-center-do">
-                         <span data-toggle="modal" data-target="#myModal3"> 修改 </span> |
-                         <span data-toggle="modal" data-target="#myModal5"> 删除 </span>
-                        <span> | 默认地址</span>
-                        </td>
-                </tr>
-            </tbody>
-        </table>
-<!--         
+                <table id="user-Order-table">
+                    <thead>
+                        <tr>
+                            <th>收货人</th>
+                            <th>电话</th>
+                            <th>地址详情</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-location-div">
+                        <tr id="user-center-dizhi">
+                            <td>14k</td>
+                            <td>13888888888</td>
+                            <td>四川省成都市高新区青年公寓1314</td>
+                            <td id="user-center-do">
+                                <span data-toggle="modal" data-target="#myModal3"> 修改 </span> |
+                                <span data-toggle="modal" data-target="#myModal5"> 删除 </span>
+                                <span> | 默认地址</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--         
             <div id="user-location-div">
                 <ul id="user-center-dizhi">
                     <li>14k</li>
@@ -356,12 +332,9 @@
                         
                     </li>
                 </ul>
-
             </div> -->
-
-
-            <!-- Modal -->
-            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <!-- Modal -->
+                <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -374,16 +347,16 @@
                                 <div class="form-group" id="">
                                     <label for="exampleInputName2">姓名： </label>
                                     <input type="text" class="form-control" placeholder="">
-                               </div>
-                                    <div class="form-group " id="">
+                                </div>
+                                <div class="form-group " id="">
                                     <label for="exampleInputEmail2">电话：</label>
                                     <input type="text" class="form-control" placeholder="">
                                 </div>
                                 <div class="form-group " id="">
-                                <label for="exampleInputEmail2">地址：</label>
-                                <input type="text" class="form-control"  placeholder="">
-                               </div>
-    
+                                    <label for="exampleInputEmail2">地址：</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+
                             </form>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -392,10 +365,8 @@
                         </div>
                     </div>
                 </div>
-          
-          
-            <!-- Modal -->
-            <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <!-- Modal -->
+                <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -407,17 +378,16 @@
                             <form class="form-inline" id="user-center-change-location">
                                 <div class="form-group" id="">
                                     <label for="exampleInputName2">姓名： </label>
-                                    <input type="text" class="form-control"  placeholder="">
-                               </div>
-                                    <div class="form-group " id="">
-                                    <label for="exampleInputEmail2">电话：</label>
-                                    <input type="text" class="form-control"  placeholder="">
+                                    <input type="text" class="form-control" placeholder="">
                                 </div>
                                 <div class="form-group " id="">
-                                <label for="exampleInputEmail2">地址：</label>
-                                <input type="text" class="form-control" placeholder="">
-                               </div>
-    
+                                    <label for="exampleInputEmail2">电话：</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="form-group " id="">
+                                    <label for="exampleInputEmail2">地址：</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
                             </form>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -426,40 +396,58 @@
                         </div>
                     </div>
                 </div>
-
-
-
-<!-- Small modal 删除-->
-    <!-- Modal -->
-    <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content" id="user-center-delete">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <img id="user-center-logo" src="images/sign in/blacklogo.png" alt="">
+                <!-- Small modal 删除-->
+                <!-- Modal -->
+                <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content" id="user-center-delete">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <img id="user-center-logo" src="images/sign in/blacklogo.png" alt="">
+                            </div>
+                            <button type="button" class="btn btn-default" id="user-center-quxiao">取消操作</button>
+                            <button type="button" class="btn btn-danger" id="user-center-delBtn">确认删除</button>
+                        </div>
                     </div>
-                    <button type="button" class="btn btn-default" id="user-center-quxiao">取消操作</button>
-                    <button type="button" class="btn btn-danger"id="user-center-delBtn">确认删除</button>
                 </div>
             </div>
-        </div>
-
-
             </div>
-    
-
-        </div>
-
-
-
-    </section>
-    <%-include footer.html%>
-    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
-    <script type="text/javascript" src="js/userCenter.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js">
-    </script>
+        </section>
+        <%-include footer.html%>
+            <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+            <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="js/userCenter.js"></script>
+            <script>
+                // 个人信息
+                $('#user-center-li-bgcolor').ready(function(){
+                    // $('#user-center-name').text('11111');
+                    const userName=$('#user-center-name').text();
+                    const userSex=$('#user-center-sex').text();
+                    const userBirth=$('#user-center-birth').text();
+                    const userPhone=$('#user-center-phone').text();
+                    $.ajax({
+                        url:'/user_information.do',
+                        type:'get',
+                        async:true,
+                        data:{
+                            userName:userName,
+                            userSex:userSex,
+                            userBirth:userBirth,
+                            userPhone:userPhone
+                        },
+                        success:function(data){
+                            if(data=="success"){
+                                alert('ok')
+                            }
+                            else{
+                                alert('信息出错了')
+                            }
+                        }
+                    })
+                })
+            </script>
 </body>
 
 </html>

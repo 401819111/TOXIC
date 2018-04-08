@@ -37,6 +37,9 @@
         margin: 0 auto;
         margin-top: 10px;
         cursor: pointer;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
         img{
             width: 114px;
             height: 40px;
@@ -62,13 +65,14 @@
                 border: none;
                 background-color: #666;
                 height: 25px;
-                border-radius: 8px;
+                border-radius: 3px;
                 padding-left: 5px;
                 color: #999;
+                font-size: 13px;
                 transition: left .3s ease;
             }
             span{
-                margin-left: 20px;
+                margin-left: 10px;
             }
         }
         #hearder_searchFrame{
@@ -86,17 +90,22 @@
     margin-top: -40px;
     z-index: -99;
     transition: all .3s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     ul{
         color: white;
         list-style: none;
         position: relative;
         width: 700px;
-        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         li{
-            float: left;
             padding: 0 10px;
             line-height: 40px;
             font-size: 14px;
+            height: 40px;
             &:hover{
                 background-color: #444;
                 cursor: pointer;

@@ -18,7 +18,7 @@ $("#header_search").blur(function(){
 })
 $(document).scroll(function(){
     var header_fromTop=$(document).scrollTop();
-    console.log(header_fromTop);
+    // console.log(header_fromTop);
     if(header_fromTop>=500){
         $("nav").css("opacity",".8")
     }
