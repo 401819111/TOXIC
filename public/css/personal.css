@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
 body {
   background-color: #f3f3f3;
   font-size: 14px;
@@ -12,10 +17,7 @@ body {
   src: url('../font/font_icon/iconfont.eot');
   src: url('../font/font_icon/iconfont.svg'), url('../font/font_icon/iconfont.ttf'), url('../font/font_icon/iconfont.woff');
 }
-* {
-  margin: 0;
-  padding: 0;
-}
+
 #personal-bgimg {
   background-image: url("../images/userCenter/u537.jpg");
   background-origin: 0 0;
@@ -96,6 +98,9 @@ body {
 #user-information-div ul {
   float: left;
 }
+#user-information-div ul:nth-of-type(4){
+  margin-left: -30px
+}
 #user-information-div ul li {
   list-style: none;
   padding: 20px 80px;
@@ -111,12 +116,14 @@ body {
   margin-top: 76px;
   height: 690px;
   width: 74%;
+  text-align: center;
   margin-left: 22%;
   position: absolute;
   background-color: white;
 }
 #user-Order {
   display: none;
+
 }
 #user-Order ul li,
 #user-Order-DIY ul li {
@@ -158,43 +165,57 @@ body {
   margin-top: -5px;
   background-color: #ff5a00;
 }
-.Order-serch {
-  width: 300px;
-}
+
 #user-Order ul {
   clear: both;
   width: 90%;
   margin-left: 10%;
 }
-#user-Order-table {
+.user-Order-table {
   clear: both;
   width: 80%;
   margin: 0 10%;
-  line-height: 60px;
+  /* line-height: 60px; */
   border-collapse: collapse;
 }
-#user-Order-table thead {
+.user-Order-table thead {
   background-color: #515151;
   color: white;
   margin: none;
 }
-#user-Order-table thead tr th:first-child {
+.user-Order-table thead tr th:first-child {
+  text-align: center;
+  line-height: 40px;
+  width: 52%
+}
+.user-Order-table thead tr th:not(:first-child){
+  width: 12%
+}
+.user-Order-table thead tr th {
+  border: none;
   text-align: center;
 }
-#user-Order-table thead tr th {
-  border: none;
-}
-#user-Order-table tbody tr td {
+
+.user-Order-table tbody tr td {
   margin-top: 20px;
+  clear: initial
+}
+r-Order-table-thead tr th:not(:first-child){
+  width: 16%
+}
+.user-Order-table tbody tr{
+  border-bottom: 1px solid rgb(212, 212, 212)
 }
 .loginBtn {
-  clear: both;
   width: 100px;
-  height: 34px;
-  margin-top: 15px;
-  border-radius: 4px;
+  cursor: pointer;
   color: #ff5a00;
-  background-color: #ffffff;
+  border: 2px solid #ff5a00;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: rgba(255, 90, 0, 0.06);
+  font-size: 13px;
+  padding: 7px 10px;
 }
 #user-Order-DIY {
   display: none;
@@ -219,6 +240,9 @@ body {
   float: left;
   margin-left: 8%;
 }
+.user-collect-money{
+  margin-top: 20px;
+}
 .user-collect-money > div {
   float: left;
   clear: both;
@@ -231,10 +255,10 @@ body {
 }
 .user-collect-div2 {
   clear: both;
-  margin-top: 20%;
+  margin-top: 19%;
   position: absolute;
-  width: 21%;
-  margin-left: 3%;
+  width: 24%;
+  margin-left: 1%;
 }
 .user-collect-div2 > p {
   float: left;
@@ -271,15 +295,13 @@ body {
   border-radius: 5px;
   margin-top: 20px;
 }
-#user-location-div ul li {
-  margin-top: 10px;
-  line-height: 40px;
-  padding: 0px 20px;
-  text-align: center;
-  float: left;
-  list-style: none;
-  border-right: 1px solid #000000;
+#user-centet-location-table2 body tr td{ /* 地址表格 */
+line-height: 40px
 }
+#user-location-div tr td{
+  line-height: 40px
+}
+
 #user-location-div > ul li:last-child {
   border-right: none;
 }
@@ -291,20 +313,26 @@ body {
   margin-top: 20px;
 }
 #user-location table thead tr th {
-  width: 28%;
+  width: 25%;
+  text-align: center;
 }
 #user-location table tbody tr td:first-child {
-  padding-left: 13%;
+  width: 25%;
 }
-#user-center-do span {
+.user-center-dizhi:hover{
+  background-color: rgb(224, 224, 224);
+}
+
+.user-center-do span {
   color: #ff5a00;
   cursor: pointer;
 }
+
 .change-user-information {
   cursor: pointer;
   font-size: 18px;
 }
-#user-center-logo {
+.user-center-logo {
   width: 130px;
 }
 #user-center-parent {
@@ -315,31 +343,8 @@ body {
   overflow: hidden;
   border: solid 1px #ccc;
 }
-#user-center-parent select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: transparent;
-  border: none;
-  padding-left: 10px;
-  width: 120px;
-  height: 100%;
-}
-select {
-  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
-  border: solid 1px #000;
-  /*很关键：将默认的select选择框样式清除*/
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
-  padding-right: 14px;
-}
-/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
-select::-ms-expand {
-  display: none;
-}
-#user-center-modal div {
+
+.user-center-modal div {
   margin: 10px 30px;
 }
 #user-center-bir {
@@ -351,25 +356,57 @@ select::-ms-expand {
 .user-collect-div2 > p:last-child span {
   cursor: pointer;
 }
-#user-center-change-location div {
-  margin: 10px 20px;
+.user-center-change-location div {
+  margin: 10px 30px;
 }
 #user-center-delete {
-  height: 200px;
+  height: 150px;
 }
-#user-center-quxiao,
-#user-center-delBtn {
-  margin-top: 60px;
-}
-#user-center-quxiao {
-  margin-left: 100px;
-  margin-right: 20px;
-}
+
 #myModal5 {
-  width: 400px;
+  width: 300px;
   margin: 0 auto;
+}
+#myModal5  div{
+  width: 300px;
 }
 #user-center-change-pwd input,
 #user-center-change-newpwd input {
   margin-left: 15px;
 }
+#user-delete-div{
+    margin:20px auto;
+}
+#user-center-DIY-td{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.user-center-location-img{
+  width: 150px;
+  height: 150px;
+}
+.Order-serch {
+  width: 300px;
+  float: right;
+}
+#user-dingdan{
+width: 37%;
+float: right;
+margin-top: 9%;
+margin-right: 17%
+}
+.user-Order-table tbody tr td:first-child{
+  text-align: left
+}
+#address_recvname{
+  text-align: center;
+}
+.custom_button{
+  padding:4px 10px;
+  margin-top: 2px;
+}
+/* #user-Order-body{
+  overflow-y: scroll;
+  height: 500px;
+} */

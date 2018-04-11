@@ -17,7 +17,7 @@ module.exports = {
                 connection.end();
                 return;
             };
-            console.log('链接成功'); //否则链接成功
+            // console.log('链接成功'); //否则链接成功
         });
         // 3
         connection.query(sql, arr, callback)
