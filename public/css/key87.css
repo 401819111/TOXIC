@@ -1,0 +1,108 @@
+
+#bg,#bg2{
+    position: relative;
+    width: 773px;
+    background: url("../images/keyboard_order/87_keyboard_bg_hei.jpg") no-repeat;
+    background-size: 100%;
+    left: 27%;
+    top: 18%;
+}
+.imgbg{
+    opacity: 0;
+    width: 753px;
+    height: 278px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.key_87{
+    position: absolute;
+    z-index: 999;
+    clear: both;
+    left: 0;
+    top: 0;
+    width: 1000px;
+}
+.key_87 div div{
+    width: 35px;
+    height: 35px;
+    border: 1px solid transparent;
+    float: left;
+    font-size: 5px;
+    margin-top: 0.5%;
+    margin-left: 0.38%;
+    border-radius: 1px;
+}
+.key_87 div div:hover{
+    /*background-color: #0099cc;*/
+}
+.key_87>div{
+    clear: both;
+}
+
+.line1,.line2,.line3,.line4,.line5,.line6{
+    margin-left: 1.1%;
+}
+.line1{
+    margin-top: 1.6%;
+}
+.line2{
+    margin-top: 7.3%;
+}
+.esc{
+    margin-right: 4.3%;
+}
+.f4,.f8{
+    margin-right: 2.15%;
+}
+.f12{
+    margin-right: 1.1%;
+}
+.backspace{
+    width: 8% !important;
+    margin-right: 1.1%;
+}
+.tab{
+    width: 5.7% !important;
+}
+.backslash{
+    width: 5.8% !important;
+    margin-right: 1.1%;
+}
+.caps{
+    width: 6.68% !important;
+}
+.enter{
+    width: 8.9% !important;
+}
+.leftshift{
+    width:  8.68% !important;
+}
+.rightshift{
+    width:  11.05% !important;
+    margin-right: 5.2%;
+}
+.leftctrl,.leftwin,.leftalt,.rightalt,.rightwin,.fn,.rightctrl{
+    width:  45px !important;
+}
+.space{
+    width:  25.6% !important;
+}
+.rightctrl{
+    margin-right: 1.1%;
+}
+#bg .key_87 div div{
+    background: url("../images/keyboard_order/qing.png") no-repeat center;
+    background-size: 100%;
+}
+#bg .tab,#bg .rightshift,#bg .caps,#bg .leftshift,#bg .enter,#bg .backspace,#bg .backslash,#bg .line6 div{
+    background-size:35px 35px !important;
+}
+.space{
+    background: url("../images/keyboard_order/blank.png") no-repeat center;
+    background-size: 100%;
+}
+#bg2 .key_87 div div{
+    /*box-shadow:1px 1px 10px whitesmoke;*/
+    background: url("../images/keyboard_order/white.png") no-repeat center;
+    background-size: 100%;
+}

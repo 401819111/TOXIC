@@ -11,6 +11,7 @@
 
 
 </head>
+<%-include header.html%>
 <header>
     <!--video 播放-->
     <div id="lh_videodiv">
@@ -243,7 +244,7 @@
     </div>
     </div>
 </section>
-<footer></footer>
+<%-include footer.html%>
 
 
 
@@ -252,10 +253,14 @@
 <script src="js/less.js"></script>
 <script>
 
-
+ var str = window.location.search; 
+        str=parseInt(str.slice(1,2))
+    if(str>=1&&str<=5){
+        $(".lh_fontdiv").eq(str).click();
+        $('.lh_bankuai').eq(str).addClass('showclass').siblings().removeClass('showclass')        
+    };
     $(".lh_fontdiv").on('click',function (){
      var  a= $(this).index();
-        console.log($('.lh_bankuai').eq(a));
         $('.lh_bankuai').eq(a).addClass('showclass').siblings().removeClass('showclass')
         })
     var lh_kg=true

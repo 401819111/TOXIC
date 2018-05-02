@@ -1,16 +1,11 @@
-<!-- /*
- * @Author: 14k 
- * @Date: 2018-03-29 19:49:16 
- * @Last Modified by:   14k 
- * @Last Modified time: 2018-03-29 19:49:16 
- */ -->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">2
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">3
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/personal.css">
@@ -18,444 +13,656 @@
 </head>
 
 <body>
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <img id="user-center-logo" src="images/sign in/blacklogo.png" alt="">
-            </div>
-            <form class="form-inline" id="user-center-modal">
-                <div class="form-group" id="user-center-change-name">
-                    <label for="exampleInputName2">昵称：</label>
-                    <input type="text" class="form-control" id="exampleInputName2" placeholder="">
-                </div>
-                
-                <div class="dropdown">
-                        <label>性别：</label>
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                          选择
-                          <span class="caret"></span>
+    <%-include header.html %>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" id="user-center-close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                          <li><a href="#">男</a></li>
-                          
-                          <li role="separator" class="divider"></li>
-                          <li><a href="#">女</a></li>
-                        </ul>
-                      </div>
-                <div id="user-center-bir">
-                    <label>生日：</label>
-                    <input type="date" value="2015-09-24" />
-                </div>
-                <div class="form-group " id="user-center-change-phone">
-                    <label for="exampleInputEmail2">电话：</label>
-                    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="">
-                </div>
+                        <img class="user-center-logo" src="images/sign in/blacklogo.png" alt="">
+                    </div>
+                    <form class="form-inline user-center-modal" id="">
+                        <div class="form-group" id="user-center-change-name">
+                            <label for="exampleInputName2">昵称：</label>
+                            <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+                        </div>
+                        <div class="dropdown">
+                            <label>性别：</label>
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="true">
+                                选择
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li>
+                                    <a href="#">男</a>
+                                </li>
 
-            </form>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary">修改</button>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <a href="#">女</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="user-center-bir">
+                            <label>生日：</label>
+                            <input type="date" id="user_birthday" value="" />
+                        </div>
+                    </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default quixaoBtn" data-dismiss="modal">取消</button>
+                        <button type="button" id="access-change-information" class="loginBtn">修改</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-</div>
-    <div id="personal-bgimg">
-    </div>
-    <section id="section">
-        <section id="center-user">
-            <div id="user-center-img-change">
-                <div>
-                    <span>&#xe69e;</span>
-                </div>
-                    <img src="images/userCenter/u548.png" id="user-center-img" alt="">
-            </div>
-           
-            <ul>
-                <li>我的信息</li>
-                <li>我的订单</li>
-                <li>我的定制</li>
-                <li>商品收藏</li>
-                <li>我的地址</li>
-            </ul>
-        </section>
-        <!-- 个人信息 STRAT -->
-        <div id="center-user-div2">
-
-            <div>
-                <div class="user-information">
-                    <span>个人信息</span>
-                    <span class="change-user-information" data-toggle="modal" data-target="#myModal">&#xe69e;</span>
-                </div>
-                <div id="user-information-div">
-                    <ul>
-                        <li>昵称</li>
-                        <li>性别</li>
-                        <li>生日</li>
-                        <li>电话</li>
-                    </ul>
-                    <ul id="user-information-ul">
-                        <li id="user-center-name">14k</li>
-                        <li>男</li>
-                        <li>xxxx</li>
-                        <li id="user-center-phone">13890404038</li>
-                    </ul>
-                    <div class="user-information" id="user-information2">
-                        <span>账号信息</span>
-                        <span  data-toggle="modal" data-target="#myModal2" class="change-user-information">&#xe69e;</span>
+        
+        <div id="personal-bgimg">
+        </div>
+        <section id="section">
+            <section id="center-user">
+                <div id="user-center-img-change">
+                    <div>
+                        <span>&#xe69e;</span>
                     </div>
-                    <ul>
-                        <li>绑定邮箱</li>
-                        <li>绑定手机</li>
-                        <li>密码</li>
-                    </ul>
-                    <ul>
-                        <li id="user-center-email">619113277@qq.com</li>
-                        <li>13899999999</li>
-                        <li>*****</li>
-                    </ul>
+                    <img src="images/userCenter/u548.png" id="user-center-img" alt="">
                 </div>
-            </div>
-
-          
-
-
-         <!-- Modal -->
-         <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <img id="user-center-logo" src="images/sign in/blacklogo.png" alt="">
+                <ul>
+                    <li id="user-center-information">我的信息</li>
+                    <li id="usercenter_myorder">我的订单</li>
+                    <li>我的定制</li>
+                    <li>商品收藏</li>
+                    <li>我的地址</li>
+                </ul>
+            </section>
+            <!-- 个人信息 STRAT -->
+            <div id="center-user-div2">
+                <div>
+                    <div class="user-information">
+                        <span>个人信息</span>
+                        <span class="change-user-information" data-toggle="modal" data-target="#myModal">&#xe69e;</span>
+                    </div>
+                    <div id="user-information-div">
+                        <ul>
+                            <li>昵称</li>
+                            <li>性别</li>
+                            <li>生日</li>
+                        </ul>
+                        <ul id="user-information-ul">
+                            <li id="user-center-name"></li>
+                            <li id="user-center-sex"></li>
+                            <li id="user-center-birth"></li>
+                        </ul>
+                        <div class="user-information" id="user-information2">
+                            <span>账号信息</span>
+                            <span data-toggle="modal" id="account_information" data-target="#myModal2" class="change-user-information">&#xe69e;</span>
                         </div>
-                        <form class="form-inline" id="user-center-modal">
-                            <div class="form-group" id="user-center-change-email">
-                                <label for="exampleInputName2">绑定邮箱：</label>
-                                <input type="email" class="form-control" id="exampleInputName2" placeholder="">
+                        <ul>
+                            <li>绑定邮箱</li>
+                            <li>绑定手机</li>
+                            <li>账户名</li>
+                            <li>密码</li>
+                        </ul>
+                        <ul>
+                            <li id="user-center-email"></li>
+                            <li id="user-center-phone"></li>
+                            <li id="user-center-account"></li>
+                            <li id="user-center-password"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span class="user_module_close" aria-hidden="true">&times;</span>
+                                </button>
+                                <img class="user-center-logo" src="images/sign in/blacklogo.png" alt="">
                             </div>
-                           
-                            <div class="form-group " id="user-center-change-phone">
-                                <label for="exampleInputEmail2">绑定电话：</label>
-                                <input type="text" class="form-control" id="exampleInputEmail2" placeholder="">
-                            </div>
-                            <div class="form-group " id="user-center-change-pwd">
+                            <form class="form-inline user-center-modal" id="">
+                                <div class="form-group" id="user-center-change-email">
+                                    <label for="exampleInputName3">绑定邮箱：</label>
+                                    <input type="email" class="form-control" id="exampleInputName3" placeholder="">
+                                </div>
+
+                                <div class="form-group " id="user-center-change-phone2">
+                                    <label for="exampleInputEmail2">绑定电话：</label>
+                                    <input type="text" class="form-control" id="exampleInputPhone" placeholder="">
+                                </div>
+                                <div class="form-group " id="user-center-change-pwd">
                                     <label for="exampleInputEmail2">原密码：</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="">
+                                    <input type="text" class="form-control" id="exampleInputPwd" placeholder="">
                                 </div>
 
                                 <div class="form-group " id="user-center-change-newpwd">
-                                        <label for="exampleInputEmail2">新密码：</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="">
-                                    </div>
-                        </form>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                            <button type="button" class="btn btn-primary">修改</button>
+                                    <label for="exampleInputEmail2">新密码：</label>
+                                    <input type="text" class="form-control" id="exampleInputNewPwd" placeholder="">
+                                </div>
+                            </form>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default quixaoBtn" data-dismiss="modal">取消</button>
+                                <button type="button" id="sure_change-information" class="loginBtn">修改</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- 个人信息 end -->
-
-        <!-- 订单STRAT -->
-        <div id="user-Order">
-            <ul id="user-Order-all">
-                <li>所有订单</li>
-                <li>待付款</li>
-                <li>待发货</li>
-                <li>待收货</li>
-                <li class="Order-serch">
-                    <form class="form-inline">
-                        <input type="text" class="user-information-input"  placeholder="商品名称/订单编号">
-                        <button type="button" class="user-information-btn" class="btn btn-primary">查找</button>
-                    </form>
-                </li>
-            </ul>
-            <table id="user-Order-table">
-                <thead>
-                    <tr>
-                        <th colspan="3">商品详情</th>
-                        <th>数量</th>
-                        <th>单价</th>
-                        <th>状态</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <!-- <table id="user-Order-table2"> -->
-                  
-                <!-- </table> -->
-<tbody>
-  
-    <tr>
-            
-        <td>2018-03-29-3:09</td><td>订单编号</td>
-        <td>123456789845</td>
-              
-    </tr>
-    
-    <tr>
-        <td>
-            <input type="checkbox">
-        </td>
-        <td>2</td>
-        <td>无线轨迹球专业FPS电竞游戏鼠标</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>
-            <button type="button" id="user-center-button" class="btn loginBtn">确认订单</button>
-        </td>
-    </tr>
-</tbody>
-         
-            </table>
-        </div>
-        <!-- 订单end -->
-
-        <div id="user-Order-DIY">
-            <ul id="user-Order-all">
-                <li>我的定制</li>
-                <li>未完成</li>
-                <li>已完成</li>
-                <li class="Order-serch">
-                    <form class="form-inline ">
-                        <input type="text" class="user-information-input"  placeholder="商品名称/订单编号">
-                        <button type="button" class="user-information-btn" class="btn btn-primary">查找</button>
-                    </form>
-                </li>
-            </ul>
-            <table id="user-Order-table">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th>定制详情</th>
-                        <th>定制型号</th>
-                        <th>状态</th>
-                        <th>操作</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2018-03-29-3:09</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="checkbox">
-                        </td>
-                        <td>2</td>
-                        <td>无线轨迹球专业FPS电竞游戏鼠标</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>
-                            <button type="button" id="user-center-button" class="btn loginBtn">确认订单</button>
-                        </td>
-                    </tr>
-
-
-                </tbody>
-            </table>
-        </div>
-        <!-- 订单end -->
-        <!--  收藏strat -->
-        <div class="user-collect">
-            <div class="user-collect-line">
-                <span>我的收藏</span>
-            </div>
-            <div class="user-collect-div">
-
-                <div class="user-collect-money">
-                    <div class="user-collect-img">
-                        <img src="images/fenlei/u1868.jpg" alt="">
-                    </div>
-                    <div class="user-collect-div2">
-                        <p>￥999</p>
-                        <p>型号：
-                            <span>888</span>
-                        </p>
-                        <p>
-                            <span>&#xe698;</span>
-                            <span>&#xe6f7;</span>
-                            <span>&#xe69d;</span>
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="user-collect-money">
-                    <div class="user-collect-img">
-                        <img src="images/fenlei/u1868.jpg" alt="">
-                    </div>
-                    <div class="user-collect-div2">
-                        <p>￥999</p>
-                        <p>型号：
-                            <span>888</span>
-                        </p>
-                        <p>
-                            <span>&#xe698;</span>
-                            <span>&#xe6f7;</span>
-                            <span>&#xe69d;</span>
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-        <!-- 收藏end -->
-
-
-   
-        <div id="user-location">
-                <button type="button" id="user-add-dress" class="btn loginBtn" data-toggle="modal" data-target="#myModal4">添加地址</button>
-            
-    <table id="user-Order-table">
-            <thead>
-                <tr>
-                    <th>收货人</th>
-                    <th>电话</th>
-                    <th>地址详情</th>
-                    <th>操作</th>
-
-                </tr>
-            </thead>
-            <tbody id="user-location-div">
-
-                <tr id="user-center-dizhi">
-                    <td>14k</td>
-                    <td>13888888888</td>
-                    <td>四川省成都市高新区青年公寓1314</td>
-                    <td id="user-center-do">
-                         <span data-toggle="modal" data-target="#myModal3"> 修改 </span> |
-                         <span data-toggle="modal" data-target="#myModal5"> 删除 </span>
-                        <span> | 默认地址</span>
-                        </td>
-                </tr>
-            </tbody>
-        </table>
-<!--         
-            <div id="user-location-div">
-                <ul id="user-center-dizhi">
-                    <li>14k</li>
-                    <li>13888888888</li>
-                    <li>四川省成都市高新区青年公寓1314</li>
-                    <li>
-                        
+            <!-- 个人信息 end -->
+            <!-- 订单STRAT -->
+            <div id="user-Order">
+                <ul id="user-Order-all">
+                    <li>所有订单</li>
+                    <li id="user_readyToPay">待付款</li>
+                    <li>待发货</li>
+                    <li>待收货</li>
+                    <li class="Order-serch">
+                        <form class="form-inline">
+                            <input type="text" class="user-information-input" placeholder="商品名称/订单编号">
+                            <button type="button" class="user-information-btn">查找</button>
+                        </form>
                     </li>
                 </ul>
+                <table class="user-Order-table">
+                    <thead>
+                        <tr>
+                            <th>商品详情</th>
+                            <th>订单时间</th>
+                            <th>数量</th>
+                            <th>总价</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-Order-body">
+                    </tbody>
+                </table>
+            </div>
+            <!-- 订单end -->
+            <div id="user-Order-DIY">
+                <ul id="user-Order-DIY-all">
+                    <li>我的定制</li>
+                    <li>未完成</li>
+                    <li>已完成</li>
+                    <li class="Order-serch">
+                        <form class="form-inline ">
+                            <input type="text" class="user-information-input" placeholder="商品名称/订单编号">
+                            <button type="button" class="user-information-btn ">查找</button>
+                        </form>
+                    </li>
+                </ul>
+                <table class="user-Order-table">
+                    <thead id="user-Order-table-thead">
+                        <tr>
+                            <th>定制详情</th>
+                            <th>订单时间</th>
+                            <th>定制型号</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                                <img src="images/fenlei/u1868.jpg" class="user-center-location-img" alt=""> 无线轨迹球专业FPS电竞游戏鼠标user
+                            </td>
+                            <td>2018-03-29-3:09</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td id="user-center-DIY-td">
+                                <button class="quixaoBtn custom_button">取消定制</button>
+                                <button type="button" id="" class="loginBtn custom_button">继续定制</button>
+                                <button class="loginBtn custom_button">提交定制</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 订单end -->
+            <!--  收藏strat -->
+            <div class="user-collect">
+                <div class="user-collect-line">
+                    <span>我的收藏</span>
+                </div>
+                <div class="user-collect-div">
+                    
+                    <div class="user-collect-money">
+                        <div class="user-collect-img">
+                            <img src="images/fenlei/u1868.jpg" alt="">
+                        </div>
+                        <div class="user-collect-div2">
+                            <p>￥999</p>
+                            <p>型号：
+                                <span>888</span>
+                            </p>
+                            <p>
+                                <span>&#xe698;</span>
+                                <span>&#xe6f7;</span>
+                                <span>&#xe69d;</span>
+                            </p>
+                        </div>
 
-            </div> -->
+                    </div>
 
-
-            <!-- Modal -->
-            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                </div>
+            </div>
+            <!-- 收藏end -->
+            <div id="user-location">
+                <button type="button" id="user-add-dress" class="loginBtn" data-toggle="modal" data-target="#myModal4">添加地址</button>
+                <table class="user-Order-table user-centet-location-table2">
+                    <thead>
+                        <tr>
+                            <th>收货人</th>
+                            <th>电话</th>
+                            <th>地址详情</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-location-div">
+                    </tbody>
+                </table>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
+                                    <span class="user_module_close" aria-hidden="true">&times;</span>
                                 </button>
-                                <img id="user-center-logo" src="images/sign in/blacklogo.png" alt="">
+                                <img class="user-center-logo" src="images/sign in/blacklogo.png" alt="">
                             </div>
-                            <form class="form-inline" id="user-center-change-location">
-                                <div class="form-group" id="">
-                                    <label for="exampleInputName2">姓名： </label>
-                                    <input type="text" class="form-control" placeholder="">
-                               </div>
-                                    <div class="form-group " id="">
-                                    <label for="exampleInputEmail2">电话：</label>
-                                    <input type="text" class="form-control" placeholder="">
+                            <form class="form-inline user-center-change-location">
+                                <div class="form-group" style="display: flex;flex-direction: column;justify-content: center">
+                                    <label for="exampleInputName2">收货人姓名： </label>
+                                    <input type="text" id="change_recName" class="form-control" placeholder="">
                                 </div>
-                                <div class="form-group " id="">
-                                <label for="exampleInputEmail2">地址：</label>
-                                <input type="text" class="form-control"  placeholder="">
-                               </div>
-    
+                                <div class="form-group " style="display: flex;flex-direction: column;justify-content: center">
+                                    <label for="exampleInputEmail2">收货人电话：</label>
+                                    <input type="text" id="change_recTel" class="form-control" placeholder="">
+                                </div>
+                                <div class="form-group " style="display: flex;flex-direction: column;justify-content: center">
+                                    <label for="exampleInputEmail2">收货地址：</label>
+                                    <br>省
+                                    <input type="text" id="change_recProvince" class="form-control" placeholder="">
+                                    <br>市
+                                    <input type="text" id="change_recCity" class="form-control" placeholder="">
+                                    <br>区/县
+                                    <input type="text" id="change_recCounty" class="form-control" placeholder="">
+                                    <br>详细地址
+                                    <input type="text" id="change_recDetailed" class="form-control" placeholder="">
+                                </div>
+
                             </form>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                <button type="button" class="btn btn-primary">修改</button>
+                                <button type="button" class="btn btn-default quixaoBtn" data-dismiss="modal">取消</button>
+                                <button type="button" id="address_change" class="loginBtn">修改</button>
                             </div>
                         </div>
                     </div>
                 </div>
-          
-          
-            <!-- Modal -->
-            <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <!-- Modal -->
+                <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
+                                    <span class="user_module_close" aria-hidden="true">&times;</span>
                                 </button>
-                                <img id="user-center-logo" src="images/sign in/blacklogo.png" alt="">
+                                <img class="user-center-logo" src="images/sign in/blacklogo.png" alt="">
                             </div>
-                            <form class="form-inline" id="user-center-change-location">
-                                <div class="form-group" id="">
-                                    <label for="exampleInputName2">姓名： </label>
-                                    <input type="text" class="form-control"  placeholder="">
-                               </div>
-                                    <div class="form-group " id="">
-                                    <label for="exampleInputEmail2">电话：</label>
-                                    <input type="text" class="form-control"  placeholder="">
+                            <form class="form-inline user-center-change-location">
+                                <div class="form-group" style="display: flex;flex-direction: column;justify-content: center">
+                                    <label for="exampleInputName2">收货人姓名： </label>
+                                    <input type="text" id="add_recName" class="form-control" placeholder="">
                                 </div>
-                                <div class="form-group " id="">
-                                <label for="exampleInputEmail2">地址：</label>
-                                <input type="text" class="form-control" placeholder="">
-                               </div>
-    
+                                <div class="form-group" style="display: flex;flex-direction: column;justify-content: center">
+                                    <label for="exampleInputEmail2">收货人电话：</label>
+                                    <input type="text" id="add_recTel" class="form-control" placeholder="">
+                                </div>
+                                <div class="form-group" style="display: flex;flex-direction: column;justify-content: center">
+                                    <label for="exampleInputEmail2">收货地址：</label>
+                                    <br>省
+                                    <input type="text" id="add_recProvince" class="form-control" placeholder="">
+                                    <br>市
+                                    <input type="text" id="add_recCity" class="form-control" placeholder="">
+                                    <br>区/县
+                                    <input type="text" id="add_recCounty" class="form-control" placeholder="">
+                                    <br>详细地址
+                                    <input type="text" id="add_recDetailed" class="form-control" placeholder="">
+                                </div>
                             </form>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                <button type="button" class="btn btn-primary">保存</button>
+                                <button type="button" class="btn btn-default quixaoBtn" data-dismiss="modal">取消</button>
+                                <button type="button" id="address_add" class="loginBtn">保存</button>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Small modal 删除-->
+                <!-- Modal -->
+                <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content" id="user-center-delete">
+                            <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span class="user_module_close" aria-hidden="true">&times;</span>
+                                        </button>
+                                <img class="user-center-logo" src="images/sign in/blacklogo.png" alt="">
+                            </div>
+                            <div id="user-delete-div">
+                                <button type="button" class="btn btn-default quixaoBtn" data-dismiss="modal" id="user-center-quxiao">取消</button>
+                                <button type="button" class="loginBtn" id="user-center-delBtn">确认</button>
+                            </div>
 
-
-
-<!-- Small modal 删除-->
-    <!-- Modal -->
-    <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content" id="user-center-delete">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <img id="user-center-logo" src="images/sign in/blacklogo.png" alt="">
+                        </div>
                     </div>
-                    <button type="button" class="btn btn-default" id="user-center-quxiao">取消操作</button>
-                    <button type="button" class="btn btn-danger"id="user-center-delBtn">确认删除</button>
                 </div>
             </div>
-        </div>
-
-
             </div>
-    
-
-        </div>
-
-
-
-    </section>
-    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
-    <script type="text/javascript" src="js/userCenter.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    </script>
+        </section>
+        <%-include footer.html%>
+            <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+            <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="js/userCenter.js"></script>
+            <script>
+                var userId = 1;
+                //按钮按下弹起事件
+                $(".loginBtn").mousedown(function(){
+                    $(this).css({"color":"white","background":"#ff5a00"})
+                }).mouseup(function(){
+                    $(this).css({"color":"#ff5a00","background":"transparent"})
+                })
+                //设置tbody宽度等于table宽度
+                var tbody_width=parseInt((($(window).width())*0.74)*0.8);
+                $('#user-Order-body').width(tbody_width)
+                // 个人信息、账户信息读取
+                user_information_get();
+                function user_information_get() {
+                    $.ajax({
+                        url: '/user_information.do',
+                        type: 'get',
+                        async: true,
+                        data: {
+                            userId: userId
+                        },
+                        success: function (data) {
+                            $('#user-center-name').text(data[0].user_name);
+                            $('#user-center-birth').text(data[0].user_birthday);
+                            $('#user-center-email').text(data[0].user_email);
+                            $('#user-center-phone').text(data[0].user_tel);
+                            $('#user-center-account').text(data[0].user_acount);
+                            $('#user-center-password').text(data[0].user_password);
+                            if (data[0].user_sex == 1) {
+                                $('#user-center-sex').text("男");
+                            } else {
+                                $('#user-center-sex').text("女");
+                            }
+                        }
+                    })
+                }
+                //个人信息修改
+                $('#access-change-information').click(function () {
+                    var nameAdd = $('#exampleInputName2').val();
+                    var birthAdd = $('#user_birthday').val();
+                    var sexAdd = $('#dropdownMenu1').val();
+                    $.ajax({
+                        url: '/user_addinformation.do',
+                        type: 'get',
+                        async: true,
+                        data: {
+                            userId: userId,
+                            nameAdd: nameAdd,
+                            birthAdd: birthAdd,
+                            sexAdd: sexAdd,
+                        },
+                        success: function (data) {
+                            $("#user-center-close").click()
+                            user_information_get();
+                            if (data == 'ok') {
+                                alert('修改成功')
+                            } else {
+                                alert('修改失败')
+                            }
+                        }
+                    })
+                })
+                //账户信息修改
+                $('#sure_change-information').click(function () {
+                    var emailUpdate = $('#exampleInputName3').val();
+                    var phoneUpdate = $('#exampleInputPhone').val();
+                    var oldPassword = $('#exampleInputPwd').val();
+                    var newPassword = $('#exampleInputNewPwd').val();
+                    $.ajax({
+                        url: '/accountInformation.do',
+                        type: 'get',
+                        async: true,
+                        data: {
+                            userId: userId,
+                            emailUpdate: emailUpdate,
+                            phoneUpdate: phoneUpdate,
+                            oldPassword: oldPassword,
+                            newPassword: newPassword
+                        },
+                        success: function (data) {
+                            $(".btn-default").click()
+                            user_information_get();
+                            if (data == 'ok') {
+                                alert('修改成功')
+                            } else {
+                                alert('修改失败')
+                            }
+                        }
+                    })
+                })
+                //获取相应栏位收货地址id
+                var x=0;
+                var getAddress_id = 0;
+                $("#user-location-div").on("click", ".user-center-dizhi", function () {
+                    x = $(this).index()
+                    getAddress_id = parseInt($(".change_button:eq(" + x + ")").attr("name"))
+                })
+                //收货地址查询
+                user_address_find();
+                function user_address_find() {
+                    $.ajax({
+                        url: '/user_address.do',
+                        type: 'get',
+                        async: true,
+                        data: {
+                            userId: userId
+                        },
+                        success: function (data) {
+                            $('#user-location-div').html("")
+                            for (var i = 0; i < data.length; i++) {
+                                $('#user-location-div').append(
+                                    "<tr class='user-center-dizhi'><td id='address_recvname'>" +
+                                    data[i].address_recvname + "</td><td id='address_tel'>" +
+                                    data[i].address_tel + "</td><td id='address_detail'>" +
+                                    data[i].address_province + data[i].address_city + data[i].address_county +
+                                    data[i].address_detailed +
+                                    "</td><td class='user-center-do'><span class='change_button' data-toggle='modal'  data-target='#myModal3' name='" +
+                                    data[i].address_id +
+                                    "a'> 修改 </span> |<span id='address_delete' data-toggle='modal' data-target='#myModal5'> 删除 </span>|<span class='set_default'> 设为默认</span></td></tr>"
+                                )
+                            }
+                        }
+                    })
+                }
+                //地址信息修改
+                $('#address_change').click(function () {
+                    var change_recName = $('#change_recName').val();
+                    var change_recTel = $('#change_recTel').val();
+                    var change_recProvince = $('#change_recProvince').val();
+                    var change_recCity = $('#change_recCity').val();
+                    var change_recCounty = $('#change_recCounty').val();
+                    var change_recDetailed = $('#change_recDetailed').val();
+                    $.ajax({
+                        url: '/address_change.do',
+                        type: 'get',
+                        async: true,
+                        data: {
+                            userId: userId,
+                            getAddress_id: getAddress_id,
+                            change_recName: change_recName,
+                            change_recTel: change_recTel,
+                            change_recProvince: change_recProvince,
+                            change_recCity: change_recCity,
+                            change_recCounty: change_recCounty,
+                            change_recDetailed: change_recDetailed,
+                        },
+                        success: function (data) {
+                            $('.user_module_close').click()
+                            user_address_find();
+                            if (data == 'ok') {
+                                alert('修改成功')
+                            } else {
+                                alert('修改失败')
+                            }
+                        }
+                    })
+                })
+                // 设为默认地址
+                $('.set_default').click(function () {
+                    alert("点了一下")
+                    console.log("点了一下")
+                    $.ajax({
+                        url: '/set_default.do',
+                        type: 'get',
+                        async: true,
+                        data: {
+                            userId: userId,
+                            getAddress_id: getAddress_id,
+                        },
+                        success: function (data) {
+                            if (data == 'ok') {
+                                alert('设为默认成功')
+                            } else {
+                                alert('设为默认失败')
+                            }
+                        }
+                    })
+                })
+                //新增地址信息
+                $('#address_add').click(function () {
+                    var add_recName = $('#add_recName').val();
+                    var add_recTel = $('#add_recTel').val();
+                    var add_recProvince = $('#add_recProvince').val();
+                    var add_recCity = $('#add_recCity').val();
+                    var add_recCounty = $('#add_recCounty').val();
+                    var add_recDetailed = $('#add_recDetailed').val();
+                    $.ajax({
+                        url: '/address_add.do',
+                        type: 'get',
+                        async: true,
+                        data: {
+                            userId: userId,
+                            add_recName: add_recName,
+                            add_recTel: add_recTel,
+                            add_recProvince: add_recProvince,
+                            add_recCity: add_recCity,
+                            add_recCounty: add_recCounty,
+                            add_recDetailed: add_recDetailed
+                        },
+                        success: function (data) {
+                            $('.user_module_close').click()
+                            user_address_find();
+                            if (data == 'ok') {
+                                alert('新增成功')
+                            } else {
+                                alert('新增失败')
+                            }
+                        }
+                    })
+                })
+                //删除地址信息
+                $('#user-center-delBtn').click(function () {
+                    $.ajax({
+                        url: '/address_delete.do',
+                        type: 'get',
+                        async: true,
+                        data: {
+                            userId: userId,
+                            getAddress_id: getAddress_id,
+                        },
+                        success: function (data) {
+                            $('.user_module_close').click()
+                            user_address_find();
+                            if (data == 'ok') {
+                                alert('删除成功')
+                            } else {
+                                alert('删除失败')
+                            }
+                        }
+                    })
+                })
+                //订单页面
+                var li_content = 0;
+                    //点击我的订单按钮就加载所有订单
+                $("#usercenter_myorder").click(function(){
+                    li_content = "所有订单";
+                    order_display();
+                });
+                $("#user-Order-all li").click(function () {
+                    li_content = $(this).text();
+                    order_display();
+                })
+                function order_display(){
+                    $.ajax({
+                        url: '/user_order.do',
+                        type: 'get',
+                        async: true,
+                        data: {
+                            userId: userId,
+                            li_content: li_content
+                        },
+                        success: function (data) {
+                            if (data == "null") {
+                                $('#user-Order-body').html("<tr>没有相关订单哦</tr>")
+                            } else {
+                                $('#user-Order-body').html("")
+                                for (var i = 0; i < data.length; i++) {
+                                    $('#user-Order-body').append("<tr><td> <img src='images/" +
+                                        data[i]
+                                        .goods_cover +
+                                        "' class='user-center-location-img'> <div  id='user-dingdan'>  <span> " +
+                                        data[i].goods_name + " </span> <span > <br> 订单编号 : " +
+                                        data[
+                                            i].order_id + " </span></div> </td>" +
+                                        "<td>" + data[i].order_date + "</td><td >" + data[i].order_gdnum +
+                                        "</td><td >￥" + data[i].sum_price + "</td><td >" + data[
+                                            i].order_state +
+                                        "</td><td > <button class='loginBtn'>查看详情</button></td></tr>"
+                                    )
+                                }
+                            }
+                        }
+                    })
+                }
+                //商品收藏
+                user_center_collection();
+                function user_center_collection() {
+                    $.ajax({
+                        url: '/user_collection.do',
+                        type: 'get',
+                        async: true,
+                        data: {
+                            userId: userId
+                        },
+                        success: function (data) {
+                            console.log(data)
+                            $('.user-collect-div').html("")
+                            for (var i = 0; i < data.length; i++) {
+                                $('.user-collect-div').append("<div class='user-collect-money'><div class='user-collect-img'><img src='images/"+ data[i].goods_cover+"' alt=''></div><div class='user-collect-div2'><p>￥"+data[i].goods_sale+"</p><p>型号：<span>"+ data[0].goods_name+"</span></p><p><span>&#xe698;</span><span>&#xe6f7;</span><span>&#xe69d;</span></p></div></div>");$('.user-collect-div').append();
+                        }
+                    }
+                    })
+                }
+            </script>
 </body>
 
 </html>

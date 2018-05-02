@@ -1,9 +1,4 @@
-<!-- /*
- * @Author: 14k 
- * @Date: 2018-03-29 19:49:16 
- * @Last Modified by:   14k 
- * @Last Modified time: 2018-03-29 19:49:16 
- */ -->
+
 <!DOCTYPE html>
 <html lang="en">2
 
@@ -58,7 +53,7 @@
                         </div>
                     </form>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-default quixaoBtn" data-dismiss="modal">取消</button>
                         <button type="button" id="access-change-information" class="loginBtn">修改</button>
                     </div>
                 </div>
@@ -150,7 +145,7 @@
                                 </div>
                             </form>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-default quixaoBtn" data-dismiss="modal">取消</button>
                                 <button type="button" id="sure_change-information" class="loginBtn">修改</button>
                             </div>
                         </div>
@@ -168,7 +163,7 @@
                     <li class="Order-serch">
                         <form class="form-inline">
                             <input type="text" class="user-information-input" placeholder="商品名称/订单编号">
-                            <button type="button" class="user-information-btn loginBtn">查找</button>
+                            <button type="button" class="user-information-btn">查找</button>
                         </form>
                     </li>
                 </ul>
@@ -220,7 +215,7 @@
                             <td>2</td>
                             <td>3</td>
                             <td id="user-center-DIY-td">
-                                <button class="loginBtn custom_button">取消定制</button>
+                                <button class="quixaoBtn custom_button">取消定制</button>
                                 <button type="button" id="" class="loginBtn custom_button">继续定制</button>
                                 <button class="loginBtn custom_button">提交定制</button>
                             </td>
@@ -304,7 +299,7 @@
 
                             </form>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-default quixaoBtn" data-dismiss="modal">取消</button>
                                 <button type="button" id="address_change" class="loginBtn">修改</button>
                             </div>
                         </div>
@@ -342,7 +337,7 @@
                                 </div>
                             </form>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-default quixaoBtn" data-dismiss="modal">取消</button>
                                 <button type="button" id="address_add" class="loginBtn">保存</button>
                             </div>
                         </div>
@@ -360,7 +355,7 @@
                                 <img class="user-center-logo" src="images/sign in/blacklogo.png" alt="">
                             </div>
                             <div id="user-delete-div">
-                                <button type="button" class="btn btn-default" data-dismiss="modal" id="user-center-quxiao">取消</button>
+                                <button type="button" class="btn btn-default quixaoBtn" data-dismiss="modal" id="user-center-quxiao">取消</button>
                                 <button type="button" class="loginBtn" id="user-center-delBtn">确认</button>
                             </div>
 
@@ -409,7 +404,7 @@
                             }
                         }
                     })
-                }
+                }   
                 //个人信息修改
                 $('#access-change-information').click(function () {
                     var nameAdd = $('#exampleInputName2').val();

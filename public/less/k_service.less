@@ -1,0 +1,149 @@
+@color-border:gainsboro;
+@font-face{
+  font-family:"Myfont";
+  src: url("../font/font_icon/iconfont.eot"),
+  url("../font/font_icon/iconfont.ttf"),
+  url("../font/font_icon/iconfont.woff")
+}
+header{
+  height: 60px;
+  background-color: #0086b3;
+}
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  overflow: hidden;
+}
+section{
+  position: relative;
+  height: 700px;
+  width: 100%;
+}
+.div1{
+  position: absolute;
+  width: 45%;
+  height: 500px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid @color-border;
+  border-radius: 3px;
+}
+.div1 div:nth-child(1){
+  background-color: #444444;
+  width: 100%;
+  height: 55px;
+  float: left;
+}
+.div1 div:nth-child(2){
+  width: 68%;
+  height: 300px;
+  border: 1px solid @color-border;
+  border-left:none ;
+  border-top:none ;
+  float: left;
+}
+.div1 div:nth-child(3){
+  float: left;
+  width: 31%;
+  height: 200px;
+  border-left:none ;
+  border-top:none ;
+  border-right:none ;
+}
+.div1 div:nth-child(4){
+  float: left;
+  width: 68%;
+  height: 145px;
+}
+.div1 div:nth-child(5){
+  float: left;
+  width: 31.5%;
+  height: 245px;
+  position: relative;
+  top: -100px;
+  border: 1px solid @color-border;
+  border-right: none;
+  border-bottom: none;
+}
+.div1>div>p{
+  font-size: 13px;
+}
+.div1>div:nth-child(1) p:nth-child(1){
+  margin-left: 20px;
+  margin-top: 10px;
+  color:white;
+}
+.div1>div:nth-child(2) p:nth-child(2){
+  margin-left: 40px;
+  margin-top: 10px;
+}
+.div1>div:nth-child(1) p:nth-child(2){
+  margin-left: 200px;
+  color: white;
+}
+.div1>div:nth-child(2) p:nth-child(1){
+  margin-left:15px;
+  margin-top: 10px;
+}
+.div1>div:nth-child(3) img{
+  margin-top: 20px;
+  width: 100px;
+  margin-left: 50px;
+}
+#p1{
+  font-size: 13px;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+#div1{
+  font-family: Myfont;
+  color: #949494;
+}
+#div1 span{
+  margin-left: 20px;
+  font-size: 15px;
+}
+#div1 p{
+  margin-top: 115px;
+}
+#div2 button{
+  color: white;
+  background-color: #ff5a00;
+  height: 26px;
+  width: 80px;
+  border-radius: 3px;
+  border: none;
+}
+#div2{
+  float: right;
+  margin-top: -25px;
+}
+.div2 img{
+  width:90px;
+  position: relative;
+  top: 55px;
+}
+.div2 p{
+  position: relative;
+  top: 30px;
+}
+textarea{
+  float: left;
+  border-left:0 solid;
+  border-top:0 solid;
+  border-right:0 solid;
+  border-bottom:0 solid;
+}
+.div2{
+  text-align: center;
+}
+#CharMessage{
+  height: 240px;
+  width: 415px;
+}
+input,button,select,textarea{outline:none}

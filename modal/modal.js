@@ -5,6 +5,7 @@ module.exports = {
         const sql = "select * from goods,goods_detail where goods.goods_id=goods_detail.goods_id and goods.goods_id=?";
         db.query(sql, [goods_id], callback);
     },
+    //个人中心
     myInformation:function(userId,callback){
         let sql="select * from user_information where user_id=?";
         // console.log(sql)
@@ -53,4 +54,42 @@ module.exports = {
         let sql="SELECT collection.col_id,goods.goods_cover,goods.goods_name,goods.goods_sale FROM collection,goods WHERE collection.goods_id=goods.goods_id AND user_id=?";
         db.query(sql,[userId],callback)
     },
-}
+    //登录页
+    login:(name,pwd,callback)=>{
+        const sql="select * from user_information where user_account= ?  and user_password=?" 
+        db.query(sql,[name,pwd],callback) 
+     },
+     signUp:(res,name,pwd,phone,code,callback)=>{
+         
+         AV.Cloud.verifySmsCode(code, phone).then((data)=> {
+             console.log(typeof("phone"))
+             const sql="INSERT INTO user_information (user_tel,user_acount,user_password)  VALUES (?,?,?)" 
+             db.query(sql,[phone,name,pwd],callback); 
+         },(err)=>{
+             res.send("fail2")
+         })
+      },
+      queryUser:(name,callback)=>{
+         const sql="select * from user_information where user_acount=? " 
+         db.query(sql,name,callback) 
+      },
+      ForgotPwd:(res,name,phone,code,newPwd,callback)=>{
+         AV.Cloud.verifySmsCode(code, phone).then((data)=> {
+             const sql="update user_information set user_password= ? where user_tel= ?"
+             db.query(sql,[newPwd,phone],callback); 
+         },(err)=>{
+             // console.log(err)
+             res.send("fail2")
+         })
+      },
+      //产品分类
+      lh_stulist:function (callback) {
+        const sql="select*from goods "
+        db.query(sql,[],callback)
+    },
+    // 前台获取
+    viewFrontImg:function(callback){
+        const sql ="SELECT * FROM front_control ";
+        db.query(sql,callback);
+    },
+    }

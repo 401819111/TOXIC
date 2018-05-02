@@ -37,7 +37,7 @@ body {
 #index_fullpage .section1 .index_slide1 div {
   color: white;
   position: absolute;
-  top: 27%;
+  top: 37%;
   left: 2%;
 }
 #index_fullpage .section1 .index_slide1 div h2 {
@@ -59,7 +59,7 @@ body {
 #index_fullpage .section1 .index_slide2 div {
   color: white;
   position: relative;
-  top: 27%;
+  top: 37%;
   left: 10%;
 }
 #index_fullpage .section1 .index_slide2 div h2 {
@@ -81,10 +81,11 @@ body {
   color: white;
   position: relative;
   text-align: center;
-  top: 10%;
+  top: 20%;
 }
 #index_fullpage .index_slide3 div h2 {
   font-size: 50px;
+  color: #303133;
 }
 #index_fullpage .index_slide3 div h3 {
   font-size: 35px;
@@ -103,7 +104,7 @@ body {
 #index_fullpage .index_slide4 div {
   color: white;
   position: relative;
-  top: 27%;
+  top: 37%;
   left: 10%;
 }
 #index_fullpage .index_slide4 div h2 {

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>键盘定制</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<style>
+	#dowebok{
+		width: 85%;
+		margin-left: 7.5%;
+	}
+	#bgcolor,.key_87{
+		text-align: center;
+	}
+	#bgcolor img{
+		margin-top: 10%;
+	}
+	.section{
+		position: relative;
+	}
+	.section ul li {
+		list-style: none;
+		float: left;
+	}
+	.zhou{
+		clear: both;
+        height: 130px;
+		position: absolute;
+		bottom: 35%;
+		margin-left: 22%;
+	}
+    .zhou li{
+        position: relative;
+    }
+	.zhou img{
+		width: 80%;
+		height: 80%;
+        margin-left: 5%;
+        clear: both;
+	}
+    .di{
+        margin-top: 10%;
+        margin-left: 29%;
+    }
+    .di li{
+        width: 70px;
+        height: 70px;
+        margin-right: 100px;
+        border-radius: 100px;
+        border: 1px grey solid;
+        background-color: white;
+    }
+    .di li:nth-child(1){
+        background-color: black;
+    }
+    .di li:nth-child(2){
+        background-color: gray;
+    }
+    .di li:nth-child(3){
+        background-color: mistyrose;
+    }
+    .keycap{
+        margin-top: 15%;
+        margin-left: 25%;
+    }
+    .keycap li{
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+        /*border-radius: 100px;*/
+        border: 1px grey solid;
+        background-color: black;
+    }
+    .keycap li:nth-child(1){
+        background-color: white;
+    }
+    .keycap li:nth-child(2){
+        background-color: pink;
+    }
+    .keycap li:nth-child(3){
+        background-color: darkseagreen;
+    }
+    .keycap li:nth-child(4){
+        background-color: mistyrose;
+    }
+    .keycap li:nth-child(5){
+        background-color: papayawhip;
+    }
+	button{
+		background-color: #ff5a00;
+		border:0;
+		color:  white;
+		border-radius: 3px;
+		height: 46px;
+		width: 120px;
+		position: absolute;
+		bottom: 10%;
+		right: 10%;
+        outline: none;
+	}
+    .keystyle1,.keystyle2{
+        position: absolute;
+        text-align: center;
+        line-height: 46px;
+        width: 600px;
+        bottom: 20%;
+        left: 30%;
+    }
+    .keystyle1 label, .keystyle2 label{
+        float: left;
+        margin-right: 10%;
+    }
+    .keystyle1 div , .keystyle2 div{
+        outline: 1px solid #ff5a00;
+        color:#ff5a00;
+        height: 46px;
+        width: 120px;
+        float: left;
+        margin-left: 2%;
+    }
+    .keystyle1 div:hover , .keystyle2 div:hover{
+        color: white;
+        background-color: #ff5a00;
+        height: 44px;
+        width: 118px;
+        box-shadow: 0px 3px 10px #888888;
+    }
+</style>
+	<link rel="stylesheet" href="css/keyboard.css"/>
+	<link rel="stylesheet" href="css/key87.css"/>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script>
+$(function(){
+	$('#dowebok').fullpage({
+		sectionsColor: ['white', 'white', 'white', 'white'],
+		verticalCentered:false,
+		keyboardScrolling:false,
+        AutoScrolling:false,
+        touchSensitivity:100
+	});
+});
+
+</script>
+</head>
+
+<body>
+        <div style="height: 60px;width: 100%; border: 1px solid red"></div>
+   
+<div id="dowebok">
+
+
+	<div class="section">
+		<div class="key87" data-keynum="87">
+			<img src="images/keyboard_order/87_keyboard.png" alt=""/>
+			<p>87键定制键盘</p>
+			<p>采用Cherry原厂轴体</p>
+			<p>基础价<span>￥188</span></p>
+		</div>
+		<div class="key104" data-keynum="104">
+			<img src="images/keyboard_order/104_keyboard.png" alt=""/>
+			<p>104键定制键盘</p>
+			<p>采用Cherry原厂轴体</p>
+			<p>基础价<span>￥218</span></p>
+		</div>
+		<button class="next firstbtn" style="background-color: gainsboro">下一步</button>
+	</div>
+	<!--///////////////////////////////////////////////////////-->
+	<div class="section">
+		<div id="bgcolor">
+			<img  src="images/keyboard_order/87_keyboard_bg_hei.jpg" alt=""/>
+		</div>
+		<button class="next">下一步</button>
+        <ul class="di">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+	</div>
+	<!--///////////////////////////////////////////////////////-->
+	<div class="section">
+		<div id="bg">
+			<img class="imgbg" src="images/keyboard_order/87-blank-thumb.png" alt=""/>
+			<section class="key_87" data-default-keycolor="0@0">
+				<div class="line1 linebg1" >
+					<div class="esc k27" data-key="0@0">esc</div>
+					<div class="f1 k112" data-key="0@0">f1</div>
+					<div class="f2 k113" data-key="0@0">f2</div>
+					<div class="f3 k114" data-key="0@0">f3</div>
+					<div class="f4 k115" data-key="0@0">f4</div>
+					<div class="f5 k116" data-key="0@0">f5</div>
+					<div class="f6 k117" data-key="0@0">f6</div>
+					<div class="f7 k118" data-key="0@0">f7</div>
+					<div class="f8 k119" data-key="0@0">f8</div>
+					<div class="f9 k120" data-key="0@0">f9</div>
+					<div class="f10 k121" data-key="0@0">f10</div>
+					<div class="f11 k122" data-key="0@0">f11</div>
+					<div class="f12 k123" data-key="0@0">f12</div>
+					<div class="prtsc k42" data-key="0@0">prtsc</div>
+					<div class="scrlk k145" data-key="0@0">scrlk</div>
+					<div class="pause k19" data-key="0@0">pause</div>
+				</div>
+				<div class="line2 linebg1">
+					<div class="wave k192" data-key="0@0">~</div>
+					<div class="n1 k49" data-key="0@0">1</div>
+					<div class="n2 k50" data-key="0@0">2</div>
+					<div class="n3 k51" data-key="0@0">3</div>
+					<div class="n4 k52" data-key="0@0">4</div>
+					<div class="n5 k53" data-key="0@0">5</div>
+					<div class="n6 k54" data-key="0@0">6</div>
+					<div class="n7 k55" data-key="0@0">7</div>
+					<div class="n8 k56" data-key="0@0">8</div>
+					<div class="n9 k57" data-key="0@0">9</div>
+					<div class="n0 k48" data-key="0@0">0</div>
+					<div class="minus k189" data-key="0@0">-</div>
+					<div class="plus k187" data-key="0@0">=</div>
+					<div class="backspace k8" data-key="0@0">backspace</div>
+					<div class="insert k45" data-key="0@0">insert</div>
+					<div class="home k36" data-key="0@0">home</div>
+					<div class="pgup k33" data-key="0@0">pgup</div>
+				</div>
+				<div class="line3 linebg1">
+					<div class="tab k9" data-key="0@0">tab</div>
+					<div class="q k81" data-key="0@0"></div>
+					<div class="w k87" data-key="0@0"></div>
+					<div class="e k69" data-key="0@0"></div>
+					<div class="r k82" data-key="0@0"></div>
+					<div class="t k84" data-key="0@0"></div>
+					<div class="y k89" data-key="0@0"></div>
+					<div class="u k85" data-key="0@0"></div>
+					<div class="i k73" data-key="0@0"></div>
+					<div class="o k79" data-key="0@0"></div>
+					<div class="p k80" data-key="0@0"></div>
+					<div class="leftbrace k219" data-key="0@0"></div>
+					<div class="rightbrace k221" data-key="0@0"></div>
+					<div class="backslash k220" data-key="0@0"></div>
+					<div class="del k46" data-key="0@0"></div>
+					<div class="end k35" data-key="0@0"></div>
+					<div class="pgdn k34" data-key="0@0"></div>
+				</div>
+				<div class="line4 linebg1">
+					<div class="caps k20" data-key="0@0">caps</div>
+					<div class="a k65" data-key="0@0"></div>
+					<div class="s k83" data-key="0@0"></div>
+					<div class="d k68" data-key="0@0"></div>
+					<div class="f k70" data-key="0@0"></div>
+					<div class="g k71" data-key="0@0"></div>
+					<div class="h k72" data-key="0@0"></div>
+					<div class="j k74" data-key="0@0"></div>
+					<div class="k k75" data-key="0@0"></div>
+					<div class="l k76" data-key="0@0"></div>
+					<div class="colon k186" data-key="0@0"></div>
+					<div class="Quotes k222" data-key="0@0"></div>
+					<div class="enter k13" data-key="0@0"></div>
+				</div>
+				<div class="line5 linebg1">
+					<div class="leftshift k16" data-key="0@0">shift</div>
+					<div class="z k90" data-key="0@0"></div>
+					<div class="x k88" data-key="0@0"></div>
+					<div class="c k67" data-key="0@0"></div>
+					<div class="v k86" data-key="0@0"></div>
+					<div class="b k66" data-key="0@0"></div>
+					<div class="n k78" data-key="0@0"></div>
+					<div class="m k77" data-key="0@0"></div>
+					<div class="comma k188" data-key="0@0"></div>
+					<div class="dot k190" data-key="0@0"></div>
+					<div class="slash k191" data-key="0@0"></div>
+					<div class="rightshift" data-key="0@0">shift</div>
+					<div class="up k38" data-key="0@0"></div>
+				</div>
+				<div class="line6 linebg1">
+					<div class="leftctrl k17" data-key="0@0">ctrl</div>
+					<div class="leftwin k91" data-key="0@0"></div>
+					<div class="leftalt k18" data-key="0@0">alt</div>
+					<div class="space k32" data-key="0@0"></div>
+					<div class="rightalt" data-key="0@0">alt</div>
+					<div class="rightwin k92" data-key="0@0"></div>
+					<div class="fn" data-key="0@0">fn</div>
+					<div class="rightctrl" data-key="0@0"></div>
+					<div class="left k37" data-key="0@0"></div>
+					<div class="down k40" data-key="0@0"></div>
+					<div class="right k39" data-key="0@0"></div>
+				</div>
+			</section>
+		</div>
+		<ul class="zhou">
+			<li><img src="images/keyboard_order/青.jpg" alt=""/></li>
+			<li><img src="images/keyboard_order/红.jpg" alt=""/></li>
+			<li><img src="images/keyboard_order/茶.jpg" alt=""/></li>
+			<li><img src="images/keyboard_order/黑.jpg" alt=""/></li>
+		</ul>
+        <div class="keystyle1">
+            <label>风格组</label>
+            <div>全部</div>
+            <div>功能键</div>
+            <div>字母数字键</div>
+        </div>
+		<button class="next">下一步</button>
+	</div>
+	<!--///////////////////////////////////////////////////////-->
+	<div class="section">
+		<div id="bg2">
+			<img class="imgbg" src="images/keyboard_order/87-blank-thumb.png" alt=""/>
+            <section class="key_87" data-default-keycolor="0@0">
+                <div class="line1 linebg2" >
+                    <div class="esc k27" data-key="0@0">esc</div>
+                    <div class="f1 k112" data-key="0@0">f1</div>
+                    <div class="f2 k113" data-key="0@0">f2</div>
+                    <div class="f3 k114" data-key="0@0">f3</div>
+                    <div class="f4 k115" data-key="0@0">f4</div>
+                    <div class="f5 k116" data-key="0@0">f5</div>
+                    <div class="f6 k117" data-key="0@0">f6</div>
+                    <div class="f7 k118" data-key="0@0">f7</div>
+                    <div class="f8 k119" data-key="0@0">f8</div>
+                    <div class="f9 k120" data-key="0@0">f9</div>
+                    <div class="f10 k121" data-key="0@0">f10</div>
+                    <div class="f11 k122" data-key="0@0">f11</div>
+                    <div class="f12 k123" data-key="0@0">f12</div>
+                    <div class="prtsc k42" data-key="0@0">prtsc</div>
+                    <div class="scrlk k145" data-key="0@0">scrlk</div>
+                    <div class="pause k19" data-key="0@0">pause</div>
+                </div>
+                <div class="line2 linebg2">
+                    <div class="wave k192" data-key="0@0">~</div>
+                    <div class="n1 k49" data-key="0@0">1</div>
+                    <div class="n2 k50" data-key="0@0">2</div>
+                    <div class="n3 k51" data-key="0@0">3</div>
+                    <div class="n4 k52" data-key="0@0">4</div>
+                    <div class="n5 k53" data-key="0@0">5</div>
+                    <div class="n6 k54" data-key="0@0">6</div>
+                    <div class="n7 k55" data-key="0@0">7</div>
+                    <div class="n8 k56" data-key="0@0">8</div>
+                    <div class="n9 k57" data-key="0@0">9</div>
+                    <div class="n0 k48" data-key="0@0">0</div>
+                    <div class="minus k189" data-key="0@0">-</div>
+                    <div class="plus k187" data-key="0@0">=</div>
+                    <div class="backspace k8" data-key="0@0">backspace</div>
+                    <div class="insert k45" data-key="0@0">insert</div>
+                    <div class="home k36" data-key="0@0">home</div>
+                    <div class="pgup k33" data-key="0@0">pgup</div>
+                </div>
+                <div class="line3 linebg2">
+                    <div class="tab k9" data-key="0@0">tab</div>
+                    <div class="q k81" data-key="0@0"></div>
+                    <div class="w k87" data-key="0@0"></div>
+                    <div class="e k69" data-key="0@0"></div>
+                    <div class="r k82" data-key="0@0"></div>
+                    <div class="t k84" data-key="0@0"></div>
+                    <div class="y k89" data-key="0@0"></div>
+                    <div class="u k85" data-key="0@0"></div>
+                    <div class="i k73" data-key="0@0"></div>
+                    <div class="o k79" data-key="0@0"></div>
+                    <div class="p k80" data-key="0@0"></div>
+                    <div class="leftbrace k219" data-key="0@0"></div>
+                    <div class="rightbrace k221" data-key="0@0"></div>
+                    <div class="backslash k220" data-key="0@0"></div>
+                    <div class="del k46" data-key="0@0"></div>
+                    <div class="end k35" data-key="0@0"></div>
+                    <div class="pgdn k34" data-key="0@0"></div>
+                </div>
+                <div class="line4 linebg2">
+                    <div class="caps k20" data-key="0@0">caps</div>
+                    <div class="a k65" data-key="0@0"></div>
+                    <div class="s k83" data-key="0@0"></div>
+                    <div class="d k68" data-key="0@0"></div>
+                    <div class="f k70" data-key="0@0"></div>
+                    <div class="g k71" data-key="0@0"></div>
+                    <div class="h k72" data-key="0@0"></div>
+                    <div class="j k74" data-key="0@0"></div>
+                    <div class="k k75" data-key="0@0"></div>
+                    <div class="l k76" data-key="0@0"></div>
+                    <div class="colon k186" data-key="0@0"></div>
+                    <div class="Quotes k222" data-key="0@0"></div>
+                    <div class="enter k13" data-key="0@0"></div>
+                </div>
+                <div class="line5 linebg2">
+                    <div class="leftshift k16" data-key="0@0">shift</div>
+                    <div class="z k90" data-key="0@0"></div>
+                    <div class="x k88" data-key="0@0"></div>
+                    <div class="c k67" data-key="0@0"></div>
+                    <div class="v k86" data-key="0@0"></div>
+                    <div class="b k66" data-key="0@0"></div>
+                    <div class="n k78" data-key="0@0"></div>
+                    <div class="m k77" data-key="0@0"></div>
+                    <div class="comma k188" data-key="0@0"></div>
+                    <div class="dot k190" data-key="0@0"></div>
+                    <div class="slash k191" data-key="0@0"></div>
+                    <div class="rightshift" data-key="0@0">shift</div>
+                    <div class="up k38" data-key="0@0"></div>
+                </div>
+                <div class="line6 linebg2">
+                    <div class="leftctrl k17" data-key="0@0">ctrl</div>
+                    <div class="leftwin k91" data-key="0@0"></div>
+                    <div class="leftalt k18" data-key="0@0">alt</div>
+                    <div class="space k32" data-key="0@0"></div>
+                    <div class="rightalt" data-key="0@0">alt</div>
+                    <div class="rightwin k92" data-key="0@0"></div>
+                    <div class="fn" data-key="0@0">fn</div>
+                    <div class="rightctrl" data-key="0@0"></div>
+                    <div class="left k37" data-key="0@0"></div>
+                    <div class="down k40" data-key="0@0"></div>
+                    <div class="right k39" data-key="0@0"></div>
+                </div>
+            </section>
+		</div>
+        <ul class="keycap">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <div class="keystyle2">
+            <label>风格组</label>
+            <div>全部</div>
+            <div>功能键</div>
+            <div>字母数字键</div>
+        </div>
+        <div></div>
+		<button class="save">保存</button>
+	</div>
+</div>
+
+
+<script>
+    var key_num ;
+    var board_color = 1;
+    var key_light = 1;
+    var custom_img = 1;
+    var custom_detail;
+    var user_id = 1;
+    //-----------------键数选择-------------------
+    $(".key87 , .key104 ").click(function(){
+        $(".key87 , .key104 ").css("box-shadow","none");
+        $(this).css("box-shadow","lightgrey 1px 0 20px");
+        $(".firstbtn").css("background-color","#ff5a00");
+        key_num = $(this).attr("data-keynum");
+        console.log(key_num)
+    });
+    $("button").keydown(function(){
+       $(this).css("background-color","#E14F00")
+    }).keyup(function(){
+        $(this).css("background-color","#ff5a00")
+    });
+    //-----------------键盘按下-------------------
+	$(document).keydown(function(event){
+		var key = event.keyCode;
+		var onkey = "k"+key;
+		$("."+onkey).css({
+			"box-shadow": " grey 1px 0 5px", "background-size": "90%"});
+	});
+	$(document).keyup(function(event){
+		var key = event.keyCode;
+		var onkey = "k"+key;
+		$("."+onkey).css({
+			"box-shadow": "none", "background-size": "100%"});
+	});
+    //-----------------下一页-------------------
+    $(".next").click(function(){
+        $.fn.fullpage.moveSectionDown();
+    });
+
+	window.onload = function(){
+        $.fn.fullpage.setAllowScrolling(false,'down');
+		var arr = ['qing','hong','cha','hei'];
+        var arrdi = ['hei','hui','feng','bai'];
+		var axis = "qing";
+		var address;
+		var num;
+        var numdi;
+        var di;
+        var divNodes = $("#bg").children().children().children();
+        //-----------------轴体下落-------------------
+//        var mtop = parseFloat(divNodes.css("margin-top"));
+//        divNodes.css("margin-top",mtop-6+"px")
+        //-----------------换壳-------------------
+        $(".di li").click(function(){
+            var indexdi = $(".di li").index(this);
+            numdi = arrdi[indexdi];
+            di = "images/keyboard_order/87_keyboard_bg_"+numdi+".jpg";
+            board_color = indexdi;
+            $("#bgcolor img").attr("src",di);
+            $("#bg,#bg2").css("background","url(../images/keyboard_order/87_keyboard_bg_"+numdi+".jpg)")
+        });
+        //-----------------换轴-------------------
+
+        $(".zhou").children().click(function(){
+			var index = $(".zhou").children().index(this);
+            $(".zhou img").css({"width":"80%","height":"80%"});
+            $(this).children().css({"width":"90%","height":"90%"});
+			num = index;
+			axis = arr[index];
+			address = "url(../images/keyboard_order/"+axis+".png)";
+		});
+
+		for(var i = 0 ;i < divNodes.length; i++){
+			divNodes[i].onclick = function(){
+				this.style.backgroundImage = address;
+				this.setAttribute("data-key",num+"@0");
+                $("#bg2").children().children().children().eq($(this).index()).attr("data-key",num+"@0");
+			}
+		}
+        $('.linebg1 div').each(function(i){
+            var coloradd;
+            var colorone=$(this).data("key").substr(0,1);
+            var colorall = $(".key_87").data("default-keycolor").substr(0,1);
+            var arr = ['qing','hong','cha','hei'];
+            if(colorone==colorall) {
+                coloradd = "url(../images/keyboard_order/" + arr[colorall] + ".png)";
+            }else{
+                coloradd="url(../images/keyboard_order/" + arr[colorone] + ".png)";
+            }
+            this.style.backgroundImage = coloradd;
+        });
+
+        $('.keystyle1').children().click(function(){
+            var keystyle = $(".keystyle1").children().index(this);
+//            $('.keystyle1 div').css({"background-color":"white","color":"#ff5a00"});
+//            $(this).css({"background-color":"#ff5a00","color":"white"});
+//            var arr = ['qing','hong','cha','hei'];
+            if(keystyle==1){
+                $(".key_87").attr("data-default-keycolor",num+"@0");
+                $('.linebg1 div').each(function(i){
+                    this.style.backgroundImage = "url(../images/keyboard_order/" + axis + ".png)";
+                    this.setAttribute("data-key",num+"@0");
+                    $("#bg2").children().children().children().eq($(this).index()).attr("data-key",num+"@0");
+                })
+            }else if(keystyle==2){
+                $('.linebg1 div').each(function(i){
+                    if(i>=0&&i<16||i>=29&&i<34||i>=47&&i<51||i==62||i==63||i>=74&&i!=79){
+                    this.style.backgroundImage = "url(../images/keyboard_order/" + axis + ".png)";
+                    this.setAttribute("data-key",num+"@0");
+                    $("#bg2").children().children().children().eq($(this).index()).attr("data-key",num+"@0");
+                    }
+                })
+            }else if(keystyle==3){
+                $('.linebg1 div').each(function(i){
+                    if(!(i>=0&&i<16||i>=29&&i<34||i>=47&&i<51||i==62||i==63||i>=74&&i!=79)){
+                        this.style.backgroundImage = "url(../images/keyboard_order/" + axis + ".png)";
+                        this.setAttribute("data-key",num+"@0");
+                        $("#bg2").children().children().children().eq($(this).index()).attr("data-key",num+"@0");
+                    }
+                })
+            }
+        });
+        //-----------------换帽-------------------
+        var caparr = ['white','black','white','black','white'];
+        var cap = "white";
+        var capaddress;
+        var capnum;
+        var divNodes2 = $("#bg2").children().children().children();
+        var step;
+        $(".keycap").children().click(function(){
+            var index = $(".keycap").children().index(this);
+            $(".keycap li").css({"border":"1px grey solid"});
+            $(this).css({"border":"2px grey solid"});
+            capnum = index;
+            cap = caparr[index];
+            capaddress = "url(../images/keyboard_order/"+cap+".png)";
+        });
+        for(var j = 0 ;j < divNodes.length; j++){
+            divNodes2[j].onclick = function(){
+                this.style.backgroundImage = capaddress;
+                step = $(this).attr("data-key").substr(0,2);
+                $(this).attr("data-key",step+capnum);
+            }
+        }
+        $('.keystyle2').children().click(function(){
+            var keystyle2 = $(".keystyle2").children().index(this);
+            if(keystyle2==1){
+                $(".key_87").attr("data-default-keycolor",num+"@0");
+                $('.linebg2 div').each(function(i){
+                    this.style.backgroundImage = "url(../images/keyboard_order/" + cap + ".png)";
+                    $(this).attr("data-key",step+capnum);
+                })
+            }else if(keystyle2==2){
+                $('.linebg2 div').each(function(i){
+                    if(i>=0&&i<16||i>=29&&i<34||i>=47&&i<51||i==62||i==63||i>=74&&i!=79){
+                        this.style.backgroundImage = "url(../images/keyboard_order/" + cap + ".png)";
+                        $(this).attr("data-key",step+capnum);
+                    }
+                })
+            }else if(keystyle2==3){
+                $('.linebg2 div').each(function(i){
+                    if(!(i>=0&&i<16||i>=29&&i<34||i>=47&&i<51||i==62||i==63||i>=74&&i!=79)){
+                        this.style.backgroundImage = "url(../images/keyboard_order/" + cap + ".png)";
+                        $(this).attr("data-key",step+capnum);
+                    }
+                })
+            }
+        });
+
+	};
+
+
+    //-----------------保存-------------------
+    $(".save").click(function(){
+        var keyarr = [];
+        $('.linebg2 div').each(function(i){
+            var key=$(this).attr("data-key");
+            var keyall = $(".key_87").attr("data-default-keycolor");
+            var keyone=i+":"+key+";";
+            if(key!=keyall){
+                keyarr.push(keyone)
+            }
+            custom_detail = keyall+"|";
+        });
+
+        for(var i=0;i<keyarr.length;i++){
+            custom_detail+=keyarr[i];
+        }
+        console.log(custom_detail);
+        $.ajax({
+            async : true,
+            type : 'post',
+            url : '/custom.do',
+            data:{
+                key_num:key_num,
+                board_color:board_color,
+                key_light:key_light,
+                custom_img:custom_img,
+                custom_detail:custom_detail,
+                user_id:user_id},
+            success : function(data) {
+                console.log(data);
+            }
+        });
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>客户成品展示</title>
+    <link rel="stylesheet" href="css/showUser.css" />
+</head>
+
+<body>
+    <!--头部-->
+    <div id="container">
+        <%-include header.html%>
+            <!--banner-section1-->
+            <section>
+                <div class="bannerShow">
+                    <h2>客户成品展示</h2>
+                    <div class="lineShow"></div>
+                    <h3>show</h3>
+                    <!--<img src="images/userShow/u1678.jpg" alt=""/>-->
+                </div>
+            </section>
+            <!--展示-section1-->
+            <section>
+                <div class="userShow">
+                    <div class="userAmazing">
+                        <!--<img src="images/userShow/uimte.jpg" alt=""/>-->
+                        <div class="userAwesome">
+                            <p>全村最大的私人订制中心开始营业了</p>
+                            <p>私人定制充气娃娃？私人定制飞机杯</p>
+                            <p>私人定制顶级豪车？私人订制越南新娘</p>
+                            <p>统统没有</p>
+                            <p>秃顶男神葛优？美唇天后舒淇</p>
+                            <p>统统没有!</p>
+                            <p>@0@</p>
+                            <p class="usersAsk">
+                                <a href="#">你要问俺们有什么？</a>
+                            </p>
+                            <p>俺们拥有专业的造型规划狮</p>
+                            <p>俺们还有外观设计狮</p>
+                            <p>俺们也有旧物重建狮</p>
+                            <p>以及美女刘石狮@0@</p>
+                        </div>
+                        <div class="userFlash">
+                            <div class="userFlashbox">
+                                <h2>
+                                    <span>toxic </span>MX Exic</h2>
+                                <p>无线大黄蜂主题定制耳机</p>
+                                <p class="userP">致敬匠心，烧出品味</p>
+                                <button class="userGo goto-Diy">立 即 定 制</button>
+                            </div>
+                            <img src="" class="userImage" alt="" />
+                        </div>
+                    </div>
+                    <!--<div class="userRolling"></div>-->
+                </div>
+            </section>
+            <!-- 用户成品展示-->
+            <section>
+                <div class="showNow">
+                    <div class="showBox1">
+                        <div>
+                            <img src="images/userShow/timg1.jpg" class="imaWall6" alt="" />
+                        </div>
+                        <div>
+                            <img src="images/userShow/u1703.jpg" class="imagWall2" alt="" />
+                            <img src="images/userShow/maker_02.png" class="imagWall4" alt="" />
+                            <img src="images/userShow/timg2.jpg" class="imagWall7" alt="" />
+                        </div>
+                        <div>
+                            <img src="images/userShow/uimte.jpg" class="imaWall" alt="" />
+                            <img src="images/userShow/hor2.jpg" class="imaWall" alt="" />
+                            <img src="images/userShow/maker_pane3_05.png" class="imagWall1" alt="" />
+                            <img src="images/userShow/One2Skyline-108-1.jpg" class="imagWall5" alt="" />
+                        </div>
+                        <div>
+                            <img src="images/userShow/maker_pane3_03.png" class="imagWall3" alt="" />
+                            <img src="images/userShow/timg.jpg" class="imagWall1" alt="" />
+                            <img src="images/userShow/timg5.jpg" class="imagWall9" alt="" />
+                        </div>
+                        <div>
+                            <img src="images/userShow/timg3.jpg" class="imagWall8" alt="" />
+                        </div>
+                        <div class="userDiy">
+                            <p>狂热的外设DIY发烧友？</p>
+                            <p>全世界独一无二的外设？</p>
+                            <p>技艺高超的DIY达人？</p>
+                            <button type="button" class="liji" class="goto-Diy">立 即 定 制</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+    </div>
+    <%-include footer.html%>
+        <script src="js/jquery-1.11.3.js"></script>
+        <script src="less/less.js"></script>
+        <!-- <script src="userShow.js"></script> -->
+        <script>
+            $(".goto-Diy").click(() => {
+                location.href = "diy.html"
+            })
+            index_banner_get();
+
+            function index_banner_get() {
+                $.ajax({
+                    url: '/viewFrontImg.do',
+                    type: 'get',
+                    async: true,
+                    success: function (data) {
+                        $(".userFlash>img").attr("src",data[4].front_img)
+                        console.log(data[4]);
+                    }
+                })
+            }
+        </script>
+</body>
+
+</html>

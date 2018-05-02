@@ -1,4 +1,5 @@
 // 鼠标移入移出显示、隐藏menu
+
 $("nav").mouseover(function(){
     $('#header_hiddenFrame').css("margin-top","0");
 })
@@ -25,4 +26,30 @@ $(document).scroll(function(){
     else{
         $("nav").css("opacity","1")
     }
+})
+$("#header_menu li").click(function(){
+    if($(this).index()==0){
+        location.href='index.html'
+    } 
+         else if($(this).index()==1){
+            location.href='lh_cpfl.html?1'        
+        }
+        else if($(this).index()==2){
+            location.href='lh_cpfl.html?2'        
+        }
+        else if($(this).index()==3){
+            location.href='lh_cpfl.html?3'        
+        }
+        else if($(this).index()==4){
+            location.href='lh_cpfl.html?4'        
+        }
+        else if($(this).index()==5){
+            location.href='lh_cpfl.html?5'        
+        }
+        else if($(this).index()==6){
+            location.href='diy.html'        
+        }
+        else if($(this).index()==7){
+            location.href='userShow.html'        
+        }
 })

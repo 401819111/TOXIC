@@ -6,22 +6,41 @@ $(function () {
         'sectionsColor': ['#fff', '#fff', '#242424', '#e2e2e2','#fff','fff'],
         anchors: ['1', '2', '3','4','5','6','7'],
         'recordHistory':true,
-        // 'navigation': true,  
+        // 'navigation': true,  //添加右侧位置导航
         'slidesNavigation':true,
         'slidesNavPosition':'bottom',
-        'scrollingSpeed':700,
+        'scrollingSpeed':800,
         'loopHorizontal':true,
         'controlArrowColor':'#88888855',
         'navigationPosition': 'right',
         'navigationTooltips': ['热卖产品', '定制与鼠标', '音响专区', '耳机专区','键盘专区','玩家社区','网点查询'],
         //窗口滚动到某一窗口时触发move.js动画
+
         afterLoad:function(link,index){
             switch(index){
+                case 1:
+                $("#header-nav").css("marginTop","0px")
+                $("#header-nav").hover(function(){
+                    $("#header-nav").css("marginTop","0px")
+                    })
+                break;
                 case 2:
                     index_number=0;
                     setInterval(numberChange,25)
+                    $("#header-nav").css("marginTop","-60px")
+                    $("#header-nav").hover(function(){
+                    $("#header-nav").css("marginTop","0px")
+                    },()=>{
+                    $("#header-nav").css("marginTop","-60px")                        
+                    })
                 break;
                 case 4:
+                $("#header-nav").css("marginTop","-60px")
+                $("#header-nav").hover(function(){
+                    $("#header-nav").css("marginTop","0px")
+                    },()=>{
+                    $("#header-nav").css("marginTop","-60px")                        
+                    })
                     move('#index_imgFrame img')
                         .set('opacity','1')
                         .set('top','12%')
@@ -30,6 +49,12 @@ $(function () {
                         .end();
                 break;
                 case 5:
+                $("#header-nav").css("marginTop","-60px")
+                $("#header-nav").hover(function(){
+                    $("#header-nav").css("marginTop","0px")
+                    },()=>{
+                    $("#header-nav").css("marginTop","-60px")                        
+                    })
                     move('#index_moveimg img:first-child')
                         .set('margin-left','-400px')    
                         .duration('.7s')
@@ -77,7 +102,14 @@ $(function () {
         //窗口离开某一窗口时触发move.js动画
         onLeave:function(index,nextIndex,direction){
             switch(index){
+                case 1:
+                $("#header-nav").css("marginTop","0px")
+                $("#header-nav").hover(function(){
+                    $("#header-nav").css("marginTop","0px")
+                    })
+                break;
                 case 2:
+                $("#header-nav").css("marginTop","-60px")
                     // $('#index_degree').html(" ")
                     clearInterval(numberChange)
                     setTimeout(function(){
@@ -85,6 +117,7 @@ $(function () {
                     },1000)
                 break;
                 case 4:
+                $("#header-nav").css("marginTop","-60px")
                     move('#index_imgFrame img')
                         .set('opacity','0')
                         .set('top','80%')
@@ -93,6 +126,7 @@ $(function () {
                         .end();
                 break;
                 case 5:
+                $("#header-nav").css("marginTop","-60px")
                     move('#index_moveimg img:first-child')
                         .set('margin-left','0')    
                         .duration('.7s')
@@ -139,10 +173,10 @@ $(function () {
         }
     })
 })
-//slide轮播
+// slider轮播
 // setInterval(function(){
 //     $.fn.fullpage.moveSlideRight();
-//  },3000)
+//  },2000)
 //按钮1弹起按下事件
 $("button").mousedown(function(){
     $(this).css({"color":"white","background":"#ff5a00"})
@@ -179,8 +213,28 @@ function numberChange(){
         index_number++
     }
     $('#index_degree').html(index_number+"°")
-    
-}
+};
+
+
+$("#index_gotoMouse").click(()=>{
+    location.href='lh_cpfl.html?2'   
+})
+$("#index_gotoYX").click(()=>{
+    location.href='lh_cpfl.html?5'   
+})
+$("#index_gotoErJi").click(()=>{
+    location.href='lh_cpfl.html?4'   
+})
+$("#index_gotoKey").click(()=>{
+    location.href='lh_cpfl.html?1'   
+})
+$("#index_keyboard p button").click(()=>{
+    location.href='diy.html'       
+})
+$(".section7 p button").click(()=>{
+    location.href='Network.html'       
+})
+
 //收藏点击动画
 // var collectionState=0;
 // $('.collection').click(function(){
@@ -192,5 +246,7 @@ function numberChange(){
 //         collectionState=0;
 //     }
 // })
+
+
     
 

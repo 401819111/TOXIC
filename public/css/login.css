@@ -138,9 +138,9 @@ body {
   transform-style: preserve-3d;
   transform-origin: 170px 151px;
 }
-#login-email {
+#logup-phone ,#login-forget-pwd{
   margin-top: 15px;
-  width: 200px;
+  width: 250px;
   float: left;
 }
 .login-mess {
@@ -149,7 +149,7 @@ body {
   float: left;
 }
 #login-phone-div{
-  width: 300px;
+  width: 350px;
   height: 100px;
 }
 #sign-up-pwd{
@@ -182,13 +182,14 @@ body {
   border: none;
   color: white;
 }
-#sign-up-Newpwd{
+#sign-up-NewPwd{
   margin-top: 30px
 }
 .login-sendMess{
   height: 43px;
   margin-top: 15px;
-  width: 100px;
+  width: 80px;
+  float: right;
 }
 #login-form3{
   display: none;
@@ -207,4 +208,17 @@ body {
 }
 #login-up-backUser{
   margin-left: 50px;
+}
+#signUp-err,#signUp-err2,
+#signUp-err3,#signUp-err4,
+#signUp-err5,#signUp-err6{
+  color:#ff5a00;
+  position: absolute;
+  font-size: 13px;
+}
+#signUp-err3,#signUp-err4{
+  margin-top: 56px;
+  clear: both;
+  width: 150px;
+  margin-left: -250px;
 }

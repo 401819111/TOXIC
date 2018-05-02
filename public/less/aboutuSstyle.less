@@ -1,0 +1,118 @@
+@img-path:"../images";
+@img-height:500px;
+@s-width:100%;
+@font-color:#666666;
+@margin-atop:15px;
+@font-family:"微软雅黑";
+@font-size:18px;
+@font-color2:#949494;
+@padding:60px;
+@font-jianju:1px;
+@div-height:240px;
+@div2-heiht:170px;
+@div5-heiht:350px;
+@background-color:#f2f2f2;
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.se1{
+  background-image: url("@{img-path}/aboutUs/u4187.jpg");
+  height: @img-height;
+  width: @s-width;
+  background-size:@s-width 1200px;
+  background-repeat: no-repeat;
+  background-position: 0 -500px;
+  font-family: @font-family;
+  position: relative;
+}
+.div1{
+  color: @font-color;
+  text-align: center;
+  width: 300px;
+  height: 130px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  letter-spacing: @font-jianju;
+}
+#p1{
+  font-size: 32px;
+}
+#p2{
+  font-size: 20px;
+  margin-top:@margin-atop;
+}
+#div1{
+  width: 150px;
+  height: 1px;
+  background-color: @font-color;
+  margin: 0 auto;
+  margin-top: @margin-atop;
+}
+.div2{
+  font-size: @font-size;
+  font-family: @font-family;
+  color: @font-color2;
+  padding-top: @padding;
+  text-align: center;
+}
+.div2>p{
+  margin-top: @margin-atop;
+}
+.div3{
+  margin-top: @padding;
+  background-color: #d7d7d7;
+  height: @div-height;
+  text-align: center;
+}
+.div4{
+  height: @div2-heiht;
+  text-align: center;
+  color: @font-color2;
+}
+#div2{
+  padding-top: 40px;
+  color: @font-color2;
+}
+#div2 p{
+  margin-top: @margin-atop;
+}
+#div2 button{
+  margin-top:50px;
+  height: 36px;
+  width: 120px;
+  border-radius: 3px;
+  border-style: none;
+  color:white;
+  background-color: #ff5a00 ;
+}
+.p3{
+  font-size: 32px;
+}
+.p4{
+  font-size: @font-size;
+}
+.div4>p{
+  margin-top: 40px;
+}
+.div5{
+  background-color: @background-color;
+  height: @div5-heiht;
+}
+.div6{
+  width: 80%;
+  margin: 0 auto;
+}
+.div6>div>img{
+  width: 170px;
+}
+.div6>div{
+  float: left;
+  height: 150px;
+  margin-left: 50px;
+}
+input,button,select,textarea{outline:none}

@@ -37,21 +37,21 @@ h3 {
 .lh_xiankuang > h3 {
   font-size: 23px;
   width: 250px;
-  text-align: center;
   background-color: #ffffff;
-  position: absolute;
-  margin-left: 42%;
-  margin-top: -16px;
+  margin-top: 16px;
 }
 .lh_xian {
   width: 60%;
   border: 1px #787771 solid;
-  margin: 0 auto;
+
   margin-top: 29px;
 }
 .lh_xiankuang {
   height: 30px;
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
 }
 .lh_jianpan {
   float: left;
@@ -71,16 +71,16 @@ h3 {
   font-size: 18px;
 }
 .lh_jiantxet h2 {
-  font-size: 23px;
+  font-size: 28px;
   font-weight: normal;
 }
 .lh_jiantxet h3 {
-  font-size: 25px;
+  font-size: 28px;
   color: #ff4903;
   margin-top: 160px;
 }
 .lh_jiantxet p {
-  font-size: 17px;
+  font-size: 19px;
 }
 .lh_goumai {
   border: 2px #ff4903 solid;
@@ -109,10 +109,13 @@ h3 {
   margin: 0  auto;
 }
 .lh_zhanshi {
-  height: 1000px;
   width: 80%;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
 }
 .lh_zhanshi .lh_erjiJG {
   color: #ff4903;
@@ -137,14 +140,13 @@ h3 {
   margin-left: 130px;
   margin-top: -30px;
 }
-.lh_zhanshi .lh_ulHuan {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.lh_zhanshi .lh_ulHuan > ul {
+
+.lh_zhanshi > ul {
   position: relative;
   height: 340px;
+  width: 20%;
+  padding-left:5% ;
+  /*margin-left: 100px;*/
 }
 .lh_erjiGM:hover {
   background-color: #ff4903;
@@ -172,8 +174,9 @@ h3 {
   display: none;
   cursor: pointer;
 }
-.lh_ulHuan > ul:hover .lh_shouchang {
+.lh_zhanshi > ul:hover .lh_shouchang {
   display: block;
+  z-index: 999;
 }
 .lh_fontSC {
   font-family: lh_font;
@@ -184,4 +187,8 @@ h3 {
   line-height: 60px;
   margin-left: 240px;
   cursor: pointer;
+}
+.lh_zhanshi>ul>li>img{
+  width:210px ;
+  height: 210px;
 }

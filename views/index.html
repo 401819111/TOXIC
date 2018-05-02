@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+ 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -22,6 +22,9 @@
 </head>
 
 <body>
+	<%-include header.html %>
+
+
 	<!-- fullPage插件，每个窗口为一个section -->
 	<div id="index_fullpage">
 		<div class="section section1">
@@ -69,11 +72,8 @@
 		</div>
 		<div class="section section2">
 			<div id="index_keyboard">
-				<h2>定制
-					<span>专属于你</span>喜欢的键盘,let's go!</h2>
-				<p>
-					<button>即刻定制</button>
-				</p>
+				<h2>定制<span>专属于你</span>喜欢的键盘,let's go!</h2>
+				<p><button>即刻定制</button></p>
 				<div id="index_keyboardlun">
 				</div>
 			</div>
@@ -83,11 +83,10 @@
 					<img data-src="./images/index/mx-ergo-wireless-trackball.png" alt="">
 				</div>
 				<div class="index_detailRight">
-					<h2>可自定的
-						<span>舒适</span>感受</h2>
+					<h2>可自定的<span>舒适</span>感受</h2>
 					<span>终于有一款您真正属于您自己的轨迹球。独特的可调整枢轴让您可从0° 到20° 间选择最佳角度，以获得更自然的手部位置和更优异的舒适感。</span>
 					<p>
-						<button class="index_zhuanqu">进入鼠标专区</button>
+						<button class="index_zhuanqu" id="index_gotoMouse" >进入鼠标专区</button>
 					</p>
 				</div>
 			</div>
@@ -95,10 +94,9 @@
 		<div class="section section3">
 			<div id="index_detailLeft">
 				<h2>你的音乐，准备好出发!</h2>
-				<span>一个
-					<span>可选的充电底座</span>让您的SoundLink围绕充电和准备,这是您的扬声器的便利家庭基地，您可以在充电时播放音乐。只需将扬声器附带的墙上充电器插入通讯座即可。</span>
+				<span>一个<span>可选的充电底座</span>让您的SoundLink围绕充电和准备,这是您的扬声器的便利家庭基地，您可以在充电时播放音乐。只需将扬声器附带的墙上充电器插入通讯座即可。</span>
 				<p>
-					<button class="index_zhuanqu">进入音响专区</button>
+					<button class="index_zhuanqu" id="index_gotoYX">进入音响专区</button>
 				</p>
 			</div>
 			<img data-src="./images/index/cq5dam.web.1000.1000.jpeg" alt="">
@@ -108,12 +106,10 @@
 				<img data-src="./images/index/u170.png" alt="">
 			</div>
 			<div class="index_detailRight">
-				<h2>专业级
-					<span>自动调整</span>头带</h2>
-				<span>相较于容易断开、碎裂的塑料，头带框体采用耐用且具有弹性的
-					<span>合金材质</span>，且同时能自动调整的头带全罩式设计，隔绝外部噪音,方便的线控，快速调整音量或开启静音</span>
+				<h2>专业级<span>自动调整</span>头带</h2>
+				<span>相较于容易断开、碎裂的塑料，头带框体采用耐用且具有弹性的<span>合金材质</span>，且同时能自动调整的头带全罩式设计，隔绝外部噪音,方便的线控，快速调整音量或开启静音</span>
 				<p>
-					<button class="index_zhuanqu">进入耳机专区</button>
+					<button class="index_zhuanqu"  id="index_gotoErJi" >进入耳机专区</button>
 				</p>
 			</div>
 		</div>
@@ -122,9 +118,7 @@
 				<img data-src="./images/index/u160.png" alt="">
 				<p>工程师们不停地探索希望找出兼具手感以及LED背光亮度的更好的方法。我们重新设计内部结构与RGB背光方式，改造PCB并加入小型的开口让LED与机械轴能够紧密结合。</p>
 				<p>这意味着我们在使用原厂的Cherry MX机械轴的同时，还可以拥有更大、更亮的RGB LED。忘记那些暗淡的颜色吧！键帽底部的集中亮度表现使得彩色LED能够更加耀眼。</p>
-				<p>
-					<button class="index_zhuanqu">进入键盘专区</button>
-				</p>
+				<p><button  class="index_zhuanqu"  id="index_gotoKey">进入键盘专区</button></p>
 
 			</div>
 			<div id="index_moveimg">
@@ -152,15 +146,34 @@
 			<p>
 				<button>寻找零售商</button>
 			</p>
-
+			
 		</div>
 	</div>
+	
 </body>
 <script src="js/jquery-1.11.3.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/move.min.js"></script>
 <script src="js/fullpage.min.js"></script>
 <script src="js/index.js"></script>
+<script>
+	index_banner_get();
 
-
+	function index_banner_get() {
+		$.ajax({
+			url: '/viewFrontImg.do',
+			type: 'get',
+			async: true,
+			
+			success: function (data) {
+				for (var i = 0; i < data.length-1; i++) {
+					$('.section1').append(
+					'<div class="slide index_slide'+(i+1)+'"><div><h2>'+data[i].front_h1+'</h2><h3>'+data[i].front_h2+'</h3><p>'+data[i].front_price+'￥</p><p><button>立即购买</button></p></div></div>'
+					)
+				}
+				console.log(data);
+			}
+		})
+	}
+</script>
 </html>

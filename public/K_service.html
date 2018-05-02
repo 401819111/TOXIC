@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet/less" href="less/k_service.less"/>
+</head>
+<body>
+    <header>
+    </header>
+    <section>
+        <div class="div1">
+            <div>
+                <p>一度外设客服_9527</p>
+                <p>一度外设，ONE里挑一(*^_^*)</p>
+            </div>
+            <div>
+                <p>一度外设客服_9527：</p>
+                <p>上午好，很高兴为您提供服务，请问有什么可以帮助您的？</p>
+                <div id="CharMessage"></div>
+            </div>
+            <div>
+                <img src="images/kefu.png" alt=""/>
+                <p id="p1">一度外设客服_9527</p>
+            </div>
+
+            <div id="div1">
+                <textarea name="txtMessage" id="txtMessage" cols="70" rows="6" placeholder="请输入发送的消息" autofocus></textarea>
+                <p><span>&#xe6af;</span><span>&#xe6a8;</span><span>&#xe717;</span></p>
+                <div id="div2"><button id="btn1">发送</button></div>
+            </div>
+            <div class="div2">
+                <p>订单查询&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;维修进度</p>
+                <p>服务政策&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服务网点</p>
+                <p>发起售后&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;维修价格</p>
+                <img src="images/erweima.png" alt=""/>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="less/less.min.js"></script>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    var socket;
+    var dMessage;
+  
+
+    $("#btn1").click(function(){
+        $("#btn1").css("background-color","#E14F00");
+        var message = document.getElementById("txtMessage").value;
+        var jsonobj = {message:message};
+        socket.send(JSON.stringify(jsonobj)); //发送信息到服务器
+        document.getElementById("txtMessage").value="";
+        window.setTimeout(function(){
+            $("#btn1").css("background-color","#ff5a00");
+        },1000)
+    });
+    window.onload=function(){
+        dMessage = document.getElementById("CharMessage");
+        socket = new WebSocket('ws://192.168.253.1:8888/');
+        socket.onopen=function(event){
+            console.log("socket连接成功");
+            socket.onmessage = function(event) {
+                var jsonobj = JSON.parse(event.data);
+                dMessage.innerHTML="<p><b>"+'用户'+"：</b>"+jsonobj.message+"</br></p>" // 加载服务器发送过来的留言
+            };
+        }
+    }
+</script>
+</html>

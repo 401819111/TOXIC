@@ -123,7 +123,9 @@ body {
 }
 #user-Order {
   display: none;
-
+  height:650px;
+  overflow:auto;
+  width: 74%
 }
 #user-Order ul li,
 #user-Order-DIY ul li {
@@ -159,12 +161,14 @@ body {
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
+  border-radius: 3px;
   cursor: pointer;
   border: 1px solid transparent;
   margin-left: -5px;
   margin-top: -5px;
-  background-color: #ff5a00;
-}
+  background-color: #ff5a00; 
+  color: white
+ }
 
 #user-Order ul {
   clear: both;
@@ -217,11 +221,26 @@ r-Order-table-thead tr th:not(:first-child){
   font-size: 13px;
   padding: 7px 10px;
 }
+.quixaoBtn {
+  width: 100px;
+  cursor: pointer;
+  color: #ff5a00;
+  border: 2px solid #ff5a00;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: white;
+  font-size: 13px;
+  padding: 7px 10px;
+}
+
 #user-Order-DIY {
   display: none;
 }
 .user-collect {
   display: none;
+  height:650px;
+  overflow:auto;
+  width: 74%
 }
 .user-collect-line {
   height: 60px;
@@ -241,7 +260,7 @@ r-Order-table-thead tr th:not(:first-child){
   margin-left: 8%;
 }
 .user-collect-money{
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .user-collect-money > div {
   float: left;
@@ -251,7 +270,8 @@ r-Order-table-thead tr th:not(:first-child){
   width: 80%;
 }
 .user-collect-img img {
-  width: 100%;
+  margin-top:80px;
+  width: 60%;
 }
 .user-collect-div2 {
   clear: both;
@@ -293,7 +313,7 @@ r-Order-table-thead tr th:not(:first-child){
   margin: 0 auto;
   height: 60px;
   border-radius: 5px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 #user-centet-location-table2 body tr td{ /* 地址表格 */
 line-height: 40px
@@ -322,7 +342,9 @@ line-height: 40px
 .user-center-dizhi:hover{
   background-color: rgb(224, 224, 224);
 }
-
+.user-center-dizhi{
+  height: 54px;
+}
 .user-center-do span {
   color: #ff5a00;
   cursor: pointer;

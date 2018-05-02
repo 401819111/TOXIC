@@ -43,6 +43,7 @@ footer #footer_mid ul li p {
   margin-top: 8px;
   width: 95%;
   max-width: 200px;
+  cursor: pointer;
 }
 footer #footer_mid ul li p button {
   width: 91px;
