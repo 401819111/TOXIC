@@ -7,6 +7,7 @@
 </head>
 <body>
         <%-include header.html%>
+      
 <section>
     <div class="myShopcar">
         <h3>我的购物车<span class="spanT">account management </span></h3>
@@ -24,24 +25,13 @@
                        <th>数量</th>
                        <th>小计</th>
                        <th>操作</th>
+                      
                    </tr>
                    </thead>
-                   <tbody>
-                   <!--第一个商品-->
-                   <tr>
-                       <td><input type="checkbox" class="inputFill"></td>
-                       <td><img src="images/fenlei/u1865.jpg" alt="" ><p>Masterkeys Pro S 机械键盘</p><h6>颜色分类：白色  类型：茶轴 104键</h6> <h5>发货时间：卖家承诺72小时</h5></td>
-                       <td>￥<label  class="price">899.00</label></td>
-                       <td class="tdFour"><input class="min" name="" type="button" value="-">
-                           <input  class="text_box" name="" type="text" value="1">
-                           <input class="add" name="" type="button" value="+">
-                       </td>
-                       <td>￥<label class="subtotal">899.00</label></td>
-                       <td><span class="shoucang">&#xe795;</span> <span>&#xe62e;</span></td>
-                   </tr>
+                   <tbody id="shopCar_goods">
 
                    <!--第二个商品-->
-                   <tr>
+                   <!-- <tr>
                        <td><input type="checkbox"  class="inputFill" ></td>
                        <td><img src="images/fenlei/u1865.jpg" alt="" ><p>Masterkeys Pro S 机械键盘</p><h6>颜色分类：白色  类型：茶轴 104键</h6> <h5>发货时间：卖家承诺72小时</h5></td>
                        <td>￥<label  class="price">899.00</label></td>
@@ -51,7 +41,7 @@
                        </td>
                        <td>￥<label class="subtotal">899.00</label></td>
                        <td><span class="shoucang">&#xe795;</span> <span>&#xe62e;</span></td>
-                   </tr>
+                   </tr> -->
 
                    </tbody>
                    <!--tfoot  总计-->
@@ -66,25 +56,86 @@
                    </tr>
                    </tfoot>
                </table>
-            <div class="butShop">
-                <button id="goonShop"><span>&#xe6ca;</span>继续购物</button>
-                <button id="gettoPay">  去结算<span>&#xe6ca;</span></button>
-            </div>
+       
 
         </div>
     </div>
-
+    <div class="butShop">
+        <button id="goonShop"><span>&#xe6ca;</span>继续购物</button>
+        <button id="gettoPay">  去结算<span>&#xe6ca;</span></button>
+    </div>
 </section>
 <%-include footer.html%>
 <script src="js/jquery-1.11.3.js"></script>
 <script src="js/ShopCart_js.js"></script>
 <script type="text/javascript">
+//    function add(){
+//     console.log($(this));
+// }
+    console.log($("#My_user_name"));
     $("#goonShop").click(()=>{
        location.href="lh_cpfl.html"        
     })
     $("#gettoPay").click(()=>{
        location.href="PayList_html.html"        
     })
+
+        $("#shopCar_goods").on("click",$(".delete-shopcar"),function(e){
+               var target=e.target
+              var goods_id=$(target).attr('uid')
+              var id=$("#My_user_name")[0].innerHTML
+              $.ajax({
+                url:'/deleteShopCar.do',
+                type:'POST', //GET
+                data:{
+                    user_name : id,
+                    goods_id:goods_id
+                },
+                async:false,    //或false,是否异步 
+                success : function(data) {
+                    console.log(data);
+                    getData()
+                }
+              })
+          });
+
+    getData()
+    function getData(){
+        var id=$("#My_user_name")[0].innerHTML
+        $.ajax({
+                url:'/getCar.do',
+                type:'POST', //GET
+                data:{
+                    user_id : id
+                },
+                async:true,    //或false,是否异步 
+                success : function(data) {
+                    console.log(data);
+                   
+                    for (var i=0;i<data.length;i++){
+                        var img=data[i].goods_img.split(",");
+                        trim(img[0])
+                        console.log(img[0])
+                       $("#shopCar_goods").append ("<tr class='bmls' ><td><input type='checkbox'  class='inputFill' ></td>"+
+                       "<td><img src="+img[0]+"><p>"+data[i].goods_name+"</p><h6>类型："+data[0].goods_class+" </h6> <h5>发货时间：卖家承诺72小时</h5></td>"+
+                       "<td>￥<label  class='price'>"+data[i].goods_sale+"</label></td>"+
+                      "<td class='tdFour'><input class='min' type='button' value='-'>"+
+                       "<input  class='text_box'  type='text' value='1'>"+
+                      " <input class='add' uid="+data[i].goods_id+"  type='button' value='+'>"+
+                       "</td><td>￥<label class='subtotal'>"+data[i].goods_sale+"</label></td>"+
+                       "<td><span class='shoucang'>&#xe795;</span> <span class='delete-shopcar' uid="+data[i].goods_id+">&#xe62e;</span></td>"+
+                   "</tr>")
+                    }
+                }
+            })
+    }
+    function  trim(str)
+            {
+                for (var i = 0; i < str.length && str.charAt(i) == " "; i++);//从左到右得到最右边的第一个非空字符
+                for (var j = str.length; j > 0 && str.charAt(j - 1) == " "; j--);//从右到左得到最左边的第一个非空字符
+                if(i>j)  return  "";  
+                return  str.substring(i,j);//得到字符串  
+            }
 </script>
 </body>
 </html>

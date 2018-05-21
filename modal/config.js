@@ -3,11 +3,12 @@ module.exports = {
     query: function (sql, arr, callback) {
         //1.
         const mysql_user = {
-            host: 'localhost',
+            host: '172.16.13.52',
             user: 'root',
             password: 'root',
             port:3306,//端口号
-            database: 'toxic'
+            database: 'toxic',
+            multipleStatements:true
         };
         var connection = mysql.createConnection(mysql_user); //建立数据库链接
         // 2                                        

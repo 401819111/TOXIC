@@ -16,8 +16,7 @@
                 <!-- <li></li> -->
                 <li id="hearder_searchFrame"><span>&#xe725;</span><span>666-4512-123</span><input value="请输入搜索内容" id="header_search" onfocus="this.value=''" ></li>
                 <li id="header_searchIcon">&#xe6ac;</li>
-                <li>&#xe6b8; 	<%= session.user%>  </li>
-                
+                <li id="header_usercenter">&#xe6b8; 	<span id="My_user_name"><%= session.user%></span>  </li>
             </ul>
         </div>
         <!-- 隐藏在下面的nav -->
@@ -38,5 +37,10 @@
 </body>
 <script src="js/jquery-1.11.3.js"></script>
 <script src="js/header.js"></script>
+<script>
+    $("#header_usercenter").click(() => {
+    location.href = 'personal.html'
+    });
+</script>
 <!-- <script src="js/less.min.js"></script> -->
 </html>

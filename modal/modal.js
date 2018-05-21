@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 const db = require('./config.js');
+var AV = require('leanengine');
 module.exports = {
     details: function (goods_id, callback) {
         const sql = "select * from goods,goods_detail where goods.goods_id=goods_detail.goods_id and goods.goods_id=?";
@@ -60,17 +61,17 @@ module.exports = {
         db.query(sql,[name,pwd],callback) 
      },
      signUp:(res,name,pwd,phone,code,callback)=>{
-         
+
          AV.Cloud.verifySmsCode(code, phone).then((data)=> {
              console.log(typeof("phone"))
-             const sql="INSERT INTO user_information (user_tel,user_acount,user_password)  VALUES (?,?,?)" 
+             const sql="INSERT INTO user_information (user_tel,user_account,user_password)  VALUES (?,?,?)" 
              db.query(sql,[phone,name,pwd],callback); 
          },(err)=>{
              res.send("fail2")
          })
       },
       queryUser:(name,callback)=>{
-         const sql="select * from user_information where user_acount=? " 
+         const sql="select * from user_information where user_account=? " 
          db.query(sql,name,callback) 
       },
       ForgotPwd:(res,name,phone,code,newPwd,callback)=>{
@@ -92,4 +93,33 @@ module.exports = {
         const sql ="SELECT * FROM front_control ";
         db.query(sql,callback);
     },
-    }
+    //向定制表加数据
+    addCustom:function (custom_price,key_num,board_color,key_light,custom_img,custom_detail,user_id,callback) {
+        const sql = " INSERT INTO keyboard_custom (custom_price,key_num,board_color,key_light,custom_img,custom_detail,user_id) VALUES(?,?,?,?,?,?,?);INSERT INTO order1(custom_id,iscustom) VALUES((select @@IDENTITY),'定制订单',);";
+        db.query(sql,[custom_price,key_num,board_color,key_light,custom_img,custom_detail,user_id],callback);
+    },
+    addToTheCar:function (userId,goods_id,car_gdnum,callback) {
+        const sql = " INSERT INTO car_details (user_id,car_gdnum,goods_id) VALUES(?,?,?)";
+        db.query(sql,[userId,car_gdnum,goods_id],callback);
+    },
+    getUserId:function(name,callback){
+        const sql =" SELECT user_id FROM user_information where user_account= ?";
+        db.query(sql,name,callback);
+    },
+    //购物车
+    getCar:function(id,callback){
+        console.log(id);
+        const sql =" SELECT * FROM goods,car_details where goods.goods_id = car_details.goods_id AND  user_id= ?";
+        db.query(sql,id,callback);
+    },
+    getId:function(name,callback){
+        const sql =" SELECT user_id FROM user_information where user_account= ?";
+        db.query(sql,name,callback);
+    },
+    deleteShopCar:function(goods_id,id,callback){
+        console.log(goods_id);
+        console.log(id);
+        const sql =" DELETE  FROM car_details where goods_id= ? and user_id=? ";
+        db.query(sql,[goods_id,id],callback);
+    },
+}

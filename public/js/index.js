@@ -1,174 +1,190 @@
+// 前台图片获取
+index_banner_get();
+function index_banner_get() {
+    $.ajax({
+        url: '/viewFrontImg.do',
+        type: 'get',
+        async: true,
+        success: function (data) { 
+            for (var i = 0; i < data.length - 1; i++) {
+                $(".index_slide" + (i+1) + "").css("background", "url(../" + data[i].front_img + ")").html("<div><h2>"+data[i].front_h1+"</h2><h3>"+data[i].front_h2+"</h3>"+"<p>"+data[i].front_price+"￥</p><p><button> 立即购买 </button></p></div>")
+            }
+        }
+    })
+}
+
 //fullpage
 $(function () {
     $('#index_fullpage').fullpage({
         'verticalCentered': false,
         // 'css3': true,
-        'sectionsColor': ['#fff', '#fff', '#242424', '#e2e2e2','#fff','fff'],
-        anchors: ['1', '2', '3','4','5','6','7'],
-        'recordHistory':true,
-        // 'navigation': true,  //添加右侧位置导航
-        'slidesNavigation':true,
-        'slidesNavPosition':'bottom',
-        'scrollingSpeed':800,
-        'loopHorizontal':true,
-        'controlArrowColor':'#88888855',
+        'sectionsColor': ['#fff', '#fff', '#242424', '#e2e2e2', '#fff', 'fff'],
+        anchors: ['1', '2', '3', '4', '5', '6', '7'],
+        'recordHistory': true,
+        'navigation': true,  //添加右侧位置导航
+        'slidesNavigation': true,
+        'slidesNavPosition': 'bottom',
+        'scrollingSpeed': 800,
+        'loopHorizontal': true,
+        'controlArrowColor': '#88888855',
+        'continuousHorizontal':true,
         'navigationPosition': 'right',
-        'navigationTooltips': ['热卖产品', '定制与鼠标', '音响专区', '耳机专区','键盘专区','玩家社区','网点查询'],
+        'navigationTooltips': ['热卖产品', '定制与鼠标', '音响专区', '耳机专区', '键盘专区', '玩家社区', '网点查询'],
+        
         //窗口滚动到某一窗口时触发move.js动画
-
-        afterLoad:function(link,index){
-            switch(index){
+        afterLoad: function (link, index) {
+            switch (index) {
                 case 1:
-                $("#header-nav").css("marginTop","0px")
-                $("#header-nav").hover(function(){
-                    $("#header-nav").css("marginTop","0px")
+                    $("#header-nav").css("marginTop", "0px")
+                    $("#header-nav").hover(function () {
+                        $("#header-nav").css("marginTop", "0px")
                     })
-                break;
+                    break;
                 case 2:
-                    index_number=0;
-                    setInterval(numberChange,25)
-                    $("#header-nav").css("marginTop","-60px")
-                    $("#header-nav").hover(function(){
-                    $("#header-nav").css("marginTop","0px")
-                    },()=>{
-                    $("#header-nav").css("marginTop","-60px")                        
+                    index_number = 0;
+                    setInterval(numberChange, 25)
+                    $("#header-nav").css("marginTop", "-60px")
+                    $("#header-nav").hover(function () {
+                        $("#header-nav").css("marginTop", "0px")
+                    }, () => {
+                        $("#header-nav").css("marginTop", "-60px")
                     })
-                break;
+                    break;
                 case 4:
-                $("#header-nav").css("marginTop","-60px")
-                $("#header-nav").hover(function(){
-                    $("#header-nav").css("marginTop","0px")
-                    },()=>{
-                    $("#header-nav").css("marginTop","-60px")                        
+                    $("#header-nav").css("marginTop", "-60px")
+                    $("#header-nav").hover(function () {
+                        $("#header-nav").css("marginTop", "0px")
+                    }, () => {
+                        $("#header-nav").css("marginTop", "-60px")
                     })
                     move('#index_imgFrame img')
-                        .set('opacity','1')
-                        .set('top','12%')
+                        .set('opacity', '1')
+                        .set('top', '12%')
                         .duration('.3s')
                         .ease('out')
                         .end();
-                break;
+                    break;
                 case 5:
-                $("#header-nav").css("marginTop","-60px")
-                $("#header-nav").hover(function(){
-                    $("#header-nav").css("marginTop","0px")
-                    },()=>{
-                    $("#header-nav").css("marginTop","-60px")                        
+                    $("#header-nav").css("marginTop", "-60px")
+                    $("#header-nav").hover(function () {
+                        $("#header-nav").css("marginTop", "0px")
+                    }, () => {
+                        $("#header-nav").css("marginTop", "-60px")
                     })
                     move('#index_moveimg img:first-child')
-                        .set('margin-left','-400px')    
+                        .set('margin-left', '-400px')
                         .duration('.7s')
                         .ease('out')
                         .end();
                     move('#index_moveimg img:nth-child(2)')
-                        .set('margin-left','-300px')    
+                        .set('margin-left', '-300px')
                         .duration('.7s')
                         .ease('out')
                         .end();
                     move('#index_moveimg img:nth-child(3)')
-                        .set('margin-left','-200px')    
+                        .set('margin-left', '-200px')
                         .duration('.7s')
                         .ease('out')
                         .end();
                     move('#index_moveimg img:nth-child(4)')
-                        .set('margin-left','-50px')    
+                        .set('margin-left', '-50px')
                         .duration('.7s')
                         .ease('out')
                         .end();
                     move('#index_moveimg img:nth-child(5)')
-                        .set('margin-left','80px')    
+                        .set('margin-left', '80px')
                         .duration('.7s')
                         .ease('out')
                         .end();
                     move('#index_moveimg img:nth-child(6)')
-                        .set('margin-left','150px')    
+                        .set('margin-left', '150px')
                         .duration('.7s')
                         .ease('out')
                         .end();
                     move('#index_moveimg img:nth-child(7)')
-                        .set('margin-left','200px')    
+                        .set('margin-left', '200px')
                         .duration('.7s')
                         .ease('out')
                         .end();
                     move('#index_textframe')
-                        .set('top','70%')
-                        .set('opacity','1')
+                        .set('top', '70%')
+                        .set('opacity', '1')
                         .duration('.6s')
                         .ease('out')
                         .end();
-                break;
+                    break;
             }
         },
         //窗口离开某一窗口时触发move.js动画
-        onLeave:function(index,nextIndex,direction){
-            switch(index){
+        onLeave: function (index, nextIndex, direction) {
+            switch (index) {
                 case 1:
-                $("#header-nav").css("marginTop","0px")
-                $("#header-nav").hover(function(){
-                    $("#header-nav").css("marginTop","0px")
+                    $("#header-nav").css("marginTop", "0px")
+                    $("#header-nav").hover(function () {
+                        $("#header-nav").css("marginTop", "0px")
                     })
-                break;
+                    break;
                 case 2:
-                $("#header-nav").css("marginTop","-60px")
+                    $("#header-nav").css("marginTop", "-60px")
                     // $('#index_degree').html(" ")
                     clearInterval(numberChange)
-                    setTimeout(function(){
-                        index_number=0;
-                    },1000)
-                break;
+                    setTimeout(function () {
+                        index_number = 0;
+                    }, 1000)
+                    break;
                 case 4:
-                $("#header-nav").css("marginTop","-60px")
+                    $("#header-nav").css("marginTop", "-60px")
                     move('#index_imgFrame img')
-                        .set('opacity','0')
-                        .set('top','80%')
+                        .set('opacity', '0')
+                        .set('top', '80%')
                         .duration('.5s')
                         .ease('out')
                         .end();
-                break;
+                    break;
                 case 5:
-                $("#header-nav").css("marginTop","-60px")
+                    $("#header-nav").css("marginTop", "-60px")
                     move('#index_moveimg img:first-child')
-                        .set('margin-left','0')    
+                        .set('margin-left', '0')
                         .duration('.7s')
                         .ease('out')
                         .end();
                     move('#index_moveimg img:nth-child(2)')
-                        .set('margin-left','0')    
+                        .set('margin-left', '0')
                         .duration('.7s')
                         .ease('out')
                         .end();
                     move('#index_moveimg img:nth-child(3)')
-                        .set('margin-left','0')   
+                        .set('margin-left', '0')
                         .duration('.7s')
                         .ease('out')
                         .end();
                     move('#index_moveimg img:nth-child(4)')
-                        .set('margin-left','0')
+                        .set('margin-left', '0')
                         .duration('.7s')
                         .ease('out')
                         .end();
                     move('#index_moveimg img:nth-child(5)')
-                        .set('margin-left','0')
+                        .set('margin-left', '0')
                         .duration('.7s')
                         .ease('out')
                         .end();
                     move('#index_moveimg img:nth-child(6)')
-                        .set('margin-left','0') 
+                        .set('margin-left', '0')
                         .duration('.7s')
                         .ease('out')
                         .end();
                     move('#index_moveimg img:nth-child(7)')
-                        .set('margin-left','0')   
+                        .set('margin-left', '0')
                         .duration('.7s')
                         .ease('out')
                         .end();
                     move('#index_textframe')
-                        .set('top','100%')
-                        .set('opacity','0')        
+                        .set('top', '100%')
+                        .set('opacity', '0')
                         .duration('.6s')
                         .ease('out')
                         .end();
-                break;
+                    break;
             }
         }
     })
@@ -176,63 +192,67 @@ $(function () {
 // slider轮播
 // setInterval(function(){
 //     $.fn.fullpage.moveSlideRight();
-//  },2000)
+//  },1000)
 //按钮1弹起按下事件
-$("button").mousedown(function(){
-    $(this).css({"color":"white","background":"#ff5a00"})
-}).mouseup(function(){
-    $(this).css({"color":"#ff5a00","background":"transparent"})
+$("button").mousedown(function () {
+    $(this).css({
+        "color": "white",
+        "background": "#ff5a00"
+    })
+}).mouseup(function () {
+    $(this).css({
+        "color": "#ff5a00",
+        "background": "transparent"
+    })
 })
 //键盘轮播
-var keyTime=0;
-setInterval(index_keybordlb,2000)
-function index_keybordlb(){
+var keyTime = 0;
+setInterval(index_keybordlb, 2000)
+
+function index_keybordlb() {
     keyTime++;
-    if(keyTime==1){
-        $('#index_keyboardlun').css("background","url(./images/index/u432.png)")
-    }
-    else if(keyTime==2){
-        $('#index_keyboardlun').css("background","url(./images/index/u434.png)")
-    }
-    else if(keyTime==3){
-        $('#index_keyboardlun').css("background","url(./images/index/u436.png)")
-    }
-    else if(keyTime==4){
-        $('#index_keyboardlun').css("background","url(./images/index/u430.png)")
-    }
-    else if(keyTime==5){
-        keyTime=0;
+    if (keyTime == 1) {
+        $('#index_keyboardlun').css("background", "url(./images/index/u432.png)")
+    } else if (keyTime == 2) {
+        $('#index_keyboardlun').css("background", "url(./images/index/u434.png)")
+    } else if (keyTime == 3) {
+        $('#index_keyboardlun').css("background", "url(./images/index/u436.png)")
+    } else if (keyTime == 4) {
+        $('#index_keyboardlun').css("background", "url(./images/index/u430.png)")
+    } else if (keyTime == 5) {
+        keyTime = 0;
     }
 }
 //数字递增
-var index_number=0;
-function numberChange(){
-    if(index_number>=20){
+var index_number = 0;
+
+function numberChange() {
+    if (index_number >= 20) {
         clearInterval(numberChange);
-    }else{
+    } else {
         index_number++
     }
-    $('#index_degree').html(index_number+"°")
+    $('#index_degree').html(index_number + "°")
 };
 
 
-$("#index_gotoMouse").click(()=>{
-    location.href='lh_cpfl.html?2'   
-})
-$("#index_gotoYX").click(()=>{
-    location.href='lh_cpfl.html?5'   
-})
-$("#index_gotoErJi").click(()=>{
-    location.href='lh_cpfl.html?4'   
-})
-$("#index_gotoKey").click(()=>{
-    location.href='lh_cpfl.html?1'   
-})
-$("#index_keyboard p button").click(()=>{
-    location.href='diy.html'       
-})
-$(".section7 p button").click(()=>{
-    location.href='Network.html'       
+$("#index_gotoMouse").click(() => {
+    location.href = 'lh_cpfl.html?2'
+});
+$("#index_gotoYX").click(() => {
+    location.href = 'lh_cpfl.html?5'
+});
+$("#index_gotoErJi").click(() => {
+    location.href = 'lh_cpfl.html?4'
+});
+$("#index_gotoKey").click(() => {
+    location.href = 'lh_cpfl.html?1'
+});
+$("#index_keyboard p button").click(() => {
+    location.href = 'diy.html'
+});
+$(".section7 p button").click(() => {
+    location.href = 'Network.html'
 })
 
 //收藏点击动画
@@ -246,7 +266,3 @@ $(".section7 p button").click(()=>{
 //         collectionState=0;
 //     }
 // })
-
-
-    
-

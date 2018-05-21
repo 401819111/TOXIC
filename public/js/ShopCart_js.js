@@ -12,16 +12,23 @@ $(".shoucang").on('click',function() {
 //数量加
 
 $(function(){
-    $(".add").click(function(){
-        var t=$(this).parent().find('input[class*=text_box]');
-        t.val(parseInt(t.val())+1);
-        if(isNaN(t.val())){
-            t.val(1);
-        }
-        subtotal(t)
+ 
+    $("#shopCar_goods").on("click",$(".add"),function(e){
+  var target=e.target
+
+        var t=$(target).parent().find('input[class*=text_box]');
+        // console.log(t.val());
+        // var num=t.val()
+        // num++
+        // if(isNaN(t.val())){
+        //     t.val(1);
+        // }
+        // subtotal(1)
     });
+
+   
     //数量减
-    $(".min").click(function(){
+    $("#shopCar_goods").on("click",$(".min"),function(){
         var t=$(this).parent().find('input[class*=text_box]');
         t.val(parseInt(t.val())-1);
         if(parseInt(t.val())<=0 || isNaN(t.val())){
@@ -49,16 +56,13 @@ $(function(){
         setTotal();
     }
     //总价
+    setTotal()
     function setTotal(){
         var s=0;
-        $("#table tbody tr td:nth-child(5)").each(function(){
-            if($(this).siblings("td").children("input").prop("checked")==true) {
-                s+= parseFloat($(this).siblings("td").children('.price').text())
-                    * parseInt($(this).siblings("td").children(".text_box").val());
-            }else{
-                s=s;
-            }
-        });
+        console.log($(".min"));
+        for (var i=0;i<$(".min").length;i++){
+
+        }
         $("#total").html(s.toFixed(2));
         $("#total").css("font-size","20px","margin-left", "20%","font-weight","800");
     }

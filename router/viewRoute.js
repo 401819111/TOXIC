@@ -19,6 +19,8 @@ router.get('/index.html',function(req,res){
     res.render('index')
 })
 router.get('/aboutUs.html',function(req,res){
+    res.locals.session = req.session;
+    user=req.session.user
     res.render('aboutUs')
 })
 router.get('/diy.html',function(req,res){
@@ -79,6 +81,8 @@ router.get('/productDetail.html',function(req,res){
     res.render('productDetail')
 })
 router.get('/SoftDownload.html',function(req,res){
+    res.locals.session = req.session;
+    user=req.session.user
     res.render('SoftDownload')
 })
 router.get('/PayWays_html.html',function(req,res){

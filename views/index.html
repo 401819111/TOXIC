@@ -15,7 +15,7 @@
 			font-family: "微软雅黑";
 		}
 	</style>
-	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=dBpjCtkcH8S7Zf0qFVMaz2G5pApA1p5a"></script>
+	<!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=dBpjCtkcH8S7Zf0qFVMaz2G5pApA1p5a"></script> -->
 	<title>Toxic外设</title>
 	<link rel="stylesheet" href="css/fullPage.css">
 	<link rel="stylesheet" href="css/index.css">
@@ -23,51 +23,22 @@
 
 <body>
 	<%-include header.html %>
-
-
 	<!-- fullPage插件，每个窗口为一个section -->
 	<div id="index_fullpage">
 		<div class="section section1">
 			<!-- slide轮播方式 -->
-			<div class="slide index_slide1">
-				<div>
-					<h2>舒适与精确的新标准</h2>
-					<h3>无限轨迹球</h3>
-					<p>599￥</p>
-					<p>
-						<button>立即购买</button>
-					</p>
-				</div>
-			</div>
-			<div class="slide index_slide2">
-				<div>
-					<h2>您桌面上的优质音乐体验</h2>
-					<h3>MX-SUOUND</h3>
-					<p>599￥</p>
-					<p>
-						<button>立即购买</button>
-					</p>
-				</div>
-			</div>
-			<div class="slide index_slide3">
-				<div>
-					<h2>以您的方式展现创意</h2>
-					<h3>craft-创意旋钮</h3>
-					<p>1299￥</p>
-					<p>
-						<button>立即购买</button>
-					</p>
-				</div>
-			</div>
+			<div class="slide index_slide1"></div>
+			<div class="slide index_slide2"></div>
+			<div class="slide index_slide3"></div>
 			<div class="slide index_slide4">
-				<div>
+				<!-- <div>
 					<h2>全天舒适，史诗音效</h2>
 					<h3>VOID PRO RGB</h3>
 					<p>899￥</p>
 					<p>
 						<button>立即购买</button>
 					</p>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="section section2">
@@ -156,24 +127,4 @@
 <script src="js/move.min.js"></script>
 <script src="js/fullpage.min.js"></script>
 <script src="js/index.js"></script>
-<script>
-	index_banner_get();
-
-	function index_banner_get() {
-		$.ajax({
-			url: '/viewFrontImg.do',
-			type: 'get',
-			async: true,
-			
-			success: function (data) {
-				for (var i = 0; i < data.length-1; i++) {
-					$('.section1').append(
-					'<div class="slide index_slide'+(i+1)+'"><div><h2>'+data[i].front_h1+'</h2><h3>'+data[i].front_h2+'</h3><p>'+data[i].front_price+'￥</p><p><button>立即购买</button></p></div></div>'
-					)
-				}
-				console.log(data);
-			}
-		})
-	}
-</script>
 </html>

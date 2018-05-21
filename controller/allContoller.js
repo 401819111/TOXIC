@@ -1,10 +1,15 @@
 const modal = require('./../modal/modal.js')
+var AV = require('leanengine');
 module.exports = {
-
+    //商品详情
     details(req, res, next) {
-        const goods_id = req.query.goods_id
+        let goods_id = req.query.goods_id
         modal.details(goods_id, function (err, data) {
-            res.send(data)
+            if (err) {
+                console.log(err);
+            } else {
+                res.send(data)
+            }
         })
     },
     //个人中心
@@ -57,7 +62,6 @@ module.exports = {
         let getAddress_id = req.query.getAddress_id;
         modal.change_address(userId, change_recName, change_recTel, change_recProvince, change_recCity, change_recCounty, change_recDetailed, getAddress_id, function (err, data) {
             if (err) {
-                // console.log(err)
                 res.send('fail')
             } else {
                 res.send('ok')
@@ -96,7 +100,6 @@ module.exports = {
         let getAddress_id = req.query.getAddress_id;
         modal.default_set(userId, getAddress_id, function (err, data) {
             if (err) {
-                // console.log(err)
                 res.send('fail')
             } else {
                 res.send('ok')
@@ -116,9 +119,7 @@ module.exports = {
     },
     user_collection(req, res, next) {
         let userId = req.query.userId;
-        // console.log(userId)
         modal.user_collection(userId, function (err, data) {
-            // console.log(data)
             res.send(data)
         })
     },
@@ -130,12 +131,10 @@ module.exports = {
 
             if (data.length > 0) {
                 req.session.user = data[0].user_account;
-                console.log( req.session.user);
-                console.log('登录成功')
+                req.session.id = data[0].user_id;
                 res.send(data)
             } else {
                 res.send(data)
-                console.log('登录失败')
             }
         })
     },
@@ -145,6 +144,7 @@ module.exports = {
         const phone = req.body.phone;
         const code = req.body.code;
         modal.queryUser(name, function (err, data) {
+            console.log(data);
             if (data.length > 0) {
                 res.send("fail"); // 验证用户名是否存在
             } else {
@@ -152,7 +152,6 @@ module.exports = {
                     if (!err) {
                         res.send("success")
                     }
-                    console.log(err)
                 })
             }
         })
@@ -168,10 +167,8 @@ module.exports = {
             op: "美邦", //进行什么操作
             ttl: 2 //验证码过期时间，单位分钟
         }).then(function (data) {
-            // console.log(data)
             res.send("success")
         }, function (err) {
-            console.log(err);
             res.send("fail")
         });
     },
@@ -201,41 +198,100 @@ module.exports = {
             op: "美邦", //进行什么操作
             ttl: 10 //验证码过期时间，单位分钟
         }).then(function (data) {
-            // console.log(data)
             res.send("success")
         }, function (err) {
-            console.log(err);
             res.send("fail")
         });
     },
     Index: (req, res) => {
         if (req.session.user) {
-            console.log(req.session.user)
-            console.log("yi登陆");
             res.render('index')
         } else {
-            console.log("未登录")
             res.redirect('login.html')
         }
     },
     lh_stulist: function (req, res, callback) {
         // const id=req.body.id
-        // console.log(id);
         modal.lh_stulist(function (err, data) {
-            // console.log(data);
-            // console.log(err);
             res.send(data)
         })
     },
-    viewFrontImg:function(req,res,next){
-        console.log(11);
-        modal.viewFrontImg(function(err,data){
+    viewFrontImg: function (req, res, next) {
+        modal.viewFrontImg(function (err, data) {
             if (data.length > 0) {
-                console.log(data);
                 res.send(data);
+            } else {}
+        })
+    },
+    //定制页
+    custom: function (req, res, next) {
+        var custom_price = req.body.custom_price;
+        var key_num = req.body.key_num;
+        var board_color = req.body.board_color;
+        var key_light = req.body.key_light;
+        var custom_img = req.body.custom_img;
+        var custom_detail = req.body.custom_detail;
+        var user_id = req.body.user_id;
+        modal.addCustom(custom_price, key_num, board_color, key_light, custom_img, custom_detail, user_id, function (err, data) {
+            if (err) {
+                res.json(err);
             } else {
-                console.log(err);
+                res.send("ok");
             }
         })
-    }
+    },
+    //加入购物车
+    addToTheCar: function (req, res, next) {
+        let userId = req.query.user_id;
+        let goods_id = req.query.goods_id;
+        let car_gdnum = req.query.car_gdnum;
+        modal.addToTheCar(userId, goods_id, car_gdnum, function (err, data) {
+            if (err) {
+                res.send('fail')
+            } else {
+                res.send('ok')
+            }
+        })
+    },
+    //获取用户id
+    getUserId: function (req, res, next) {
+        let name = req.query.username;
+        modal.getUserId(name, function (err, data) {
+            if (err) {
+                res.send('fail')
+            } else {
+                res.send(data)
+            }
+        })
+    },
+    //购物车
+    gerCar: function (req, res, next) {
+        var name = req.body.user_id;
+        modal.getId(name, (err, data) => {
+            var id = data[0].user_id
+            modal.getCar(id, function (err, data) {
+                console.log(data);
+                if (data.length > 0) {
+                    res.send(data);
+                } else {
+                    console.log(err);
+                }
+            })
+        })
+    },
+    deleteShopCar: function (req, res, next) {
+        var name = req.body.user_name;
+        var goods_id = req.body.goods_id;
+        modal.getId(name, (err, data) => {
+            var id = data[0].user_id
+            modal.deleteShopCar(goods_id, id, function (err, data) {
+                if (data.length > 0) {
+                    res.send(data);
+                } else {
+                    console.log(err);
+                }
+            })
+        })
+    },
+
 }

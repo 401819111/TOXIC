@@ -125,6 +125,7 @@
         width: 118px;
         box-shadow: 0px 3px 10px #888888;
     }
+    
 </style>
 	<link rel="stylesheet" href="css/keyboard.css"/>
 	<link rel="stylesheet" href="css/key87.css"/>
@@ -152,13 +153,13 @@ $(function(){
 			<img src="images/keyboard_order/87_keyboard.png" alt=""/>
 			<p>87键定制键盘</p>
 			<p>采用Cherry原厂轴体</p>
-			<p>基础价<span>￥188</span></p>
+			<p>基础价<span id="custom_price">￥188</span></p>
 		</div>
 		<div class="key104" data-keynum="104">
 			<img src="images/keyboard_order/104_keyboard.png" alt=""/>
 			<p>104键定制键盘</p>
 			<p>采用Cherry原厂轴体</p>
-			<p>基础价<span>￥218</span></p>
+			<p>基础价<span id="custom_price">￥218</span></p>
 		</div>
 		<button class="next firstbtn" style="background-color: gainsboro">下一步</button>
 	</div>
@@ -627,7 +628,9 @@ $(function(){
         });
     });
 
-
+$("#header_usercenter").click(() => {
+    location.href = 'lh_cpfl.html?2'
+});
 </script>
 </body>
 </html>

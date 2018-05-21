@@ -47,9 +47,7 @@ body {
   width: 70%;
   box-shadow: grey 1px 0 40px;
 }
-span {
-  color: #44A8F2;
-}
+
 .key87:hover,
 .key104:hover {
   box-shadow: lightgrey 1px 0 20px;

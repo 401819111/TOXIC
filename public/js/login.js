@@ -166,18 +166,18 @@ $("#sign-up-name-back").on("blur",function(){
 //密码正则判断
 $("#sign-up-pwd").on("blur",function(){
     let signUpPwd=$("#sign-up-pwd").val();
-    checkAll("Pwd",signUpPwd,$("#signUp-err2"),"密码格式错误",'userPwd');
+    checkAll("Pwd",signUpPwd,$("#signUp-err2"),"密码格式错误,至少为6位",'userPwd');
 })
 $("#sign-up-NewPwd").on("blur",function(){
     let signUpPwd=$("#sign-up-NewPwd").val();
-    checkAll("Pwd",signUpPwd,$("#signUp-err5"),"密码格式错误",'userPwd2');
+    checkAll("Pwd",signUpPwd,$("#signUp-err5"),"密码格式错误，至少为6位",'userPwd2');
 })
 
 // 手机号码正则
 $("#logup-phone").on("blur",function(){
     let signPhone=$("#logup-phone").val();
     checkAll("Phone",signPhone,$("#signUp-err3"),"手机号码格式错误",'userPhone');
-    console.log(userPhone);
+    // console.log(userPhone);
 })
 $("#login-forget-pwd").on("blur",function(){
     let signPhone=$("#login-forget-pwd").val();
@@ -229,9 +229,7 @@ $("#loginBtn").click(()=>{
     }) 
 })
 $("#login-up").click(function (){
-    console.log(userNum);
-    console.log(userPwd);
-    console.log(userPhone);
+
     const signUpName=$("#sign-up-name").val();
     const signUpPwd=$("#sign-up-pwd").val();
     const phone=$("#logup-phone").val();

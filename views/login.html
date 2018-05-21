@@ -7,109 +7,94 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>登陆/注册</title>
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/login.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登陆/注册</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
+  </head>
 
-</head>
-
-<body>
-
-
-
-  <section>
-
-    <div id="login">
-      <div>
-        <div id="login-logo">
-          <div>
-            <h1>
-              <img src="images/sign in/blacklogo.png" class="login-logo" alt="">
-            </h1>
-            <p> 或使用第三方登陆</p>
-          </div>
-
-
-        </div>
-        <div id="login-key">
-          <img src="images/sign in/u50.png" alt="">
-
-        </div>
-
-      </div>
-
-      <div id="login-div2">
-        <img src='images/sign in/QQ图片20180329113557.png' id="login-line" alt="">
-        <div id="login-login">
-          <p>登陆</p>
-          <div class="input-group input-group-lg">
-            <!-- 这里是登陆表单 -->
-            <div id="login-div1">
-              <form action="" id="login-form1">
-                <input type="text" class=" loginInput" id="sign-in-name" placeholder="用户名 / 手机号" aria-describedby="sizing-addon1">
-                <input type="password" class=" loginInput" id="sign-in-pwd" placeholder="密码" aria-describedby="sizing-addon1">
-                <button type="button" id="login-signup" class="btn login-btn-styles">注册</button>
-                <button type="button" id="loginBtn" class="btn loginBtn">登陆</button>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox"> 记住密码
-                  </label>
-                  <span id="login-forgetpwd">
-                    忘记密码?
-                  </span>
-                </div>
-              </form>
+  <body>
+    <section>
+      <div id="login">
+        <div>
+          <div id="login-logo">
+            <div>
+              <h1>
+                <img src="images/sign_in/blacklogo.png" class="login-logo" alt="">
+              </h1>
+              <p> 或使用第三方登陆</p>
             </div>
           </div>
+          <div id="login-key">
+            <img src="images/sign_in/u50.png" alt="">
+          </div>
         </div>
-        <!-- 登陆--end -->
-
-
-
-        <!-- 注册start -->
-        <form action="" id="login-form2" >
-          <p>注册</p>
-          <input type="text" class=" loginInput" id="sign-up-name" placeholder="用户名" aria-describedby="sizing-addon1">
-          <span id="signUp-err"></span>
-          <input type="password" class=" loginInput" id="sign-up-pwd" placeholder="密码" aria-describedby="sizing-addon1">
-          <span id="signUp-err2"></span>
-          <div id="login-phone-div">
-            <input type="text" id="logup-phone" class=" loginInput" placeholder="手机号码" aria-describedby="sizing-addon1">
-            <button type="button" class="btn btn-default login-sendMess" id="sendCode">发送</button>
-            <input type="text" id="user-logup-code" class=" loginInput login-mess" placeholder="验证码" aria-describedby="sizing-addon1">
+        <div id="login-div2">
+          <img src='images/sign_in/20180329113557.png' id="login-line" alt="">
+          <div id="login-login">
+            <p>登陆</p>
+            <div class="input-group input-group-lg">
+              <!-- 这里是登陆表单 -->
+              <div id="login-div1">
+                <form action="" id="login-form1">
+                  <input type="text" class=" loginInput" id="sign-in-name" placeholder="用户名 / 手机号" aria-describedby="sizing-addon1">
+                  <input type="password" class=" loginInput" id="sign-in-pwd" placeholder="密码" aria-describedby="sizing-addon1">
+                  <button type="button" id="login-signup" class="btn login-btn-styles">注册</button>
+                  <button type="button" id="loginBtn" class="btn loginBtn">登陆</button>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> 记住密码
+                    </label>
+                    <span id="login-forgetpwd">
+                      忘记密码?
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-          <div id="login-div-button">
-            <button type="button" id="login-re" class="login-btn-styles btn">返回登陆</button>
-            <button type="button" id="login-up" class="btn loginBtn">确认注册</button>
-          </div>
-        </form>
-        <!-- 注册--end -->
-        <!-- 忘记密码表单 -->
-        <form action="" id="login-form3">
-          <p>找回密码</p>
-          <input type="text" class=" loginInput" id="sign-up-name-back" placeholder="用户名" aria-describedby="sizing-addon1">
-          <div id="login-phone-div">
-            <input type="text" id="login-forget-pwd" class=" loginInput" placeholder="手机号码" aria-describedby="sizing-addon1">
-            <button type="button" id="getBack-code" class="btn btn-default login-sendMess">发送</button>
-            <input type="text" id="user-back-code" class=" loginInput login-mess" placeholder="验证码" aria-describedby="sizing-addon1">
-          </div>
-          <input type="password" class=" loginInput" id="sign-up-NewPwd" placeholder="新密码" aria-describedby="sizing-addon1">
-          <div>
-            <button type="button" id="login-return" class="login-btn-styles btn">取消</button>
-            <button type="button" id="login-up-backUser" class="btn loginBtn2">找回</button>
-          </div>
-        </form>
+          <!-- 登陆--end -->
+          <!-- 注册start -->
+          <form action="" id="login-form2">
+            <p>注册</p>
+            <input type="text" class=" loginInput" id="sign-up-name" placeholder="用户名" aria-describedby="sizing-addon1">
+            <span id="signUp-err"></span>
+            <input type="password" class=" loginInput" id="sign-up-pwd" placeholder="密码" aria-describedby="sizing-addon1">
+            <span id="signUp-err2"></span>
+            <div id="login-phone-div">
+              <input type="text" id="logup-phone" class=" loginInput" placeholder="手机号码" aria-describedby="sizing-addon1">
+              <button type="button" class="btn btn-default login-sendMess" id="sendCode">发送</button>
+              <input type="text" id="user-logup-code" class=" loginInput login-mess" placeholder="验证码" aria-describedby="sizing-addon1">
+            </div>
+            <div id="login-div-button">
+              <button type="button" id="login-re" class="login-btn-styles btn">返回登陆</button>
+              <button type="button" id="login-up" class="btn loginBtn">确认注册</button>
+            </div>
+          </form>
+          <!-- 注册--end -->
+          <!-- 忘记密码表单 -->
+          <form action="" id="login-form3">
+            <p>找回密码</p>
+            <input type="text" class=" loginInput" id="sign-up-name-back" placeholder="用户名" aria-describedby="sizing-addon1">
+            <div id="login-phone-div">
+              <input type="text" id="login-forget-pwd" class=" loginInput" placeholder="手机号码" aria-describedby="sizing-addon1">
+              <button type="button" id="getBack-code" class="btn btn-default login-sendMess">发送</button>
+              <input type="text" id="user-back-code" class=" loginInput login-mess" placeholder="验证码" aria-describedby="sizing-addon1">
+            </div>
+            <input type="password" class=" loginInput" id="sign-up-NewPwd" placeholder="新密码" aria-describedby="sizing-addon1">
+            <div>
+              <button type="button" id="login-return" class="login-btn-styles btn">取消</button>
+              <button type="button" id="login-up-backUser" class="btn loginBtn2">找回</button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-
-  </section>
-
-  <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
-  <script type="text/javascript" src="js/login.js"></script>
-</body>
+    </section>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+  </body>
 
 </html>

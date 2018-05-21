@@ -1,6 +1,4 @@
-/**
- * Created by yang on 2018/3/12.
- */
+
 const mysql = require('mysql');
 module.exports.sqlpool=function(){
     var pool={

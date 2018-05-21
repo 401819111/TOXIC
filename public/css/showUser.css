@@ -134,6 +134,7 @@ body {
   width: 85%;
   margin-left: 7.5%;
   height: 700px;
+  margin-bottom: 40px;
 }
 .showNow .showBox1 {
   width: 100%;
@@ -143,11 +144,11 @@ body {
   grid-template-rows: 500px;
 }
 .showNow .showBox1 div img {
-  box-shadow: 1px 1px 1px 1px #939391;
+  box-shadow: 0 0 5px wwwww#b1b1b1;
 }
 .showNow .showBox1 .userDiy {
-  margin-top: 250px;
-  margin-left: 30px;
+  margin-top: 130px;
+  margin-left: 50px;
 }
 .showNow .showBox1 .userDiy p {
   font-size: 24px;

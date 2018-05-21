@@ -27,7 +27,7 @@
         height: 130px;
 		position: absolute;
 		bottom: 35%;
-		margin-left: 22%;
+		margin-left: 25%;
 	}
     .zhou li{
         position: relative;
@@ -40,7 +40,7 @@
 	}
     .di{
         margin-top: 10%;
-        margin-left: 29%;
+        margin-left: 32%;
     }
     .di li{
         width: 70px;
@@ -61,7 +61,7 @@
     }
     .keycap{
         margin-top: 15%;
-        margin-left: 25%;
+        margin-left: 28%;
     }
     .keycap li{
         width: 20px;
@@ -75,7 +75,7 @@
         background-color: white;
     }
     .keycap li:nth-child(2){
-        background-color: pink;
+        background-color: black;
     }
     .keycap li:nth-child(3){
         background-color: darkseagreen;
@@ -103,14 +103,23 @@
         text-align: center;
         line-height: 46px;
         width: 600px;
-        bottom: 20%;
-        left: 30%;
+        top: 70%;
+        left: 28%;
     }
-    .keystyle1 label, .keystyle2 label{
+    .light{
+        display: block;
+        text-align: center;
+        line-height: 46px;
+        margin-left: 28%;
+        margin-top: 20%;
+        width: 600px;
+        clear: both;
+    }
+    .light label , .keystyle1 label, .keystyle2 label{
         float: left;
         margin-right: 10%;
     }
-    .keystyle1 div , .keystyle2 div{
+    .light div , .keystyle1 div , .keystyle2 div{
         outline: 1px solid #ff5a00;
         color:#ff5a00;
         height: 46px;
@@ -118,18 +127,32 @@
         float: left;
         margin-left: 2%;
     }
-    .keystyle1 div:hover , .keystyle2 div:hover{
+    .light div:hover , .keystyle1 div:hover , .keystyle2 div:hover{
         color: white;
         background-color: #ff5a00;
-        height: 44px;
-        width: 118px;
-        box-shadow: 0px 3px 10px #888888;
+        height: 50px;
+        box-shadow: 0 3px 10px #888888;
+    }
+    #header_topFrame{
+        position: fixed;
+    }
+    .key_87>div>div{
+        position: relative;
+        top: -20px;
+        transition: top 1s,opacity .5s;
+        opacity: 0;
+    }
+    .warn{
+        color: red;
+        font-size: 20px;
+        display: none;
     }
 </style>
+    <link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/keyboard.css"/>
 	<link rel="stylesheet" href="css/key87.css"/>
-<script src="js/jquery-1.11.3.js"></script>
-<script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
 <script>
 $(function(){
 	$('#dowebok').fullpage({
@@ -141,11 +164,38 @@ $(function(){
 	});
 });
 
+
 </script>
 </head>
 
 <body>
-        <div style="height: 60px;width: 100%; border: 1px solid red"></div>
+
+<nav>
+    <!-- 显示出的nav -->
+    <div id="header_topFrame">
+        <h1 id="logo"><img src="images/logo.png"  alt=""></h1>
+        <ul>
+            <!-- <li></li> -->
+            <li id="hearder_searchFrame"><span>&#xe725;</span><span>666-4512-123</span><input value="请输入搜索内容" id="header_search" onfocus="this.value=''" ></li>
+            <li id="header_searchIcon">&#xe6ac;</li>
+            <li class="userid">&#xe6b8; <%= session.user%></li>
+        </ul>
+    </div>
+    <!-- 隐藏在下面的nav -->
+    <div id="header_hiddenFrame">
+        <ul id="header_menu">
+            <li>首页</li>
+            <li>键盘专区</li>
+            <li>鼠标专区</li>
+            <li>键帽专区</li>
+            <li>耳机专区</li>
+            <li>音响专区</li>
+            <li>键盘定制</li>
+            <li>客户产品展示</li>
+            <li>Toxic社区</li>
+        </ul>
+    </div>
+</nav>
    
 <div id="dowebok">
 
@@ -162,15 +212,16 @@ $(function(){
 			<p>104键定制键盘</p>
 			<p>采用Cherry原厂轴体</p>
 			<p>基础价<span>￥218</span></p>
+            <p class="warn">104键无货！</p>
 		</div>
-		<button class="next firstbtn" style="background-color: gainsboro">下一步</button>
+		<button class=" firstbtn" style="background-color: gainsboro">下一步</button>
 	</div>
 	<!--///////////////////////////////////////////////////////-->
 	<div class="section">
 		<div id="bgcolor">
 			<img  src="images/keyboard_order/87_keyboard_bg_hei.jpg" alt=""/>
 		</div>
-		<button class="next">下一步</button>
+		<button class="next keyZhou">下一步</button>
         <ul class="di">
             <li></li>
             <li></li>
@@ -184,44 +235,44 @@ $(function(){
 			<img class="imgbg" src="images/keyboard_order/87-blank-thumb.png" alt=""/>
 			<section class="key_87" data-default-keycolor="0@0">
 				<div class="line1 linebg1" >
-					<div class="esc k27" data-key="0@0">esc</div>
-					<div class="f1 k112" data-key="0@0">f1</div>
-					<div class="f2 k113" data-key="0@0">f2</div>
-					<div class="f3 k114" data-key="0@0">f3</div>
-					<div class="f4 k115" data-key="0@0">f4</div>
-					<div class="f5 k116" data-key="0@0">f5</div>
-					<div class="f6 k117" data-key="0@0">f6</div>
-					<div class="f7 k118" data-key="0@0">f7</div>
-					<div class="f8 k119" data-key="0@0">f8</div>
-					<div class="f9 k120" data-key="0@0">f9</div>
-					<div class="f10 k121" data-key="0@0">f10</div>
-					<div class="f11 k122" data-key="0@0">f11</div>
-					<div class="f12 k123" data-key="0@0">f12</div>
-					<div class="prtsc k42" data-key="0@0">prtsc</div>
-					<div class="scrlk k145" data-key="0@0">scrlk</div>
-					<div class="pause k19" data-key="0@0">pause</div>
+					<div class="esc k27" data-key="0@0"></div>
+					<div class="f1 k112" data-key="0@0"></div>
+					<div class="f2 k113" data-key="0@0"></div>
+					<div class="f3 k114" data-key="0@0"></div>
+					<div class="f4 k115" data-key="0@0"></div>
+					<div class="f5 k116" data-key="0@0"></div>
+					<div class="f6 k117" data-key="0@0"></div>
+					<div class="f7 k118" data-key="0@0"></div>
+					<div class="f8 k119" data-key="0@0"></div>
+					<div class="f9 k120" data-key="0@0"></div>
+					<div class="f10 k121" data-key="0@0"></div>
+					<div class="f11 k122" data-key="0@0"></div>
+					<div class="f12 k123" data-key="0@0"></div>
+					<div class="prtsc k42" data-key="0@0"></div>
+					<div class="scrlk k145" data-key="0@0"></div>
+					<div class="pause k19" data-key="0@0"></div>
 				</div>
 				<div class="line2 linebg1">
-					<div class="wave k192" data-key="0@0">~</div>
-					<div class="n1 k49" data-key="0@0">1</div>
-					<div class="n2 k50" data-key="0@0">2</div>
-					<div class="n3 k51" data-key="0@0">3</div>
-					<div class="n4 k52" data-key="0@0">4</div>
-					<div class="n5 k53" data-key="0@0">5</div>
-					<div class="n6 k54" data-key="0@0">6</div>
-					<div class="n7 k55" data-key="0@0">7</div>
-					<div class="n8 k56" data-key="0@0">8</div>
-					<div class="n9 k57" data-key="0@0">9</div>
-					<div class="n0 k48" data-key="0@0">0</div>
+					<div class="wave k192" data-key="0@0"></div>
+					<div class="n1 k49" data-key="0@0"></div>
+					<div class="n2 k50" data-key="0@0"></div>
+					<div class="n3 k51" data-key="0@0"></div>
+					<div class="n4 k52" data-key="0@0"></div>
+					<div class="n5 k53" data-key="0@0"></div>
+					<div class="n6 k54" data-key="0@0"></div>
+					<div class="n7 k55" data-key="0@0"></div>
+					<div class="n8 k56" data-key="0@0"></div>
+					<div class="n9 k57" data-key="0@0"></div>
+					<div class="n0 k48" data-key="0@0"></div>
 					<div class="minus k189" data-key="0@0">-</div>
 					<div class="plus k187" data-key="0@0">=</div>
-					<div class="backspace k8" data-key="0@0">backspace</div>
-					<div class="insert k45" data-key="0@0">insert</div>
-					<div class="home k36" data-key="0@0">home</div>
-					<div class="pgup k33" data-key="0@0">pgup</div>
+					<div class="backspace k8" data-key="0@0"></div>
+					<div class="insert k45" data-key="0@0"></div>
+					<div class="home k36" data-key="0@0"></div>
+					<div class="pgup k33" data-key="0@0"></div>
 				</div>
 				<div class="line3 linebg1">
-					<div class="tab k9" data-key="0@0">tab</div>
+					<div class="tab k9" data-key="0@0"></div>
 					<div class="q k81" data-key="0@0"></div>
 					<div class="w k87" data-key="0@0"></div>
 					<div class="e k69" data-key="0@0"></div>
@@ -240,7 +291,7 @@ $(function(){
 					<div class="pgdn k34" data-key="0@0"></div>
 				</div>
 				<div class="line4 linebg1">
-					<div class="caps k20" data-key="0@0">caps</div>
+					<div class="caps k20" data-key="0@0"></div>
 					<div class="a k65" data-key="0@0"></div>
 					<div class="s k83" data-key="0@0"></div>
 					<div class="d k68" data-key="0@0"></div>
@@ -255,7 +306,7 @@ $(function(){
 					<div class="enter k13" data-key="0@0"></div>
 				</div>
 				<div class="line5 linebg1">
-					<div class="leftshift k16" data-key="0@0">shift</div>
+					<div class="leftshift k16" data-key="0@0"></div>
 					<div class="z k90" data-key="0@0"></div>
 					<div class="x k88" data-key="0@0"></div>
 					<div class="c k67" data-key="0@0"></div>
@@ -266,17 +317,17 @@ $(function(){
 					<div class="comma k188" data-key="0@0"></div>
 					<div class="dot k190" data-key="0@0"></div>
 					<div class="slash k191" data-key="0@0"></div>
-					<div class="rightshift" data-key="0@0">shift</div>
+					<div class="rightshift" data-key="0@0"></div>
 					<div class="up k38" data-key="0@0"></div>
 				</div>
 				<div class="line6 linebg1">
-					<div class="leftctrl k17" data-key="0@0">ctrl</div>
+					<div class="leftctrl k17" data-key="0@0"></div>
 					<div class="leftwin k91" data-key="0@0"></div>
-					<div class="leftalt k18" data-key="0@0">alt</div>
+					<div class="leftalt k18" data-key="0@0"></div>
 					<div class="space k32" data-key="0@0"></div>
-					<div class="rightalt" data-key="0@0">alt</div>
+					<div class="rightalt" data-key="0@0"></div>
 					<div class="rightwin k92" data-key="0@0"></div>
-					<div class="fn" data-key="0@0">fn</div>
+					<div class="fn" data-key="0@0"></div>
 					<div class="rightctrl" data-key="0@0"></div>
 					<div class="left k37" data-key="0@0"></div>
 					<div class="down k40" data-key="0@0"></div>
@@ -291,7 +342,7 @@ $(function(){
 			<li><img src="images/keyboard_order/黑.jpg" alt=""/></li>
 		</ul>
         <div class="keystyle1">
-            <label>风格组</label>
+            <label>风格组:</label>
             <div>全部</div>
             <div>功能键</div>
             <div>字母数字键</div>
@@ -342,50 +393,50 @@ $(function(){
                 </div>
                 <div class="line3 linebg2">
                     <div class="tab k9" data-key="0@0">tab</div>
-                    <div class="q k81" data-key="0@0"></div>
-                    <div class="w k87" data-key="0@0"></div>
-                    <div class="e k69" data-key="0@0"></div>
-                    <div class="r k82" data-key="0@0"></div>
-                    <div class="t k84" data-key="0@0"></div>
-                    <div class="y k89" data-key="0@0"></div>
-                    <div class="u k85" data-key="0@0"></div>
-                    <div class="i k73" data-key="0@0"></div>
-                    <div class="o k79" data-key="0@0"></div>
-                    <div class="p k80" data-key="0@0"></div>
-                    <div class="leftbrace k219" data-key="0@0"></div>
-                    <div class="rightbrace k221" data-key="0@0"></div>
-                    <div class="backslash k220" data-key="0@0"></div>
-                    <div class="del k46" data-key="0@0"></div>
-                    <div class="end k35" data-key="0@0"></div>
-                    <div class="pgdn k34" data-key="0@0"></div>
+                    <div class="q k81" data-key="0@0">q</div>
+                    <div class="w k87" data-key="0@0">w</div>
+                    <div class="e k69" data-key="0@0">e</div>
+                    <div class="r k82" data-key="0@0">r</div>
+                    <div class="t k84" data-key="0@0">t</div>
+                    <div class="y k89" data-key="0@0">y</div>
+                    <div class="u k85" data-key="0@0">u</div>
+                    <div class="i k73" data-key="0@0">i</div>
+                    <div class="o k79" data-key="0@0">o</div>
+                    <div class="p k80" data-key="0@0">p</div>
+                    <div class="leftbrace k219" data-key="0@0">[</div>
+                    <div class="rightbrace k221" data-key="0@0">]</div>
+                    <div class="backslash k220" data-key="0@0">\</div>
+                    <div class="del k46" data-key="0@0">del</div>
+                    <div class="end k35" data-key="0@0">end</div>
+                    <div class="pgdn k34" data-key="0@0">pgdn</div>
                 </div>
                 <div class="line4 linebg2">
                     <div class="caps k20" data-key="0@0">caps</div>
-                    <div class="a k65" data-key="0@0"></div>
-                    <div class="s k83" data-key="0@0"></div>
-                    <div class="d k68" data-key="0@0"></div>
-                    <div class="f k70" data-key="0@0"></div>
-                    <div class="g k71" data-key="0@0"></div>
-                    <div class="h k72" data-key="0@0"></div>
-                    <div class="j k74" data-key="0@0"></div>
-                    <div class="k k75" data-key="0@0"></div>
-                    <div class="l k76" data-key="0@0"></div>
-                    <div class="colon k186" data-key="0@0"></div>
-                    <div class="Quotes k222" data-key="0@0"></div>
-                    <div class="enter k13" data-key="0@0"></div>
+                    <div class="a k65" data-key="0@0">a</div>
+                    <div class="s k83" data-key="0@0">s</div>
+                    <div class="d k68" data-key="0@0">d</div>
+                    <div class="f k70" data-key="0@0">f</div>
+                    <div class="g k71" data-key="0@0">g</div>
+                    <div class="h k72" data-key="0@0">h</div>
+                    <div class="j k74" data-key="0@0">j</div>
+                    <div class="k k75" data-key="0@0">k</div>
+                    <div class="l k76" data-key="0@0">l</div>
+                    <div class="colon k186" data-key="0@0">;</div>
+                    <div class="Quotes k222" data-key="0@0">'</div>
+                    <div class="enter k13" data-key="0@0">enter</div>
                 </div>
                 <div class="line5 linebg2">
                     <div class="leftshift k16" data-key="0@0">shift</div>
-                    <div class="z k90" data-key="0@0"></div>
-                    <div class="x k88" data-key="0@0"></div>
-                    <div class="c k67" data-key="0@0"></div>
-                    <div class="v k86" data-key="0@0"></div>
-                    <div class="b k66" data-key="0@0"></div>
-                    <div class="n k78" data-key="0@0"></div>
-                    <div class="m k77" data-key="0@0"></div>
-                    <div class="comma k188" data-key="0@0"></div>
-                    <div class="dot k190" data-key="0@0"></div>
-                    <div class="slash k191" data-key="0@0"></div>
+                    <div class="z k90" data-key="0@0">z</div>
+                    <div class="x k88" data-key="0@0">x</div>
+                    <div class="c k67" data-key="0@0">c</div>
+                    <div class="v k86" data-key="0@0">v</div>
+                    <div class="b k66" data-key="0@0">b</div>
+                    <div class="n k78" data-key="0@0">n</div>
+                    <div class="m k77" data-key="0@0">m</div>
+                    <div class="comma k188" data-key="0@0">,</div>
+                    <div class="dot k190" data-key="0@0">.</div>
+                    <div class="slash k191" data-key="0@0">/</div>
                     <div class="rightshift" data-key="0@0">shift</div>
                     <div class="up k38" data-key="0@0"></div>
                 </div>
@@ -410,11 +461,14 @@ $(function(){
             <li></li>
             <li></li>
             <li></li>
-            <li></li>
         </ul>
-
+        <div class="light">
+            <label>键盘灯:</label>
+            <div>冰蓝</div>
+            <div>少女粉</div>
+            <div>亮白</div></div>
         <div class="keystyle2">
-            <label>风格组</label>
+            <label>风格组:</label>
             <div>全部</div>
             <div>功能键</div>
             <div>字母数字键</div>
@@ -426,31 +480,53 @@ $(function(){
 
 
 <script>
+    var custom_price;
     var key_num ;
-    var board_color = 1;
-    var key_light = 1;
+    var board_color = "黑";
+    var key_light = "无";
     var custom_img = 1;
     var custom_detail;
     var user_id = 1;
+    console.log(user_id);
+    var activation = 0;
     //-----------------键数选择-------------------
     $(".key87 , .key104 ").click(function(){
         $(".key87 , .key104 ").css("box-shadow","none");
         $(this).css("box-shadow","lightgrey 1px 0 20px");
-        $(".firstbtn").css("background-color","#ff5a00");
         key_num = $(this).attr("data-keynum");
         console.log(key_num)
+
     });
-    $("button").keydown(function(){
-       $(this).css("background-color","#E14F00")
-    }).keyup(function(){
-        $(this).css("background-color","#ff5a00")
+    $(".key87 ").click(function(){
+        activation = 1;
+        $(".warn").css("display","none");
+        $(".firstbtn").css("background-color","#ff5a00") .click(function(){
+            $.fn.fullpage.moveSectionDown();
+        });
     });
+    $(".key104 ").click(function(){
+        activation = 0;
+        $(".warn").css("display","block");
+        $(".firstbtn").css("background-color","gainsboro") .click(function(){
+            $.fn.fullpage.moveSectionUp();
+        });
+    });
+    $("button").mousedown(function(){
+        if(activation){
+            $(this).css("background-color","#E14F00")
+        }
+    }).mouseup(function(){
+        if(activation){
+            $(this).css("background-color","#ff5a00")
+        }
+    });
+
     //-----------------键盘按下-------------------
 	$(document).keydown(function(event){
 		var key = event.keyCode;
 		var onkey = "k"+key;
 		$("."+onkey).css({
-			"box-shadow": " grey 1px 0 5px", "background-size": "90%"});
+            	"box-shadow": " grey 1px 0 5px", "background-size": "90%"});
 	});
 	$(document).keyup(function(event){
 		var key = event.keyCode;
@@ -462,11 +538,21 @@ $(function(){
     $(".next").click(function(){
         $.fn.fullpage.moveSectionDown();
     });
+    $(".keyZhou").click(function(){
 
+        $(".key_87>div>div").each(function(i){
+            var that = $(this);
+            setTimeout(function(){
+                that.css({"top": "0" ,"opacity":"1"});}, 10*i);
+        });
+//        $(".key_87>div>div").css({
+//            "top": "0"});
+    });
+    //-------------------------------------------
 	window.onload = function(){
         $.fn.fullpage.setAllowScrolling(false,'down');
 		var arr = ['qing','hong','cha','hei'];
-        var arrdi = ['hei','hui','feng','bai'];
+        var arrdi = ['hei','hui','fen','bai'];
 		var axis = "qing";
 		var address;
 		var num;
@@ -486,7 +572,7 @@ $(function(){
             $("#bg,#bg2").css("background","url(../images/keyboard_order/87_keyboard_bg_"+numdi+".jpg)")
         });
         //-----------------换轴-------------------
-
+        var capstep = "@0"
         $(".zhou").children().click(function(){
 			var index = $(".zhou").children().index(this);
             $(".zhou img").css({"width":"80%","height":"80%"});
@@ -499,8 +585,8 @@ $(function(){
 		for(var i = 0 ;i < divNodes.length; i++){
 			divNodes[i].onclick = function(){
 				this.style.backgroundImage = address;
-				this.setAttribute("data-key",num+"@0");
-                $("#bg2").children().children().children().eq($(this).index()).attr("data-key",num+"@0");
+				this.setAttribute("data-key",num+capstep);
+                $("#bg2").children().children().children().eq($(this).index()).attr("data-key",num+capstep);
 			}
 		}
         $('.linebg1 div').each(function(i){
@@ -518,30 +604,28 @@ $(function(){
 
         $('.keystyle1').children().click(function(){
             var keystyle = $(".keystyle1").children().index(this);
-//            $('.keystyle1 div').css({"background-color":"white","color":"#ff5a00"});
-//            $(this).css({"background-color":"#ff5a00","color":"white"});
-//            var arr = ['qing','hong','cha','hei'];
             if(keystyle==1){
-                $(".key_87").attr("data-default-keycolor",num+"@0");
+                $(".key_87").attr("data-default-keycolor",num+capstep);
                 $('.linebg1 div').each(function(i){
                     this.style.backgroundImage = "url(../images/keyboard_order/" + axis + ".png)";
-                    this.setAttribute("data-key",num+"@0");
-                    $("#bg2").children().children().children().eq($(this).index()).attr("data-key",num+"@0");
+                    this.setAttribute("data-key",num+capstep);
+                    $("#bg2").children().children().children().eq($(this).index()).attr("data-key",num+capstep);
+                    console.log("what:"+num)
                 })
             }else if(keystyle==2){
                 $('.linebg1 div').each(function(i){
                     if(i>=0&&i<16||i>=29&&i<34||i>=47&&i<51||i==62||i==63||i>=74&&i!=79){
                     this.style.backgroundImage = "url(../images/keyboard_order/" + axis + ".png)";
-                    this.setAttribute("data-key",num+"@0");
-                    $("#bg2").children().children().children().eq($(this).index()).attr("data-key",num+"@0");
+                    this.setAttribute("data-key",num+capstep);
+                    $("#bg2").children().children().children().eq($(this).index()).attr("data-key",num+capstep);
                     }
                 })
             }else if(keystyle==3){
                 $('.linebg1 div').each(function(i){
                     if(!(i>=0&&i<16||i>=29&&i<34||i>=47&&i<51||i==62||i==63||i>=74&&i!=79)){
                         this.style.backgroundImage = "url(../images/keyboard_order/" + axis + ".png)";
-                        this.setAttribute("data-key",num+"@0");
-                        $("#bg2").children().children().children().eq($(this).index()).attr("data-key",num+"@0");
+                        this.setAttribute("data-key",num+capstep);
+                        $("#bg2").children().children().children().eq($(this).index()).attr("data-key",num+capstep);
                     }
                 })
             }
@@ -550,9 +634,9 @@ $(function(){
         var caparr = ['white','black','white','black','white'];
         var cap = "white";
         var capaddress;
-        var capnum;
+        var capnum = 0;
         var divNodes2 = $("#bg2").children().children().children();
-        var step;
+        var step = "0@";
         $(".keycap").children().click(function(){
             var index = $(".keycap").children().index(this);
             $(".keycap li").css({"border":"1px grey solid"});
@@ -566,20 +650,40 @@ $(function(){
                 this.style.backgroundImage = capaddress;
                 step = $(this).attr("data-key").substr(0,2);
                 $(this).attr("data-key",step+capnum);
+                console.log(step)
             }
         }
+        $('.light').children().click(function(){
+            var light = $(".light").children().index(this);
+            var keylight = $("#bg2 .key_87>div>div");
+            if(light==1){
+                keylight.css({"box-shadow": "0 3px 10px #3299CC"});
+                key_light = "冰蓝";
+            }
+            else  if(light==2){
+                keylight.css({"box-shadow": "0 3px 10px #FF6EC7"});
+                key_light = "少女粉";
+            }
+            else if(light==3){
+                keylight.css({"box-shadow": "0 3px 10px #999999"});
+                key_light = "亮白";
+            }
+        });
         $('.keystyle2').children().click(function(){
             var keystyle2 = $(".keystyle2").children().index(this);
             if(keystyle2==1){
-                $(".key_87").attr("data-default-keycolor",num+"@0");
+                $(".key_87").attr("data-default-keycolor",num+capstep);
                 $('.linebg2 div').each(function(i){
                     this.style.backgroundImage = "url(../images/keyboard_order/" + cap + ".png)";
+                    step = $(this).attr("data-key").substr(0,2);
                     $(this).attr("data-key",step+capnum);
                 })
             }else if(keystyle2==2){
                 $('.linebg2 div').each(function(i){
                     if(i>=0&&i<16||i>=29&&i<34||i>=47&&i<51||i==62||i==63||i>=74&&i!=79){
                         this.style.backgroundImage = "url(../images/keyboard_order/" + cap + ".png)";
+                        console.log("当前"+step+capnum);
+                        step = $(this).attr("data-key").substr(0,2);
                         $(this).attr("data-key",step+capnum);
                     }
                 })
@@ -587,6 +691,7 @@ $(function(){
                 $('.linebg2 div').each(function(i){
                     if(!(i>=0&&i<16||i>=29&&i<34||i>=47&&i<51||i==62||i==63||i>=74&&i!=79)){
                         this.style.backgroundImage = "url(../images/keyboard_order/" + cap + ".png)";
+                        step = $(this).attr("data-key").substr(0,2);
                         $(this).attr("data-key",step+capnum);
                     }
                 })
@@ -607,17 +712,44 @@ $(function(){
                 keyarr.push(keyone)
             }
             custom_detail = keyall+"|";
+
         });
 
         for(var i=0;i<keyarr.length;i++){
             custom_detail+=keyarr[i];
         }
+        var temp = custom_detail.split('|')[1].split(';');
+        var sum = 288;
+        var zhoucolor=0;
+        console.log("long:"+temp.length);
+        for(var i=0; i<temp.length-1;i++){
+            zhoucolor = temp[i].substring(temp[i].indexOf(':')+1,temp[i].indexOf('@'));
+            console.log("zhoucolor"+zhoucolor);
+//            if(zhoucolor=="1"){
+//                sum+=zhoucolor;
+//            }
+            switch(zhoucolor)
+            {
+                case "0":sum+=1;
+                break;
+                case "1":sum+=5;
+                    break;
+                case "2":sum+=4;
+                    break;
+                case "3":sum+=6;
+                    break;
+                default:sum+=0;
+                    break;
+            }
+        }
+        custom_price = sum;
         console.log(custom_detail);
         $.ajax({
             async : true,
             type : 'post',
             url : '/custom.do',
             data:{
+                custom_price:custom_price,
                 key_num:key_num,
                 board_color:board_color,
                 key_light:key_light,
@@ -628,9 +760,11 @@ $(function(){
                 console.log(data);
             }
         });
+        location.href="ShopCart_html.html"
     });
 
 
 </script>
+<script src="js/header.js"></script>
 </body>
 </html>

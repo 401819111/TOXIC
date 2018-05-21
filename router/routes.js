@@ -1,8 +1,9 @@
 const express = require('express')
 const route = express.Router(); //方法
 const userController = require('./../controller/allContoller.js')
-
+//商品详情
 route.get("/details.do",userController.details);
+route.get("/addToTheCar.do",userController.addToTheCar);
 //个人中心
 route.get("/user_information.do",userController.myInformation);//个人信息查询
 route.get("/user_addinformation.do",userController.user_addinformation);//个人信息修改
@@ -24,4 +25,12 @@ route.post('/sendCode2.do',userController.GetBackCode); //忘记密码的发送�
 route.post('/lh_cpfl.do',userController.lh_stulist);
 // 前台获取
 route.get('/viewFrontImg.do',userController.viewFrontImg);
+
+//获取用户账户
+route.get('/getUserId.do',userController.getUserId);
+//定制页
+route.post('/custom.do',userController.custom);
+//购物车
+route.post('/getCar.do',userController.gerCar);
+route.post('/deleteShopCar.do',userController.deleteShopCar);
 exports.routes=route; //公开
