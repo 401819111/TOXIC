@@ -3,7 +3,7 @@ module.exports = {
     query: function (sql, arr, callback) {
         //1.
         const mysql_user = {
-            host: '172.16.13.52',
+            host: 'localhost',
             user: 'root',
             password: 'root',
             port:3306,//端口号

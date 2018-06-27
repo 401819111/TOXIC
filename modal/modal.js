@@ -59,8 +59,8 @@ module.exports = {
     login:(name,pwd,callback)=>{
         const sql="select * from user_information where user_account= ?  and user_password=?" 
         db.query(sql,[name,pwd],callback) 
-     },
-     signUp:(res,name,pwd,phone,code,callback)=>{
+    },
+    signUp:(res,name,pwd,phone,code,callback)=>{
 
          AV.Cloud.verifySmsCode(code, phone).then((data)=> {
              console.log(typeof("phone"))
@@ -69,28 +69,28 @@ module.exports = {
          },(err)=>{
              res.send("fail2")
          })
-      },
-      queryUser:(name,callback)=>{
-         const sql="select * from user_information where user_account=? " 
-         db.query(sql,name,callback) 
-      },
-      ForgotPwd:(res,name,phone,code,newPwd,callback)=>{
-         AV.Cloud.verifySmsCode(code, phone).then((data)=> {
-             const sql="update user_information set user_password= ? where user_tel= ?"
-             db.query(sql,[newPwd,phone],callback); 
-         },(err)=>{
-             // console.log(err)
-             res.send("fail2")
-         })
-      },
-      //产品分类
-      lh_stulist:function (callback) {
+    },
+    queryUser:(name,callback)=>{
+        const sql="select * from user_information where user_account=? " 
+        db.query(sql,name,callback) 
+    },
+    ForgotPwd:(res,name,phone,code,newPwd,callback)=>{
+        AV.Cloud.verifySmsCode(code, phone).then((data)=> {
+            const sql="update user_information set user_password= ? where user_tel= ?"
+            db.query(sql,[newPwd,phone],callback); 
+        },(err)=>{
+            // console.log(err)
+            res.send("fail2")
+        })
+    },
+    //产品分类
+    lh_stulist:function (callback) {
         const sql="select*from goods "
         db.query(sql,[],callback)
     },
     // 前台获取
     viewFrontImg:function(callback){
-        const sql ="SELECT * FROM front_control ";
+        const sql ="SELECT * FROM front_control";
         db.query(sql,callback);
     },
     //向定制表加数据

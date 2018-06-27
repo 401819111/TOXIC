@@ -218,6 +218,8 @@ module.exports = {
     },
     viewFrontImg: function (req, res, next) {
         modal.viewFrontImg(function (err, data) {
+            // console.log(data)
+            // console.log(err)
             if (data.length > 0) {
                 res.send(data);
             } else {}
